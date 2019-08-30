@@ -1,50 +1,171 @@
 <html>
-                                       <head>
-                                               <title>ProQuorum</title>
-		                               <meta charset="utf-8" />
-		                               <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		                               <link rel="stylesheet" href="https://2019.igem.org/Team:Oxford/maincss?action=raw&amp;ctype=text/css" />
-		                               <noscript><link rel="stylesheet" href="https://2019.igem.org/Team:Oxford/noscriptcss?action=raw&amp;ctype=text/css" /></noscript>
-                                               <link rel="stylesheet" href="http://2018.igem.org/Team:Oxford/css/bootstrapmincss?action=raw&amp;ctype=text/css">
-                                      </head>
-	<body class="is-preload">
 
-		<!-- Page Wrapper -->
-			<div id="page-wrapper">
+<script>
 
-				<!-- Header -->
-					<header id="header">
-                       <div class="inner">
-						<h1><a href="https://2019.igem.org/Team:Oxford" class = "logo">ProQuorum</a></h1>
-						<nav id="nav" >
-                            <a href="https://2019.igem.org/Team:Oxford/Project">Project</a>
-                            <a href="https://2019.igem.org/Team:Oxford/Wet_lab">Wet Lab</a>
-                            <a href="https://2019.igem.org/Team:Oxford/Modelling_Overview">Dry Lab</a>
-                            <a href="https://2019.igem.org/Team:Oxford/Human-centric_Design">Human-centric Design</a>
-                            <a href="#https://2019.igem.org/Team:Oxford/Team">Team</a>
-                        </nav>
-                        <a href="#menubar" class="menubarToggle"><span class="fa fa-bars"></span></a>
-                    </div> 
-                    </header>
-                    
 
-                <!-- Footer -->
-			<footer id="footer">
-                    <div class="inner">
-                        <div class="flex">
-                            <div class="copyright">
-                                &copy; Untitled. Design: <a href="https://templated.co">TEMPLATED</a>. Images: <a href="https://unsplash.com">Unsplash</a>.
-                            </div>
-                            <ul class="icons">
-                                <li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-                                <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-                                <li><a href="#" class="icon fa-linkedin"><span class="label">linkedIn</span></a></li>
-                                <li><a href="#" class="icon fa-pinterest-p"><span class="label">Pinterest</span></a></li>
-                                <li><a href="#" class="icon fa-vimeo"><span class="label">Vimeo</span></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </footer>
-                 
-        </body>
-</html>
+    // allow button on the black menu bar to show/hide the side menu
+    function hide_show_menu() {
+  
+      // in case you preview mode is selected, the menu is hidden for better visibility 
+      if (window.location.href.indexOf("submit") >= 0) {
+        $(".igem_2018_menu_wrapper").hide();
+      }
+
+      // if the black menu bar has been loaded
+        if (document.getElementById('bars_item')) {
+
+        // when the "bars_item" has been clicked
+        $("#bars_item").click(function() {
+          $("#sideMenu").hide();
+
+          // show/hide the menu wrapper
+          $(".igem_2018_menu_wrapper").fadeToggle("100");
+        });   
+        } 
+
+      // because the black menu bars loads at a different time than the rest of the page, this function is set on a time out so it can run again in case it has not been loaded yet
+      else {
+            setTimeout(hide_show_menu, 15);
+      }
+    }
+
+
+</script>
+
+<head> 
+
+  <!-- This tells the browser that your page is responsive -->
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+        <!-- This is from CSS templates -->
+  <!--<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">-->
+  
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,900italic,900,700italic,700,600italic,600,400italic,300italic,300,200italic" rel="stylesheet" type ='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Montserrat:200,300,400' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!--<script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>-->
+  
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://2019.igem.org/Team:Oxford/maincss?action=raw&amp;ctype=text/css" />
+  <link rel="stylesheet" href="http://2018.igem.org/Team:Oxford/css/bootstrapmincss?action=raw&amp;ctype=text/css">
+
+  <!-- Latest compiled JavaScript -->
+  <!-- <script src="http://2018.igem.org/Team:Oxford/scripts/bootstrapminjs?action=raw&ctype=text/javascript"></script> -->
+   
+</head>
+
+
+<!-- THIS IS WHERE THE HTML BEGINS -->
+
+<body id="myPage" data-spy="scroll" data-target=".navbar">
+
+<nav class= "navbar-fixed-top navbar">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <!-- This allows the navigation bar to be replaced by a button in the top right corner when screen is to small -->
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+      </button>
+
+      <!-- This is the logo -->
+     <a href="http://2019.igem.org/Team:Oxford" class="navbar-left"><img src="http://2019.igem.org/wiki/images/e/e1/T--Oxford--Logo.png"></a>
+
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+        <!-- This is the project dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Project
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="http://2019.igem.org/Team:Oxford/Description">Background</a></li>
+            <li><a href="http://2019.igem.org/Team:Oxford/Our_solution">Our Design</a></li>
+            <li><a href="http://2019.igem.org/Team:Oxford/Parts">Parts</a></li>
+            <li><a href="http://2019.igem.org/Team:Oxford/Improve">Part Improvement</a></li>
+          </ul>
+         </li>
+
+         <!-- This is the wet lab button -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Wet Lab
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="http://2019.igem.org/Team:Oxford/wetlab">Overview</a></li>
+            <li><a href="http://2019.igem.org/Team:Oxford/experiments">Experiments</a></li>
+            <li><a href="http://2019.igem.org/Team:Oxford/results">Results</a></li>
+            <li><a href="http://2019.igem.org/Team:Oxford/protocols">Protocols</a></li>
+            <li><a href="http://2019.igem.org/Team:Oxford/notebook">Notebook</a></li>
+            <li><a href="http://2019.igem.org/Team:Oxford/wet_lab_safety">Wet Lab Safety</a></li>
+            <li><a href="http://2019.igem.org/Team:Oxford/future_experiments">Future Experiments</a></li>
+
+          </ul>
+         </li>
+
+          <!-- This is the dry lab dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Dry Lab
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="http://2019.igem.org/Team:Oxford/Model">Overview</a></li>
+            <li><a href="http://2019.igem.org/Team:Oxford/Model/Time-Domain-Analysis">Time Domain Analysis</a></li>
+            <li><a href="http://2019.igem.org/Team:Oxford/Model/Frequency-Domain-Analysis">Frequency Domain Analysis</a></li>
+            <li><a href="http://2019.igem.org/Team:Oxford/Model/Killswitch">Kill Switch</a></li>
+          </ul>
+         </li>
+
+        <!-- This is the human practices dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Human Centric Design
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="http://2019.igem.org/Team:Oxford/Human_Practices">Human Practices</a></li>
+            <li><a href="http://2019.igem.org/Team:Oxford/Entrepreneurship">Entrepreneurship</a></li>
+            <li><a href="http://2019.igem.org/Team:Oxford/Public_Engagement">Public Engagement</a></li>
+            <li><a href="http://2019.igem.org/Team:Oxford/Applied_Design">Product Design</a></li>
+            <li><a href="http://2019.igem.org/Team:Oxford/Safety">Safety</a></li>
+            <li><a href="http://2019.igem.org/Team:Oxford/ethics">Ethics</a></li>
+          </ul>
+         </li>
+
+        <!-- This is the people dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">People
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="http://2019.igem.org/Team:Oxford/Awards">Awards</a></li>
+            <li><a href="http://2019.igem.org/Team:Oxford/Team">Meet the Team</a></li>
+            <li><a href="http://2019.igem.org/Team:Oxford/Collaborations">Collaborations</a></li>
+            <li><a href="http://2019.igem.org/Team:Oxford/Attributions">Attributions</a></li>
+            <li><a href="http://2019.igem.org/Team:Oxford/Sponsors">Sponsors</a></li>
+            <li><a href="http://2019.igem.org/Team:Oxford/Medals">Medals</a></li>
+          </ul>
+         </li>
+
+        <!-- This is the search button -->
+      </ul>
+    </div>
+  </div>
+</nav>
+<script>
+//
+function checkScroll(){
+    var startY = 200; //The point where the navbar changes in px
+
+    if($(window).scrollTop() > startY){
+        $('.navbar').addClass("scrolled");
+    }else{
+        $('.navbar').removeClass("scrolled");
+    }
+}
+
+if($('.navbar').length > 0){
+    $(window).on("scroll load resize", function(){
+        checkScroll();
+    });
+}
+</script>
