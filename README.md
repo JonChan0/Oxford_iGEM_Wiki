@@ -6,4 +6,4 @@ Each html file corresponds to a page on our wiki.
 
 The template html file is softcoded into every html file.
 
-The css files all correspond to one css file.
+The css files all correspond to one css file but the actual css to be worked on is called Main.css
