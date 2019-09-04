@@ -145,6 +145,7 @@
     -webkit-box-shadow: none;
     box-shadow: none;
     background-color: white;
+    display:none;
 
 }
 
@@ -165,7 +166,7 @@
 }
 
 /* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-menu {display: block; 
+.dropdown:hover .dropdown-menu {display: block !important; 
 }
 
 
@@ -282,7 +283,7 @@
   width:100px;
   height:40px;
   background-colour: white;
-  text align:center;
+  text-align:center;
 }
 
 /*
