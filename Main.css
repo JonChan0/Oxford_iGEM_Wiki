@@ -64,6 +64,7 @@
     /*opacity:0.95;*/
     margin-top: 17px;
     transition: background-color 0.5s ease-out;
+    list-style-type: none !important;
 }
 
 .navbar-nav {
@@ -130,6 +131,7 @@
     background-color: white;
     margin-top: 20px;
     margin-bottom: 20px;
+    list-style-type: none !important;
 }
 }
 
@@ -137,6 +139,7 @@
 .open .dropdown-toggle {
     color: #193759;
     background-color: white;
+    list-style-type: none !important;
 }
 
 .dropdown-menu {
@@ -154,6 +157,7 @@
 .dropdown-menu li a {
    color: black;
    font-size: 13px !important;
+   list-style-type: none !important;
 }
 
 /* the color of the dropdown links on hover */
@@ -164,19 +168,20 @@
    -moz-transition:.5s;
    -webkit-transition:.5s;
    transition: .5s;
+   list-style-type: none !important;
 }
 
 .dropdown {
     float:right;
     width: 100px !important;
     height:40px !important;
-    background-colour: white;
+    background-color:white;
     text-align:center;
     list-style-type: none !important;
   }
 
 /* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-menu {display: block !important; 
+.dropdown:hover .dropdown-menu {display: inline-block !important; 
 }
 
 
