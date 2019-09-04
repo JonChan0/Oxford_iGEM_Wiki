@@ -146,6 +146,7 @@
     box-shadow: none;
     background-color: white;
     display:none;
+    list-style-type: none;
 
 }
 
@@ -164,6 +165,15 @@
    -webkit-transition:.5s;
    transition: .5s;
 }
+
+.dropdown {
+    float:left;
+    width:100px;
+    height:40px;
+    background-colour: white;
+    text-align:center;
+    list-style-type: none;
+  }
 
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-menu {display: block !important; 
