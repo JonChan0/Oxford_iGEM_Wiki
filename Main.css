@@ -294,6 +294,7 @@
   height:40px;
   background-colour: white;
   text-align:center;
+  list-style-type: none;
 }  
 
 /**** PAGE CONTENT ****/
