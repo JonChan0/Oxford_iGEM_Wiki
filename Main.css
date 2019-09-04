@@ -142,7 +142,7 @@
     list-style-type: none !important;
 }
 
-.dropdown-menu {
+ .dropdown-menu {
     border: none;
     border-radius: 0;
     -webkit-box-shadow: none;
@@ -151,7 +151,7 @@
     display:none;
     list-style-type: none !important;
 
-}
+} 
 
 /* the color of the Dropdown links */
 .dropdown-menu li a {
