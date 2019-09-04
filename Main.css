@@ -146,7 +146,7 @@
     box-shadow: none;
     background-color: white;
     display:none;
-    list-style-type: none;
+    list-style-type: none !important;
 
 }
 
@@ -167,12 +167,12 @@
 }
 
 .dropdown {
-    float:left;
-    width:100px;
-    height:40px;
+    float:right;
+    width: 100px !important;
+    height:40px !important;
     background-colour: white;
     text-align:center;
-    list-style-type: none;
+    list-style-type: none !important;
   }
 
 /* Show the dropdown menu on hover */
