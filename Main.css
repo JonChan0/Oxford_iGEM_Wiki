@@ -156,7 +156,7 @@
 
 /* the color of the dropdown links on hover */
 .dropdown-menu li a:hover {
-    background-color: black;
+    background-color: white;
     -o-transition:.5s;
    -ms-transition:.5s;
    -moz-transition:.5s;
@@ -277,13 +277,15 @@
     }
 }
 
-/*ul li {
+ .dropdown {
   float:left;
   width:100px;
   height:40px;
-  background colour: white;
-  text align: center;
+  background-colour: white;
+  text align:center;
 }
+
+/*
 ul li a {
   text-decoration: none;
   display: block;
