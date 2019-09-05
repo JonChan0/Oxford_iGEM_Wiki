@@ -6,8 +6,8 @@
         margin-bottom: 0px; font-weight: 300; letter-spacing: normal;}
 
         body, html {
-        height: 100%;
-        line-height: 1.8;
+        height: 100% !important;
+        line-height: 1.8 !important;
         }
   
     #home_logo, #sideMenu { display:none; }
@@ -113,6 +113,8 @@
 
     .navbar-right {
         margin-right: 2% !important;
+        margin-top:12px !important;
+        margin-bottom:12px;
     }
 
     .navbar-header {
