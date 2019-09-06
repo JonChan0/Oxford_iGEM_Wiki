@@ -123,8 +123,9 @@
 
     .navbar-left {
         margin-left: 2% !important;
-        margin-top:12px !important;
+        margin-top: 0px !important;
         margin-bottom: 12px;
+        margin-right: 2% !important;
         border-style: solid !important;
     }
 
@@ -185,13 +186,13 @@
    list-style-type: none !important;
 }
 
-.dropdown {
+/*.dropdown {
     float:right;
-    width: 100px !important;
+    width: 150px !important;
     height:40px !important;
     background-color:white;
     text-align:center;
-    list-style-type: none !important;
+    list-style-type: none !important; */
   }
 
 /* Show the dropdown menu on hover */
