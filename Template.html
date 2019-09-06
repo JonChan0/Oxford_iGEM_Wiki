@@ -1,8 +1,6 @@
-<html lang="en">
+<html>
 
 <script>
-
-
     // allow button on the black menu bar to show/hide the side menu
     function hide_show_menu() {
   
@@ -10,29 +8,21 @@
       if (window.location.href.indexOf("submit") >= 0) {
         $(".igem_2018_menu_wrapper").hide();
       }
-
       // if the black menu bar has been loaded
         if (document.getElementById('bars_item')) {
-
         // when the "bars_item" has been clicked
         $("#bars_item").click(function() {
           $("#sideMenu").hide();
-
           // show/hide the menu wrapper
-          $(".igem_2018_menu_wrapper").fadeToggle("100");
+          $(".igem_2019_menu_wrapper").fadeToggle("100");
         });   
-        }       
-
+        } 
       // because the black menu bars loads at a different time than the rest of the page, this function is set on a time out so it can run again in case it has not been loaded yet
       else {
             setTimeout(hide_show_menu, 15);
       }
     }
-
-
 </script>
-
-
 
 <head> 
     <meta charset="utf-8">
@@ -50,12 +40,13 @@
     </script>-->
   
     <!-- Allows you to work offline with VSCode_Html_Preview-->
-    <link rel="stylesheet" type="text/css" href="Main.css" >
     <link rel="stylesheet" type="text/css" href="cssbootstrap.css" >
-  
+    <link rel="stylesheet" type="text/css" href="Main.css" >
+    
+
     <!-- Latest compiled and minified CSS -->
-   <!--<link rel="stylesheet" href="https://2019.igem.org/Team:Oxford/maincss?action=raw&amp;ctype=text/css" />
-    <link rel="stylesheet" href="http://2019.igem.org/Team:Oxford/cssbootstrap?action=raw&amp;ctype=text/css">
+    <!-- <link rel="stylesheet" href="http://2019.igem.org/Team:Oxford/cssbootstrap?action=raw&amp;ctype=text/css">
+    <link rel="stylesheet" href="https://2019.igem.org/Team:Oxford/maincss?action=raw&amp;ctype=text/css" />
     --> 
   
     <!-- Latest compiled JavaScript -->
@@ -84,7 +75,7 @@
      <a href="http://2019.igem.org/Team:Oxford" class="navbar-left"><img src="https://2019.igem.org/wiki/images/d/df/T--Oxford--logo.png" > </a>
 
     </div> 
-    <div class="collapse navbar-collapse" id="myNavbar">
+    <div class="collapse navbar-collapse" id="myNavbar"> 
       <ul class="nav navbar-nav navbar-right list-unstyled">  
         
         <!-- This is the project dropdown -->
@@ -154,26 +145,25 @@
             <li><a href="http://2019.igem.org/Team:Oxford/Medals">Medals</a></li>
           </ul>
          </li>
+
+        <!-- This is the search button -->
+      </ul>
+    </div>
   </div>
 </nav>
 <script>
 //
 function checkScroll(){
     var startY = 200; //The point where the navbar changes in px
-
     if($(window).scrollTop() > startY){
         $('.navbar').addClass("scrolled");
     }else{
         $('.navbar').removeClass("scrolled");
     }
 }
-
 if($('.navbar').length > 0){
     $(window).on("scroll load resize", function(){
         checkScroll();
     });
 }
 </script>
-
-
-
