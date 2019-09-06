@@ -135,8 +135,12 @@
         margin-top: 12px !important;
         margin-bottom: 12px;
         border-style: solid !important;
+        margin-right:50% !important;
     }
 
+    .nav.navbar-nav.navbar-right.list-unstyled {
+        float: right;
+    }
     .navbar>li>a {
     }
 }
