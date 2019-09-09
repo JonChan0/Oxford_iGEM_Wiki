@@ -81,6 +81,7 @@
 /* Add a gray color to all navbar links */
 .navbar li a, .navbar .navbar-brand { 
     color: black;
+    font-size: 15px !important;
 }
 
 /* the color of the single Link ('safety') on hover */
@@ -148,6 +149,7 @@
     margin-top: 20px;
     margin-bottom: 20px;
     list-style-type: none !important;
+    font-size: 15px !important;
 }
 }
 
@@ -172,7 +174,7 @@
 /* the color of the Dropdown links */
 .dropdown-menu li a {
    color: black;
-   font-size: 13px !important;
+   font-size: 15px !important;
    list-style-type: none !important;
    list-style: none !important;
 }
