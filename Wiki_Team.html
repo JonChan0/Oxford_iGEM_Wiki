@@ -26,7 +26,7 @@
                                             <div class="card">
                                               <img src="https://2019.igem.org/wiki/images/e/ed/T--Oxford--David_Team_Photo.jpg" alt="David" style="width:100%">
                                               <div class="container">
-                                                <h1>David Schramm</h1>
+                                                <h2>David Schramm</h2>
                                                 <h2>Co-Leader</h2>
                                                 <p class="title">2nd Year Biochemistry</p>
                                               </div>
@@ -34,10 +34,10 @@
                                           </div>
                                             <div class="column">
                                                         <div class="card">
-                                                          <img src="https://2019.igem.org/wiki/images/5/5c/T--Oxford--Blanc_Pic2.png" alt="Natasha" style="width:100%">
+                                                          <img src="https://2019.igem.org/wiki/images/4/4a/T--Oxford--Tasha_Team_Photo.jpeg" alt="Natasha" style="width:100%">
                                                           <div class="container">
-                                                            <h1>Natasha Cooke</h1>
-                                                            <h2>Co-Leader</h2>
+                                                            <h2>Natasha Cooke</h2>
+                                                            <p>Co-Leader</p>
                                                             <p class="title">2nd Year Biochemistry</p>
                                                           </div>
                                                         </div>
@@ -104,14 +104,14 @@
                                                                   <img src="https://2019.igem.org/wiki/images/7/76/T--Oxford--Kathy_Team_Photo.jpg" alt="Katharina" style="width:100%">
                                                                   <div class="container">
                                                                     <h1>Katharina Novikov</h1>
-                                                                    <h2>Social Media Officer</h2>
+                                                                    <h2>Human Practices Officer</h2>
                                                                     <p class="title">1st Year Biological Sciences</p>
                                                                   </div>
                                                                 </div>
                                                               </div>
                                                         <div class="column">
                                                             <div class="card">
-                                                              <img src="https://2019.igem.org/wiki/images/5/5c/T--Oxford--Blanc_Pic2.png" alt="Minakshi" style="width:100%">
+                                                              <img src="https://2019.igem.org/wiki/images/c/cd/T--Oxford--Mishi_Team_Photo.jpeg" alt="Minakshi" style="width:100%">
                                                               <div class="container">
                                                                 <h1>Minakshi Ashok</h1>
                                                                 <h2>Modelling Coordinator</h2>
@@ -200,13 +200,17 @@
           text-align:center;
           margin-bottom: 32px;
         }
+        
+        body {
+          font-family: "Josefin Sans";
+        }
 
-        /* Four columns side by side */
+        /* Three columns side by side */
         .column {
-          float: center;
-          width: 33%;
+          float: left;
+          width: 20%;
           margin-bottom: 16px;
-          padding: 0 1.5em;
+          padding: 0 4em;
         }
 
         /* Three rows down */
@@ -239,13 +243,48 @@
         
         /* Some left and right padding inside the container */
         .container {
-          padding: 0 16px;
-          font-family: "Josefin Sans";
+          padding: 0 0px !important;
+          font-family: "Josefin Sans" !important;
+
         }
-        .container h2 {font-size:1em !important;
-        color:white !important;
-        text-align: left !important;}
-        .container p {font-size:0.8em !important;}
+
+        .container h1 {
+          font-size: 1.5em !important;
+          text-align: left !important;
+          font-family: "Josefin Sans" !important;
+          color: black !important;
+          display: block;
+          margin-block-start: 0.83em;
+          margin-block-end: 0.83em;
+          margin-inline-start: 0px;
+          margin-inline-end: 0px;
+          font-weight: bold;
+        }
+
+   
+        .container h2 {
+          font-size: 1em !important;
+          color: black !important;
+          text-align: left !important;
+          font-family: "Josefin Sans" !important;
+          display: block;
+          margin-block-start: 0.83em;
+          margin-block-end: 0.83em;
+          margin-inline-start: 0px;
+          margin-inline-end: 0px;
+          font-weight: bold;
+        }
+        .container p {
+          font-size: 0.8em !important;
+          font-family: "Josefin Sans" !important;
+          color:black !important;
+          display: block;
+          margin-block-start: 1em;
+          margin-block-end: 1em;
+          margin-inline-start: 0px;
+          margin-inline-end: 0px;
+        }
+
         /* Clear floats */
         .container::after, .row::after {
           content: "";
