@@ -2,8 +2,8 @@
 
 /****************************** DEFAULT WIKI SETTINGS  ****************************/
   
-   /* body,h1,h2,h3,h4,h5,h6,p, ul, li, td, th, figcaption, .team-profile-college {font-family: 'Source Sans Pro', sans-serif;
-        margin-bottom: 0px; font-weight: 300; letter-spacing: normal;} */
+   body,h1,h2,h3,h4,h5,h6,p, ul, li, td, th, figcaption, .team-profile-college {font-family: 'Source Sans Pro', sans-serif;
+        margin-bottom: 0px; font-weight: 300; letter-spacing: normal;} 
 
         body, html {
         height: 100% !important;
@@ -416,5 +416,9 @@ padding-top: 15px;
     color:white;
 }
 
+.paragraph_divider {
+    text-align: center;
+    padding: 15px;
+}
 
 
