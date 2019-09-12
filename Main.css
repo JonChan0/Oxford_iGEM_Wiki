@@ -2,8 +2,8 @@
 
 /****************************** DEFAULT WIKI SETTINGS  ****************************/
   
-   /* body,h1,h2,h3,h4,h5,h6,p, ul, li, td, th, figcaption, .team-profile-college {font-family: 'Source Sans Pro', sans-serif;
-        margin-bottom: 0px; font-weight: 300; letter-spacing: normal;} */
+   body,h1,h2,h3,h4,h5,h6,p, ul, li, td, th, figcaption, .team-profile-college {font-family: 'Source Sans Pro', sans-serif;
+        margin-bottom: 0px; font-weight: 300; letter-spacing: normal;} 
 
         body, html {
         height: 100% !important;
@@ -22,7 +22,7 @@
     }
 
     #bodyContent h2, #bodyContent h3, #bodyContent h4, #bodyContent h5 {
-        font-family: "Source Sans Pro", sans-serif; font-weight: 400;
+        font-family: "Josefin Sans", sans-serif; font-weight: 400;
         text-align:left !important;
         margin-bottom: 0px !important;
         text-decoration: none !important;
@@ -36,7 +36,7 @@
     }
    
    #bodyContent p, #bodyContent a {
-        font-family: 'Source Sans Pro', sans-serif; font-weight: 300;
+        font-family: 'Josefin Sans', sans-serif; font-weight: 300;
         margin-bottom: 0px !important;
         letter-spacing: normal !important;
     }
@@ -400,10 +400,10 @@ padding-top: 15px;
 
 .hero-image {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(http://2018.igem.org/wiki/images/a/af/T--Oxford--lab8.jpg) !important;
-    height: 50%;
-    background-position:center;
+    height: 50% !important;
+    background-position:center !important;
     background-repeat:no-repeat;
-    background-size: cover;
+    background-size: cover !important;
     position:relative;
 }
 
@@ -416,5 +416,9 @@ padding-top: 15px;
     color:white;
 }
 
+.paragraph_divider {
+    text-align: center;
+    padding: 15px;
+}
 
 
