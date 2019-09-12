@@ -400,10 +400,10 @@ padding-top: 15px;
 
 .hero-image {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(http://2018.igem.org/wiki/images/a/af/T--Oxford--lab8.jpg) !important;
-    height: 50%;
-    background-position:center;
+    height: 50% !important;
+    background-position:center !important;
     background-repeat:no-repeat;
-    background-size: cover;
+    background-size: cover !important;
     position:relative;
 }
 
