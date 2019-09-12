@@ -26,7 +26,7 @@
 
 <head> 
     <meta charset="utf-8">
-    <!-- This tells the browser that your page is responsive --
+    <!-- This tells the browser that your page is responsive -->
     <meta name="viewport" content="width=device-width, initial-scale=1"> 
           <!-- This is from CSS templates -->
     <!--<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">-->
@@ -63,8 +63,19 @@
 
   <nav class= "navbar-fixed-top navbar">
     <div class="container-fluid">
-    
-      <!-- <div class="collapse navbar-collapse" id="myNavbar"> -->
+      <div class="navbar-header"> 
+      <!-- This allows the navigation bar to be replaced by a button in the top right corner when screen is to small -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span> 
+        </button>
+      
+       <!-- This is the logo -->
+       <a href="http://2019.igem.org/Team:Oxford" class="navbar-left"><img src="https://2019.igem.org/wiki/images/d/df/T--Oxford--logo.png" > </a>
+      
+    </div> 
+    <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right list-unstyled">  
 
        <!-- This is the project dropdown -->
@@ -135,19 +146,7 @@
 
         <!-- This is the search button -->
       </ul>
-    <div class="navbar-header"> 
-          <!-- This allows the navigation bar to be replaced by a button in the top right corner when screen is to small -->
-          <!-- <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span> 
-          </button> -->
-    
-          <!-- This is the logo -->
-         <a href="http://2019.igem.org/Team:Oxford" class="navbar-left"><img src="https://2019.igem.org/wiki/images/d/df/T--Oxford--logo.png" > </a>
-    
-      </div> 
-    <!-- </div> -->
+    </div>
   </div>
 </nav>
 </body>
