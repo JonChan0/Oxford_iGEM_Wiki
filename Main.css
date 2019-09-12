@@ -15,14 +15,14 @@
     #content { width:100%; padding:0px;  margin-top:-7px; margin-left:0px;}
     body {background-color:#f2f2f2; }
     #bodyContent h1 {
-       font-family: 'Josefin Sans';
+       font-family: 'Source Sans Pro';
        font-weight: 400;
        font-size: 45px;
        color: black !important;
     }
 
     #bodyContent h2, #bodyContent h3, #bodyContent h4, #bodyContent h5 {
-        font-family: "Josefin Sans", sans-serif; font-weight: 400;
+        font-family: 'Source Sans Pro', sans-serif; font-weight: 400;
         text-align:left !important;
         margin-bottom: 0px !important;
         text-decoration: none !important;
@@ -36,7 +36,7 @@
     }
    
    #bodyContent p, #bodyContent a {
-        font-family: 'Josefin Sans', sans-serif; font-weight: 300;
+        font-family: 'Source Sans Pro', sans-serif; font-weight: 300;
         margin-bottom: 0px !important;
         letter-spacing: normal !important;
     }
@@ -148,9 +148,9 @@
     background-color: white;
     margin-top: 20px;
     margin-bottom: 20px;
-    list-style-type: none !important;
+   /* list-style-type: none !important;
     font-size: 15px !important;
-    font-style: 'Montserrat';
+    font-style: 'Montserrat'; */
 }
 }
 
