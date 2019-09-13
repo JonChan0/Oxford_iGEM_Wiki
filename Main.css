@@ -57,7 +57,7 @@
     padding-bottom: 5px;
     padding-left: 25px;
     padding-right: 25px;
-    background-color: white;
+    background-color:#1c2427;
 
     border-color: black !important;
     border: 0;
@@ -80,13 +80,13 @@
 
 /* Add a gray color to all navbar links */
 .navbar li a, .navbar .navbar-brand { 
-    color: black;
+    color: #78a3c0 !important;
     font-size: 15px !important;
 }
 
 /* the color of the single Link ('safety') on hover */
 .navbar-nav li a:hover {
-    color: black;
+    color: #78a3c0;
 }
 
 /* The active link this seems to be useless at the moment*/
@@ -116,7 +116,7 @@
     }
 
     .navbar-right {
-        margin-right: 2% !important;
+        margin: 1.7em !important;
         /* margin-top:12px !important;
         margin-bottom:12px; */
     }
@@ -129,9 +129,8 @@
     }
 */
     .navbar-header {
-        margin-left: 3% !important;
-        margin-top: 12px !important;
-        margin-bottom: 12px;
+        margin-top: 15px !important;
+        margin-bottom: 5px;
         /* margin-right:50% !important; */
     }
 
@@ -145,7 +144,7 @@
 
 @media (max-width: 761px){
 .dropdown-menu li a {
-    background-color: white;
+    background-color:#1c2427;
     margin-top: 20px;
     margin-bottom: 20px;
    /* list-style-type: none !important;
@@ -156,8 +155,8 @@
 
 /* the color of the Dropdown on click */
 .open .dropdown-toggle {
-    color: #193759;
-    background-color: white;
+    color:#2a363a;
+    background-color: #1c2427;
     list-style-type: none !important;
 }
 
@@ -166,15 +165,14 @@
     border-radius: 0;
     -webkit-box-shadow: none;
     box-shadow: none;
-    background-color: white;
+    background-color: #1c2427;
     display:none;
     list-style-type: none !important;
-
 } 
 
 /* the color of the Dropdown links */
 .dropdown-menu li a {
-   color: black;
+   color: #78a3c0;
    font-size: 15px !important;
    list-style-type: none !important;
    list-style: none !important;
@@ -182,7 +180,7 @@
 
 /* the color of the dropdown links on hover */
 .dropdown-menu li a:hover {
-    background-color: white;
+    background-color: #2a363a;
     -o-transition:.5s;
    -ms-transition:.5s;
    -moz-transition:.5s;
@@ -249,8 +247,8 @@
   -moz-transition:.5s;
   -webkit-transition:.5s;
   transition:.5s;
-    background-color: #f2f2f2;
-    outline-top: 5px solid teal;
+    background-color:#1c2427;
+    outline-top: 5px solid #2a363a;
     color: black;
 }
 
@@ -259,14 +257,14 @@
 }
 
 .nav .open>a:hover, .nav a:focus {
-    background-color: white;
+    background-color: #1c2427;
 }
 
 @media (min-width: 979px) {
   ul.nav li.dropdown:hover > ul.dropdown-menu {
     display: block;
-    background-color: #f2f2f2;
-    border-top: 2px solid rgb(97, 162, 206);
+    background-color: #1c2427;
+    border-top: 2px solid #2a363a;
   animation-name: slidenavAnimation;
   animation-duration:.5s;
   animation-iteration-count: 1;
