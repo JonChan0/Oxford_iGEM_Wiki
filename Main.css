@@ -86,7 +86,7 @@
 
 /* the color of the single Link ('safety') on hover */
 .navbar-nav li a:hover {
-    color: #78a3c0;
+    color: white !important;
 }
 
 /* The active link this seems to be useless at the moment*/
@@ -155,7 +155,6 @@
 
 /* the color of the Dropdown on click */
 .open .dropdown-toggle {
-    color:#2a363a;
     background-color: #1c2427;
     list-style-type: none !important;
 }
@@ -180,7 +179,8 @@
 
 /* the color of the dropdown links on hover */
 .dropdown-menu li a:hover {
-    background-color: #2a363a;
+    background-color: /*#2a363a */  #1c2427;
+    color: white;
     -o-transition:.5s;
    -ms-transition:.5s;
    -moz-transition:.5s;
@@ -189,6 +189,7 @@
    list-style-type: none !important;
    list-style: none !important
 }
+
 
 /*
 .dropdown {
@@ -210,7 +211,7 @@
 
 .navbar-toggle .icon-bar 
 {
-    background: black;
+    background: white;
 }
 
 .navbar-header img {
@@ -247,9 +248,8 @@
   -moz-transition:.5s;
   -webkit-transition:.5s;
   transition:.5s;
-    background-color:#1c2427;
-    outline-top: 5px solid #2a363a;
-    color: black;
+  background-color:#1c2427;
+  color: white !important;
 }
 
 .nav .open .dropdown-menu, .nav .dropdown-menu {
@@ -264,7 +264,7 @@
   ul.nav li.dropdown:hover > ul.dropdown-menu {
     display: block;
     background-color: #1c2427;
-    border-top: 2px solid #2a363a;
+    border-top: 2px solid #1c2427;
   animation-name: slidenavAnimation;
   animation-duration:.5s;
   animation-iteration-count: 1;
