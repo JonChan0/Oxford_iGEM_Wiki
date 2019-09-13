@@ -1,4 +1,4 @@
-<html>
+<html lang="en">
 
 <script>
     // allow button on the black menu bar to show/hide the side menu
@@ -6,7 +6,7 @@
   
       // in case you preview mode is selected, the menu is hidden for better visibility 
       if (window.location.href.indexOf("submit") >= 0) {
-        $(".igem_2018_menu_wrapper").hide();
+        $(".igem_2019_menu_wrapper").hide();
       }
       // if the black menu bar has been loaded
         if (document.getElementById('bars_item')) {
@@ -27,7 +27,7 @@
 <head> 
     <meta charset="utf-8">
     <!-- This tells the browser that your page is responsive -->
-    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> 
           <!-- This is from CSS templates -->
     <!--<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">-->
     
@@ -65,13 +65,77 @@
 
 <body id="myPage" data-spy="scroll" data-target=".navbar">
 
-<nav class= "navbar-fixed-top navbar">
-  <div class="container-fluid">
-    
-    <!-- <div class="collapse navbar-collapse" id="myNavbar"> -->
-    <ul class="nav navbar-nav navbar-right list-unstyled">  
+  <nav class= "navbar fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header"> 
+            <!-- This allows the navigation bar to be replaced by a button in the top right corner when screen is too small -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span> 
+            </button>
+      
+            <!-- This is the logo -->
+           <a href="http://2019.igem.org/Team:Oxford" class="navbar-left"><img src="https://2019.igem.org/wiki/images/d/df/T--Oxford--logo.png" > </a>
+      
+        </div> 
+      <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right ml-auto list-unstyled">  
 
-         <!-- This is the team button -->
+       <!-- This is the project dropdown -->
+       <li class="dropdown">
+         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Project 
+         </a>
+         <ul class="dropdown-menu">
+           <li><a href="http://2019.igem.org/Team:Oxford/Description">Description</a></li>
+           <li><a href="http://2019.igem.org/Team:Oxford/Our_solution">Our Design</a></li>
+           <li><a href="http://2019.igem.org/Team:Oxford/Parts">Parts</a></li>
+           <li><a href="http://2019.igem.org/Team:Oxford/Improve">Part Improvement</a></li>
+         </ul>
+     </li>
+        
+    <!-- This is the wet lab dropdown -->
+        <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Wet Lab
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="http://2019.igem.org/Team:Oxford/wetlab">Overview</a></li>
+              <li><a href="http://2019.igem.org/Team:Oxford/experiments">Experiments</a></li>
+              <li><a href="http://2019.igem.org/Team:Oxford/Protocols">Protocols</a></li>
+              <li><a href="http://2019.igem.org/Team:Oxford/Measurement">Measurement</a></li>
+              <li><a href="http://2019.igem.org/Team:Oxford/Notebook">Notebook</a></li>
+              <li><a href="http://2019.igem.org/Team:Oxford/Results">Results</a></li>
+              <li><a href="http://2019.igem.org/Team:Oxford/Future_Experiments">Future Experiments</a></li> 
+            </ul>
+        </li>
+
+        <!-- This is the modelling dropdown -->
+        <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Modelling
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="http://2019.igem.org/Team:Oxford/Model">Overview</a></li>
+              <li><a href="http://2019.igem.org/Team:Oxford/Model/Project-Influence">Project Influence</a></li>
+              <li><a href="http://2019.igem.org/Team:Oxford/Model/Therapeutics-Insight">Therapeutics Insight</a></li>
+            </ul>
+           </li>
+
+        <!-- This is the human practices dropdown -->
+        <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Human Centric Design
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="http://2019.igem.org/Team:Oxford/Human_Practices">Human Practices</a></li>
+              <li><a href="http://2019.igem.org/Team:Oxford/Public_Engagement">Public Engagement</a></li>
+              <li><a href="http://2019.igem.org/Team:Oxford/Entrepreneurship">Entrepreneurship</a></li>
+              <li><a href="http://2019.igem.org/Team:Oxford/Applied_Design">Product Design</a></li>
+              <li><a href="https://2019.igem.org/Team:Oxford/Collaborations">Collaborations</a></li>
+              <li><a href="http://2019.igem.org/Team:Oxford/Safety">Safety</a></li>
+              <li><a href="http://2019.igem.org/Team:Oxford/Ethics">Ethics</a></li>
+            </ul>
+           </li>
+
+        <!-- This is the team button -->
         <li class="dropdown">
           <a class="dropdown-toggle" data-toggle="dropdown" href="#">Team
           </a>
@@ -84,76 +148,13 @@
           </ul>
          </li>
 
-          <!-- This is the human practices dropdown -->
-        <li class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Human Centric Design
-          </a>
-          <ul class="dropdown-menu">
-            <li><a href="http://2019.igem.org/Team:Oxford/Human_Practices">Human Practices</a></li>
-            <li><a href="http://2019.igem.org/Team:Oxford/Public_Engagement">Public Engagement</a></li>
-            <li><a href="http://2019.igem.org/Team:Oxford/Entrepreneurship">Entrepreneurship</a></li>
-            <li><a href="http://2019.igem.org/Team:Oxford/Applied_Design">Product Design</a></li>
-            <li><a href="https://2019.igem.org/Team:Oxford/Collaborations">Collaborations</a></li>
-            <li><a href="http://2019.igem.org/Team:Oxford/Safety">Safety</a></li>
-            <li><a href="http://2019.igem.org/Team:Oxford/Ethics">Ethics</a></li>
-          </ul>
-         </li>
-
-        <!-- This is the modelling dropdown -->
-        <li class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Modelling
-          </a>
-          <ul class="dropdown-menu">
-            <li><a href="http://2019.igem.org/Team:Oxford/Model">Overview</a></li>
-            <li><a href="http://2019.igem.org/Team:Oxford/Model/Project-Influence">Project Influence</a></li>
-            <li><a href="http://2019.igem.org/Team:Oxford/Model/Therapeutics-Insight">Therapeutics Insight</a></li>
-          </ul>
-         </li>
-
-        <!-- This is the wet lab dropdown -->
-        <li class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Wet Lab
-          </a>
-          <ul class="dropdown-menu">
-            <li><a href="http://2019.igem.org/Team:Oxford/wetlab">Overview</a></li>
-            <li><a href="http://2019.igem.org/Team:Oxford/experiments">Experiments</a></li>
-            <li><a href="http://2019.igem.org/Team:Oxford/Protocols">Protocols</a></li>
-            <li><a href="http://2019.igem.org/Team:Oxford/Measurement">Measurement</a></li>
-            <li><a href="http://2019.igem.org/Team:Oxford/Notebook">Notebook</a></li>
-            <li><a href="http://2019.igem.org/Team:Oxford/Results">Results</a></li>
-            <li><a href="http://2019.igem.org/Team:Oxford/Future_Experiments">Future Experiments</a></li> 
-          </ul>
-         </li>
-
-        <!-- This is the project dropdown -->
-        <li class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Project 
-          </a>
-          <ul class="dropdown-menu">
-            <li><a href="http://2019.igem.org/Team:Oxford/Description">Description</a></li>
-            <li><a href="http://2019.igem.org/Team:Oxford/Our_solution">Our Design</a></li>
-            <li><a href="http://2019.igem.org/Team:Oxford/Parts">Parts</a></li>
-            <li><a href="http://2019.igem.org/Team:Oxford/Improve">Part Improvement</a></li>
-          </ul>
-         </li>
-
         <!-- This is the search button -->
       </ul>
-    <div class="navbar-header"> 
-          <!-- This allows the navigation bar to be replaced by a button in the top right corner when screen is to small -->
-          <!-- <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span> 
-          </button> -->
-    
-          <!-- This is the logo -->
-         <a href="http://2019.igem.org/Team:Oxford" class="navbar-left"><img src="https://2019.igem.org/wiki/images/d/df/T--Oxford--logo.png" > </a>
-    
-      </div> 
-    <!-- </div> -->
+    </div>
   </div>
 </nav>
+</body>
+
 <script>
 //
 function checkScroll(){
@@ -170,3 +171,7 @@ if($('.navbar').length > 0){
     });
 }
 </script>
+
+</body>
+
+</html>
