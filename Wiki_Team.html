@@ -1,12 +1,82 @@
 {{Oxford}}
-<html>
-<body>
-<section id="banner">
-						<div class="inner">
-                            <h1> <br/><font face="Josefin Sans" size="7" color="black">Meet the Team</font> </h1>
-						</div>
-					</section>
+<html lang="en">
 
+<script>
+    // allow button on the black menu bar to show/hide the side menu
+    function hide_show_menu() {
+  
+      // in case you preview mode is selected, the menu is hidden for better visibility 
+      if (window.location.href.indexOf("submit") >= 0) {
+        $(".igem_2019_menu_wrapper").hide();
+      }
+      // if the black menu bar has been loaded
+        if (document.getElementById('bars_item')) {
+        // when the "bars_item" has been clicked
+        $("#bars_item").click(function() {
+          $("#sideMenu").hide();
+          // show/hide the menu wrapper
+          $(".igem_2019_menu_wrapper").fadeToggle("100");
+        });   
+        } 
+      // because the black menu bars loads at a different time than the rest of the page, this function is set on a time out so it can run again in case it has not been loaded yet
+      else {
+            setTimeout(hide_show_menu, 15);
+      }
+    }
+</script>
+
+<head> 
+    <meta charset="utf-8">
+    <!-- This tells the browser that your page is responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> 
+          <!-- This is from CSS templates -->
+    <!--<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">-->
+    
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,900italic,900,700italic,700,600italic,600,400italic,300italic,300,200italic" rel="stylesheet" type ='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:200,300,400' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+    <!--<script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>-->
+  
+    <!-- Allows you to work offline with VSCode_Html_Preview-->
+    <link rel="stylesheet" type="text/css" href="cssbootstrap.css" >
+    <link rel="stylesheet" type="text/css" href="Main.css" >
+    
+
+    <!-- Latest compiled and minified CSS -->
+    <!-- <link rel="stylesheet" href="https://2019.igem.org/Team:Oxford/cssbootstrap?action=raw&amp;ctype=text/css">
+    <link rel="stylesheet" href="https://2019.igem.org/Team:Oxford/maincss?action=raw&amp;ctype=text/css" />
+    --> 
+  
+    <!-- Latest compiled JavaScript -->
+    <!-- <script src="https://2018.igem.org/Team:Oxford/scripts/bootstrapminjs?action=raw&ctype=text/javascript"></script> -->
+     
+     <!-- Bootstrap core JavaScript -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+     <!-- <script src="https://2019.igem.org/Team:Oxford/bootstrapminjs?action=raw&ctype=text/javascript"></script> -->
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    
+  </head>
+ 
+<!-- THIS IS WHERE THE HTML BEGINS -->
+
+<body>
+
+<section id="banner">
+            <div class="inner" style="background-image: url('https://2019.igem.org/wiki/images/5/55/T--Oxford--Team_Photo_Cropped.png'); background-size: cover;">
+              <div class="translucent-back" style="height: 400px;">
+                <div class= "hero-text"> 
+                  <h1> Meet the Team </h1>
+                  </div>
+                <!-- <h1> <br/><font face="Josefin Sans" size="7" color="black">Meet the Team</font> </h1> -->
+              </div>
+						</div>
+          </section>
+          
     <section id="wrapper">
 						<!-- One -->
 							<section id="one" class="wrapper spotlight style1">
@@ -14,11 +84,11 @@
                                     <img src="https://2019.igem.org/wiki/images/9/9a/T--Oxford--Down_Arrow_Bounce.png">
                                 </div>
 								<div class="inner">
-									<!--<a href="#" class="image"><img src="images/logo-01.png" alt="" /></a>-->
+									<!--<a href="#" class="image"><img src="images/logo-01.png" alt="" /></a> -->
 									<div class="content">
-										<h2 class="major">Our Team Members</h2>
+										<!-- <h2 class="major">Our Team Members</h2> -->
                                     </div>
-                                </div>
+                                </div> 
                                 <div class="inner">
                                     <div class="team">
 										<div class="row">
@@ -34,7 +104,7 @@
                                           </div>
                                             <div class="column">
                                                         <div class="card">
-                                                          <img src="https://2019.igem.org/wiki/images/5/5c/T--Oxford--Blanc_Pic2.png" alt="Natasha" style="width:100%">
+                                                          <img src="https://2019.igem.org/wiki/images/3/3a/T--Oxford--Tasha_Team_Photo_Crop.jpeg" alt="Natasha" style="width:100%">
                                                           <div class="container">
                                                             <h1>Natasha Cooke</h1>
                                                             <h2>Co-Leader</h2>
@@ -66,7 +136,7 @@
                                                     alt="Jonathan" style="width:100%">
                                                   <div class="container">
                                                     <h1>Jonathan Chan</h1>
-                                                    <h2>Publications Officer & <br/> Modelling Consultant</h2>
+                                                    <h2>Publications Officer</h2>
                                                     <p class="title">1st Year Biochemistry</p>
                                                   </div>
                                                 </div>
@@ -104,17 +174,17 @@
                                                                   <img src="https://2019.igem.org/wiki/images/7/76/T--Oxford--Kathy_Team_Photo.jpg" alt="Katharina" style="width:100%">
                                                                   <div class="container">
                                                                     <h1>Katharina Novikov</h1>
-                                                                    <h2>Social Media Officer</h2>
+                                                                    <h2>Human Practices Officer</h2>
                                                                     <p class="title">1st Year Biological Sciences</p>
                                                                   </div>
                                                                 </div>
                                                               </div>
                                                         <div class="column">
                                                             <div class="card">
-                                                              <img src="https://2019.igem.org/wiki/images/5/5c/T--Oxford--Blanc_Pic2.png" alt="Minakshi" style="width:100%">
+                                                              <img src="https://2019.igem.org/wiki/images/0/0b/T--Oxford--Mishi_Team_Photo_Crop.jpeg" alt="Minakshi" style="width:100%">
                                                               <div class="container">
                                                                 <h1>Minakshi Ashok</h1>
-                                                                <h2>Modelling Coordinator</h2>
+                                                                <h2>Modelling Leader</h2>
                                                                 <p class="title">2nd Year Engineering</p>
                                                               </div>
                                                             </div>
@@ -134,8 +204,8 @@
                                             </div>
                             </section>
              </section>
-                    <section id="footer">
-						<div class="inner">
+                    <!-- <section id="footer"> 
+						<div class="inner"> -->
 							<!--h2 class="major">Get in touch</h2-->
 							<!--<p>Cras mattis ante fermentum, malesuada neque vitae, eleifend erat. Phasellus non pulvinar erat. Fusce tincidunt, nisl eget mattis egestas, purus ipsum consequat orci, sit amet lobortis lorem lacus in tellus. Sed ac elementum arcu. Quisque placerat auctor laoreet.</p>
 							<form method="post" action="#"--->
@@ -157,28 +227,30 @@
 									<li><input type="submit" value="Send Message" /></li>
 								</ul>
 							</form-->
-							<ul class="contact">
-                                <h2 class="major"> Contact Us </h2>
+						<!--	<ul class="contact">
+                                <h2 class="major"> Contact Us </h2> -->
 								<!--li class="icon solid fa-home"-->
-                                <p> <font size=5> <u>Our Address</u></font><br/>
+                                <!-- <p> <font size=5> <u>Our Address</u></font><br/>
 									Biochemistry Department<br/>
 									South Parks Road<br/>
-									Oxford, UK, OX1 2DL</p>
-								<!--/li-->
-								<!--li class="icon solid--><p>Email us:  <a href="mailto:oxfordigem@bioch.ox.ac.uk">oxfordigem@bioch.ox.ac.uk</a></br>
-								<!--li class="icon brands fa-facebook-f"-->FaceBook:  <a href="https://www.facebook.com/oxfordigem">facebook.com/oxfordigem</a><br/>
-								<!--li class="icon brands fa-instagram"-->Instagram:  <a href="https://www.instagram.com/oxfordigem">instagram.com/oxfordigem</a><br/>
-                                <!--li class="icon brands fa-twitter"-->Twitter: <a href="https://www.twitter.com/OxfordiGEM">twitter.com/OxfordiGEM</a><br/></p>
-							</ul>
+									Oxford, UK, OX1 2DL</p> -->
+                <!--/li-->
+                
+								<!--li class="icon solid--> <!-- <p>Email us:  <a href="mailto:oxfordigem@bioch.ox.ac.uk">oxfordigem@bioch.ox.ac.uk</a></br> -->
+								<!--li class="icon brands fa-facebook-f"--> <!-- FaceBook:  <a href="https://www.facebook.com/oxfordigem">facebook.com/oxfordigem</a><br/> -->
+								<!--li class="icon brands fa-instagram"--> <!-- Instagram:  <a href="https://www.instagram.com/oxfordigem">instagram.com/oxfordigem</a><br/> -->
+                                <!--li class="icon brands fa-twitter"--> <!-- Twitter: <a href="https://www.twitter.com/OxfordiGEM">twitter.com/OxfordiGEM</a><br/></p> -->
+             <!-- </ul>
+              
 							<ul class="copyright">
 								<li>iGEM Team Oxford 2019</li>
 							</ul>
 						</div>
-					</section>
+					</section> */
 
 			</div>
 
-			</div>
+			</div> -->
 
 		<!-- Scripts -->
 			<script src="https://2019.igem.org/Team:Oxford/jqueryminjs?action=raw&amp;ctype=text/javascript"></script>
@@ -200,21 +272,26 @@
           text-align:center;
           margin-bottom: 32px;
         }
+        
+        body {
+          font-family: "Josefin Sans";
+        }
 
-        /* Four columns side by side */
+        /* Three columns side by side */
         .column {
-          float: center;
-          width: 33%;
+          float: left;
+          width: 28%;
           margin-bottom: 16px;
-          padding: 0 1.5em;
+          padding: 0 3em;
         }
 
         /* Three rows down */
         .row {
             float: top;
-            max-height: 80%
+            max-height: 80%;
             margin-top: 16px;
             margin-bottom: 16px;
+            margin-left: 175px;
             padding: 0 8px;
         }
         
@@ -239,13 +316,48 @@
         
         /* Some left and right padding inside the container */
         .container {
-          padding: 0 16px;
-          font-family: "Josefin Sans";
+          padding: 0 0px !important;
+          font-family: "Josefin Sans" !important;
+
         }
-        .container h2 {font-size:1em !important;
-        color:white !important;
-        text-align: left !important;}
-        .container p {font-size:0.8em !important;}
+
+        .container h1 {
+          font-size: 1.5em !important;
+          text-align: left !important;
+          font-family: "Josefin Sans" !important;
+          color: black !important;
+          display: block;
+          margin-block-start: 0.83em;
+          margin-block-end: 0.83em;
+          margin-inline-start: 0px;
+          margin-inline-end: 0px;
+          font-weight: bold;
+        }
+
+   
+        .container h2 {
+          font-size: 1em !important;
+          color: black !important;
+          text-align: left !important;
+          font-family: "Josefin Sans" !important;
+          display: block;
+          margin-block-start: 0.83em;
+          margin-block-end: 0.83em;
+          margin-inline-start: 0px;
+          margin-inline-end: 0px;
+          font-weight: bold;
+        }
+        .container p {
+          font-size: 0.8em !important;
+          font-family: "Josefin Sans" !important;
+          color:black !important;
+          display: block;
+          margin-block-start: 1em;
+          margin-block-end: 1em;
+          margin-inline-start: 0px;
+          margin-inline-end: 0px;
+        }
+
         /* Clear floats */
         .container::after, .row::after {
           content: "";
@@ -267,3 +379,4 @@
         </style>
 
 </html>
+{{Oxford/Footer}}
