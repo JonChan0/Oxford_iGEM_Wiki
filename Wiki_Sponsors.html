@@ -1,0 +1,213 @@
+{{Oxford}}
+<html lang="en">
+
+<script>
+    // allow button on the black menu bar to show/hide the side menu
+    function hide_show_menu() {
+  
+      // in case you preview mode is selected, the menu is hidden for better visibility 
+      if (window.location.href.indexOf("submit") >= 0) {
+        $(".igem_2019_menu_wrapper").hide();
+      }
+      // if the black menu bar has been loaded
+        if (document.getElementById('bars_item')) {
+        // when the "bars_item" has been clicked
+        $("#bars_item").click(function() {
+          $("#sideMenu").hide();
+          // show/hide the menu wrapper
+          $(".igem_2019_menu_wrapper").fadeToggle("100");
+        });   
+        } 
+      // because the black menu bars loads at a different time than the rest of the page, this function is set on a time out so it can run again in case it has not been loaded yet
+      else {
+            setTimeout(hide_show_menu, 15);
+      }
+    }
+</script>
+
+<head> 
+    <meta charset="utf-8">
+    <!-- This tells the browser that your page is responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> 
+          <!-- This is from CSS templates -->
+    <!--<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">-->
+    
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,900italic,900,700italic,700,600italic,600,400italic,300italic,300,200italic" rel="stylesheet" type ='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:200,300,400' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+    <!--<script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>-->
+  
+    <!-- Allows you to work offline with VSCode_Html_Preview-->
+    <link rel="stylesheet" type="text/css" href="cssbootstrap.css" >
+    <link rel="stylesheet" type="text/css" href="Main.css" >
+    
+
+    <!-- Latest compiled and minified CSS -->
+    <!-- <link rel="stylesheet" href="https://2019.igem.org/Team:Oxford/cssbootstrap?action=raw&amp;ctype=text/css">
+    <link rel="stylesheet" href="https://2019.igem.org/Team:Oxford/maincss?action=raw&amp;ctype=text/css" />
+    --> 
+  
+    <!-- Latest compiled JavaScript -->
+    <!-- <script src="https://2018.igem.org/Team:Oxford/scripts/bootstrapminjs?action=raw&ctype=text/javascript"></script> -->
+     
+     <!-- Bootstrap core JavaScript -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+     <!-- <script src="https://2019.igem.org/Team:Oxford/bootstrapminjs?action=raw&ctype=text/javascript"></script> -->
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    
+  </head>
+ 
+<!-- THIS IS WHERE THE HTML BEGINS -->
+
+<body>
+
+    <section id="banner">
+        <div class="inner" style="background-image: url('https://2019.igem.org/wiki/images/d/d7/T--Oxford--Team_Photo_Mentors.png'); background-size: cover;">
+          <div class="translucent-back" style="height: 400px;">
+            <div class= "hero-text"> 
+              <h1> Sponsorship </h1>
+              </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="n1">
+        <div class="container">
+          <div class="row">
+            <div class=".col-md-8 .offset-md-2">
+  
+  <h2>Thank you!</h2>
+   
+      <p>We are extremely grateful to our generous sponsors for their financial and material support. Together they have given us the opportunity to participate in the iGEM competition and to attend the Giant Jamboree.</p> <br><br>
+  
+  <h2>Financial Sponsors</h2>
+
+  <figure>
+    <center>
+    <img src="https://2019.igem.org/wiki/images/3/34/T--Oxford--BBSRC.jpeg" style ="width:40%" class="center">
+    </center>
+    </figure><br>
+  
+  <br><br>
+  BBSRC is part of UK Research and Innovation, a new body which works in partnership with universities, research organisations, businesses, charities, and government to create the best possible environment for research and innovation to flourish. 
+  <br><br>
+
+  <figure>
+    <center>
+    <img src="https://2019.igem.org/wiki/images/4/40/T--Oxford--Wellcome.png" style ="width:40%" class="center">
+    </center>
+    </figure><br>
+  
+  <br><br>
+  Wellcome exists to improve health by helping great ideas to thrive. 
+They support researchers, take on big health challenges, campaign for better science, and help everyone get involved with science and health research.
+  <br><br>
+
+  <figure>
+    <center>
+    <img src="https://2019.igem.org/wiki/images/6/61/T--Oxford--Royal_Society.png" style ="width:40%" class="center">
+    </center>
+    </figure><br>
+  
+  <br><br>
+  The Royal Society is a Fellowship of many of the world's most eminent scientists and is the oldest scientific academy in continuous existence. 
+The Society’s fundamental purpose, reflected in its founding Charters of the 1660s, is to recognise, promote, and support excellence in science and to encourage the development and use of science for the benefit of humanity.
+  <br><br>
+
+  <figure>
+    <center>
+    <img src="https://2019.igem.org/wiki/images/2/2e/T--Oxford--ABVista.png" style ="width:40%" class="center">
+    </center>
+    </figure><br>
+  
+  <br><br>
+  AB Agri is the agricultural division of Associated British Foods (ABF plc) - one of Europe’s largest food and retail companies, with a market capitalisation of £25 billion.
+
+  AB Vista aims to bring a broader knowledge base to the global feed industry through close collaboration with customers and academics, identifying new and exciting opportunities for improved feed and animal performance.  
+  <br><br>
+
+  <h2> Equipment & Software</h2>
+
+  <figure>
+    <center>
+    <img src="https://2019.igem.org/wiki/images/c/c0/T--Oxford--Dept_Biochem.png" style ="width:40%" class="center">
+    </center>
+    </figure><br>
+  
+  <br><br>
+  The Biochemistry Department has been particularly generous in giving us permission to use a lot of their equipment, for example, thermocyclers, plate readers and gel visualisation equipment. They have also provided us with chemicals, glassware and other crucial materials. 
+  <br><br>
+
+  <figure>
+    <center>
+    <img src="https://2019.igem.org/wiki/images/6/64/T--Oxford--SnapGene.jpeg" style ="width:40%" class="center">
+    </center>
+    </figure><br>
+  
+  <br><br>
+  SnapGene offers the fastest and easiest way to plan, visualize, and document your molecular biology procedures.
+  <br><br>
+
+  <figure>
+    <center>
+    <img src="https://2019.igem.org/wiki/images/f/f6/T--Oxford--IDT.png" style ="width:40%" class="center">
+    </center>
+    </figure><br>
+  
+  <br><br>
+  Integrated DNA Technologies, Inc., is the supplier of custom nucleic acids, serving the areas of academic research, biotechnology, clinical diagnostics, and pharmaceutical development. 
+  <br><br>
+
+
+  <figure>
+    <center>
+    <img src="https://2019.igem.org/wiki/images/6/66/T--Oxford--New_England_BioLabs.png" style ="width:40%" class="center">
+    </center>
+    </figure><br>
+  
+  <br><br>
+  Established in the mid 1970's, New England Biolabs, Inc. (NEB) is an industry leader in the discovery and production of enzymes for molecular biology applications and now offers the largest selection of recombinant and native enzymes for genomic research.
+  <br><br>
+
+  <figure>
+    <center>
+    <img src="https://2019.igem.org/wiki/images/4/43/T--Oxford--Source_Bioscience.png" style ="width:40%" class="center">
+    </center>
+    </figure><br>
+  
+  <br><br>
+  Source BioScience Limited is an international provider of integrated state of the art Laboratory Services and Products.
+  <br><br>
+
+  <figure>
+    <center>
+    <img src="https://2019.igem.org/wiki/images/4/46/T--Oxford--BMG.jpeg" style ="width:40%" class="center">
+    </center>
+    </figure><br>
+  
+  <br><br>
+  BMG Labtech is a leading provider of high-quality, innovative and reliable Microplate readers and Microplate reader accessories.
+  <br><br>
+
+  <h2>Departments</h2>
+   
+      <p>iGEM is a multidisciplinary endeavour and members of our team study a wide range of subjects. The Biochemistry Department has contributed towards the cost for the five biochemistry students on our team, as well as providing lab space and equipment for us to use over the summer. 
+        We are also grateful to the for their generosity of the departments of engineering science, plant sciences, zoology and to the Sir William Dunn School of Pathology. 
+        </p> <br><br>
+
+  <h2>Colleges</h2>
+   
+      <p>Our team members are all based at different colleges. We are very thankful to our colleges for providing us with accommodation over the summer as well as awarding a number of travel grants, that have allowed us to travel to Boston for the iGEM jamboree. So, we would like to acknowledge the following colleges for their support: 
+        </p> <br><br>
+
+</section>
+
+          
+</body>
+</html>
+{{Oxford/Footer}}

@@ -1,0 +1,162 @@
+{{Oxford}}
+<html lang="en">
+
+<script>
+    // allow button on the black menu bar to show/hide the side menu
+    function hide_show_menu() {
+  
+      // in case you preview mode is selected, the menu is hidden for better visibility 
+      if (window.location.href.indexOf("submit") >= 0) {
+        $(".igem_2019_menu_wrapper").hide();
+      }
+      // if the black menu bar has been loaded
+        if (document.getElementById('bars_item')) {
+        // when the "bars_item" has been clicked
+        $("#bars_item").click(function() {
+          $("#sideMenu").hide();
+          // show/hide the menu wrapper
+          $(".igem_2019_menu_wrapper").fadeToggle("100");
+        });   
+        } 
+      // because the black menu bars loads at a different time than the rest of the page, this function is set on a time out so it can run again in case it has not been loaded yet
+      else {
+            setTimeout(hide_show_menu, 15);
+      }
+    }
+</script>
+
+<head> 
+    <meta charset="utf-8">
+    <!-- This tells the browser that your page is responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> 
+          <!-- This is from CSS templates -->
+    <!--<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">-->
+    
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,900italic,900,700italic,700,600italic,600,400italic,300italic,300,200italic" rel="stylesheet" type ='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:200,300,400' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+    <!--<script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>-->
+  
+    <!-- Allows you to work offline with VSCode_Html_Preview-->
+    <link rel="stylesheet" type="text/css" href="cssbootstrap.css" >
+    <link rel="stylesheet" type="text/css" href="Main.css" >
+    
+
+    <!-- Latest compiled and minified CSS -->
+    <!-- <link rel="stylesheet" href="https://2019.igem.org/Team:Oxford/cssbootstrap?action=raw&amp;ctype=text/css">
+    <link rel="stylesheet" href="https://2019.igem.org/Team:Oxford/maincss?action=raw&amp;ctype=text/css" />
+    --> 
+  
+    <!-- Latest compiled JavaScript -->
+    <!-- <script src="https://2018.igem.org/Team:Oxford/scripts/bootstrapminjs?action=raw&ctype=text/javascript"></script> -->
+     
+     <!-- Bootstrap core JavaScript -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+     <!-- <script src="https://2019.igem.org/Team:Oxford/bootstrapminjs?action=raw&ctype=text/javascript"></script> -->
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    
+  </head>
+ 
+<!-- THIS IS WHERE THE HTML BEGINS -->
+
+<body>
+
+    <section id="banner">
+        <div class="inner" style="background-image: url('https://2019.igem.org/wiki/images/d/d7/T--Oxford--Team_Photo_Mentors.png'); background-size: cover;">
+          <div class="translucent-back" style="height: 400px;">
+            <div class= "hero-text"> 
+              <h1> Attributions </h1>
+              </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="n1">
+        <div class="container">
+          <h2>Attributions<br></h2>
+          <div class="row team-profile">
+          <div class="col-lg-3 col-sm-3 text-left mb-4">
+            <img class="rounded-circle img-fluid d-block mx-auto profile-photo" src="" alt="">
+          </div>
+          <div class="col-lg-9 col-sm-9">
+            <div class="team-profile-header" style="text-align: left; margin-top: 0px;">Prof. Mark Howarth</div>
+            <div class="team-profile-job" style="text-align: left;">Oxford Department of Biochemistry</div>
+            <div class="team-profile-college">---</div>
+          </div>
+      </div>
+
+  </div>
+          </div>
+      </div>
+      </div>
+  
+      </section>
+  
+      <section id="n2">
+        <div class="container">
+          <div class="row">
+            <div class=".col-md-8 .offset-md-2">
+                       <h2>Individual Attributions<br><br></h2>
+              
+  <figure>
+  <center>
+  <img src="http://2018.igem.org/wiki/images/5/5a/T--Oxford--attributions.png" style="width:70%;"/>
+  </center>
+  </figure>
+  <br>      
+  
+  
+  
+            </div>
+          </div>
+        </div>
+      </section>
+  
+  
+      <section id="n3">
+        <div class="container">
+          <div class="row">
+            <div class=".col-md-8 .offset-md-2">
+                       <h2>Additional Thanks<br><br></h2>
+  <br>
+  <ul style="list-style-type:disc">
+   <li>Dr Simon Travis for helping us narrow down to focusing only on IBD
+  <li>Dr Hannah Chen for her insight into biomarkers
+  <li>Dr Tony Cutler for expert advice on autoimmune diseases
+  <li>Professor Chris O’Callaghan for highlighting key studies in biomarkers
+  <li>Andra Necula for detailed guidance regarding the use of metabolic markers to approximate immune cell populations in the intestine
+  <li>Dr Chris Butler for helping us understand patient perceptions
+  <li>Professor David Greaves for highlighting the importance of controlling IL-10 delivery
+  <li>Professor Luzheng Xue for advice on the molecular and cellular mechanisms involved in the pathogenesis of inflammatory diseases
+  <li>Yale Michaels for pointing us towards considering a patent
+  <li>Ben Reeves for his insights of creating a startup out of an iGEM project
+  <li>Jonathan Thomson from the Oxford Foundry for advising us on people to reach out to
+  <li>Michael Morrison for his insights into probiotic law and introducing us to Cell and Gene Therapy Catapult
+  <li>Christopher Huang for guiding us towards OUI for a patent application
+  <li>Leah Thompson for introducing us to Susan Campbell from OUI
+  <li>Susan Campbell for introducing us to the concepts of value proposition, business model canvas and for advising us on patents
+  <li>Christine Whyte for helping us understand the necessity of more data for a patent application
+  <li>Cell and Gene Therapy Catapult for teaching us about the intricacies of therapeutic manufacturing and logistics
+  <li>Barr research group for providing us with hydrogen peroxide to characterise the SoxR/S promoter library
+  </li>
+  </li>
+  </li>
+  <br>
+  <p>We would also like to thank the following organisations:</p>
+  <br>
+  <ul style="list-style-type:disc">
+  <li>Corpus, Somerville, Pembroke and UNIQ Summer Schools for allowing us to give presentations to their students
+  <li>New Scientist for allowing us to exhibit our work to a wide audience at New Scientist Live
+  <li>Oxford Museum of Natural History for allowing us to have a stall at a ‘meet the experts’ event, where we could teach the public about our system and synthetic biology
+  <li>Oxplore for inviting us to host a short podcast promoting iGEM and synthetic biology to a younger audience
+  <li>Vector Illustration based on works from <a rel="nofollow" href="https://www.vecteezy.com">vecteezy.com</a>
+  <br>
+  
+</body>
+</html>
+{{Oxford/Footer}}
