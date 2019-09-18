@@ -144,6 +144,7 @@
 
 @media (max-width: 761px){
 .dropdown-menu li a {
+    /* mobile dropdown list */
     background-color:#1c2427;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -153,7 +154,7 @@
 }
 }
 
-/* the color of the Dropdown on click */
+/* the color of the Dropdown on click - ? */
 .open .dropdown-toggle {
     background-color: #1c2427;
     list-style-type: none !important;
@@ -164,6 +165,7 @@
     border-radius: 0;
     -webkit-box-shadow: none;
     box-shadow: none;
+    /* when click dropdown-list normal display*/
     background-color: #1c2427;
     display:none;
     list-style-type: none !important;
@@ -177,9 +179,9 @@
    list-style: none !important;
 }
 
-/* the color of the dropdown links on hover */
+/* the color of the box around dropdown links on hover */
 .dropdown-menu li a:hover {
-    background-color: /*#2a363a */  #1c2427;
+    background-color: #1c2427;
     color: white;
     -o-transition:.5s;
    -ms-transition:.5s;
@@ -248,7 +250,8 @@
   -moz-transition:.5s;
   -webkit-transition:.5s;
   transition:.5s;
-  background-color:#1c2427;
+  /* color box around main dropdown goes when click on link */
+  background-color: #1c2427;
   color: white !important;
 }
 
@@ -256,6 +259,7 @@
     border: none;
 }
 
+/* ?? */
 .nav .open>a:hover, .nav a:focus {
     background-color: #1c2427;
 }
@@ -263,6 +267,7 @@
 @media (min-width: 979px) {
   ul.nav li.dropdown:hover > ul.dropdown-menu {
     display: block;
+    /* color of box around whole dropdown list box normal display */
     background-color: #1c2427;
     border-top: 2px solid #1c2427;
   animation-name: slidenavAnimation;
@@ -286,7 +291,6 @@
 }
 
 .open > .dropdown-menu {
-
 }
 @keyframes slidenavAnimation {
   from {
@@ -306,8 +310,12 @@
 }
 
 .navbar.scrolled {
-    background-color: rgba(255,255,255,0.9);
+    background-color: rgba(24, 30, 32, 0.9);
 }
+ul.nav li.dropdown:hover > ul.dropdown-menu {
+    /* color of box around whole dropdown list box normal display */
+    background-color: #1c2427;
+    
 
 @media (min-width: 1200px) {
     .container {
