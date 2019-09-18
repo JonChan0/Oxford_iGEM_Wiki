@@ -94,7 +94,10 @@
 										<div class="row">
                                         <div class="column">
                                             <div class="card">
-                                              <img src="https://2019.igem.org/wiki/images/e/ed/T--Oxford--David_Team_Photo.jpg" alt="David" style="width:100%">
+                                              <img src="https://2019.igem.org/wiki/images/e/ed/T--Oxford--David_Team_Photo.jpg" alt="David" style="width:100%" class="image">
+                                              <div class="middle">
+                                                <div class="quote">//////////////////</div>
+                                              </div>
                                               <div class="container">
                                                 <h1>David Schramm</h1>
                                                 <h2>Co-Leader</h2>
@@ -310,10 +313,48 @@
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
             transition: transform .3s ease;
         }
+
+        .image {
+          opacity: 1;
+          display: block;
+          width: 100%;
+          height: auto;
+          transition: .5s ease;
+          backface-visibility: hidden;
+        }
+
+        .middle {
+          transition: .5s ease;
+          opacity: 0;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+          text-align: center;
+        }
+
+        .quote {
+         background-color: #78a3c0;
+         color: white;
+         font-size: 1em;
+         font-family: "Josefin Sans";
+         padding: 16px 32px;
+        }
+
+        .card:hover .image{
+          opacity: 0.3;
+        }
+
+        
         .card:hover{
          transform: scale(1.05); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
         }
-        
+
+        .card:hover .middle {
+         opacity: 1;
+        }
+
         /* Some left and right padding inside the container */
         .container {
           padding: 0 0px !important;
