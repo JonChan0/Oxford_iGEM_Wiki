@@ -259,9 +259,9 @@
     border: none;
 }
 
-/* ?? */
+/* color of box around main dropdown when clicked */
 .nav .open>a:hover, .nav a:focus {
-    background-color: #1c2427;
+    background-color: #1c2427 !important;
 }
 
 @media (min-width: 979px) {
@@ -290,8 +290,7 @@
   }
 }
 
-.open > .dropdown-menu {
-}
+
 @keyframes slidenavAnimation {
   from {
     opacity: 0;
