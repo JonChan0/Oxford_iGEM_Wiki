@@ -314,7 +314,7 @@
 ul.nav li.dropdown:hover > ul.dropdown-menu {
     /* color of box around whole dropdown list box normal display */
     background-color: #1c2427;
-    
+}
 
 @media (min-width: 1200px) {
     .container {
@@ -368,7 +368,7 @@ ul.nav li.dropdown:hover > ul.dropdown-menu {
     margin: 6pt auto;
 }
 
-.img-reponsive {
+.img-responsive {
     margin-top: 6pt;
     margin-bottom: 6pt;
 
