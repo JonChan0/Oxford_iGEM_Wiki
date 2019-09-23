@@ -1,64 +1,22 @@
-<html>
-
-<body>
- <section>
-    <div class="loader loader-1">
-      <div class="line line1"></div>
-      <div class="line line2"></div>
-      <div class="line line3"></div>
-    </div>
-  </section>
-<style> 
-
-/* *,
-    *:before,
-    *:after {
-        - webkit-box-sizing: border-box;
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-    }
-    
-    body {
-        background: black;
-    }
-    
-    .container {
-        text-align: center;
-    }
-    
-    section {
-        width: 30%;
-        display: inline-block;
-        text-align: center;
-        min-height: 215px;
-        vertical-align: top;
-        margin: 1%;
-        background: #080915;
-        border-radius: 5px;
-        -webkit-box-shadow: 0px 0px 30px 1px #103136 inset;
-                box-shadow: 0px 0px 30px 1px #103136 inset;
-    }
-
-@media only screen and (max-width: 600px) {
-  section {
-    min-width: 350px;
-  }
-}
-
-*/
-    
-    .loader {
-        position: relative;
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+		<title>loader</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.loader {
+   position: relative;
         width: 60px;
         height: 60px;
         border-radius: 50%;
         margin: 75px;
+        top: 100px;
+        left: 41%;
         display: inline-block;
         vertical-align: middle;
-    }
-    
-    .loader-1 .line {
+}
+.loader-1 .line {
         width: 8px;
         position: absolute;
         border-radius: 5px;
@@ -87,15 +45,7 @@
         animation: line-grow 0.5s 0.4s ease alternate infinite;
     }
 
-     /*@-webkit-keyframes line-grow {
-  0% {
-    height: 0;
-  }
-  100% {
-    height: 75%;
-  }
-}*/
-    
+/* Safari */
 @-webkit-keyframes line-grow {
         0% {
             height: 0;
@@ -113,8 +63,43 @@
             height: 75%;
         }
     }
+    
+ #myDiv {
+  display: none;
+  text-align: center;
+ }
 </style>
 
-</body>
+</head>
+	
+<body onload="myFunction()">
+<h2>How To Create A Loader</h2>
 
+<section>
+    <div class="loader loader-1" id="loading">
+      <div class="line line1"></div>
+      <div class="line line2"></div>
+      <div class="line line3"></div>
+    </div>
+    
+  </section>
+ 
+<div style="display:none;" id="myDiv" class="animate-bottom">
+  <h2>Tada!</h2>
+  <p>Some text in my newly loaded page..</p>
+</div> 
+
+<script>
+var myVar;
+
+function myFunction() {
+  myVar = setTimeout(showPage, 1000);
+}
+
+function showPage() {
+  document.getElementById("loading").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}
+</script>
+	</body>
 </html>
