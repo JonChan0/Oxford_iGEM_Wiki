@@ -387,6 +387,11 @@ padding-right: 20px;
 
 }
 
+@font-face {
+    font-family: Source Sans Pro;
+    src: url("https://2019.igem.org/wiki/images/7/7a/T--Oxford--SourceSansPro.ttf");
+}
+
 #side {
     float: left;
 padding-right: 20px;
