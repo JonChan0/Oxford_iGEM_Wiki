@@ -1,0 +1,184 @@
+{{Oxford}}
+<html lang="en">
+
+<script>
+    // allow button on the black menu bar to show/hide the side menu
+    function hide_show_menu() {
+  
+      // in case you preview mode is selected, the menu is hidden for better visibility 
+      if (window.location.href.indexOf("submit") >= 0) {
+        $(".igem_2019_menu_wrapper").hide();
+      }
+      // if the black menu bar has been loaded
+        if (document.getElementById('bars_item')) {
+        // when the "bars_item" has been clicked
+        $("#bars_item").click(function() {
+          $("#sideMenu").hide();
+          // show/hide the menu wrapper
+          $(".igem_2019_menu_wrapper").fadeToggle("100");
+        });   
+        } 
+      // because the black menu bars loads at a different time than the rest of the page, this function is set on a time out so it can run again in case it has not been loaded yet
+      else {
+            setTimeout(hide_show_menu, 15);
+      }
+    }
+</script>
+
+<head> 
+    <meta charset="utf-8">
+    <!-- This tells the browser that your page is responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> 
+          <!-- This is from CSS templates -->
+    <!--<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">-->
+    
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,900italic,900,700italic,700,600italic,600,400italic,300italic,300,200italic" rel="stylesheet" type ='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:200,300,400' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+    <!--<script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>-->
+  
+    <!-- Allows you to work offline with VSCode_Html_Preview-->
+    <!-- <link rel="stylesheet" type="text/css" href="cssbootstrap.css" >
+    <link rel="stylesheet" type="text/css" href="Main.css" > -->
+    
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://2019.igem.org/Team:Oxford/cssbootstrap?action=raw&amp;ctype=text/css">
+    <link rel="stylesheet" href="https://2019.igem.org/Team:Oxford/maincss?action=raw&amp;ctype=text/css" />
+  
+    <!-- Latest compiled JavaScript -->
+    <!-- <script src="https://2018.igem.org/Team:Oxford/scripts/bootstrapminjs?action=raw&ctype=text/javascript"></script> -->
+     
+     <!-- Bootstrap core JavaScript -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+     <script src="https://2019.igem.org/Team:Oxford/bootstrapminjs?action=raw&ctype=text/javascript"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    
+     <style>
+        .loader {
+           position: relative;
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                margin: 75px;
+                top: 100px;
+                left: 41%;
+                display: inline-block;
+                vertical-align: middle;
+        }
+        .loader-1 .line {
+                width: 8px;
+                position: absolute;
+                border-radius: 5px;
+                bottom: 0;
+                background: -webkit-gradient(linear, left top, left bottom, from(#1ee95d), to(#5714ce));
+                background: -webkit-linear-gradient(top, #1ee95d, #5714ce);
+                background: -o-linear-gradient(top, #1ee95d, #5714ce);
+                background: linear-gradient(to bottom, #1ee95d, #5714ce);
+            }
+            
+            .loader-1 .line1 {
+                left: 0;
+                -webkit-animation: line-grow 0.5s ease alternate infinite;
+                animation: line-grow 0.5s ease alternate infinite;
+            }
+            
+            .loader-1 .line2 {
+                left: 20px;
+                -webkit-animation: line-grow 0.5s 0.2s ease alternate infinite;
+                animation: line-grow 0.5s 0.2s ease alternate infinite;
+            }
+            
+            .loader-1 .line3 {
+                left: 40px;
+                -webkit-animation: line-grow 0.5s 0.4s ease alternate infinite;
+                animation: line-grow 0.5s 0.4s ease alternate infinite;
+            }
+        
+        /* Safari */
+        @-webkit-keyframes line-grow {
+                0% {
+                    height: 0;
+                }
+                100% {
+                    height: 75%;
+                }
+            }
+            
+            @keyframes line-grow {
+                0% {
+                    height: 0;
+                }
+                100% {
+                    height: 75%;
+                }
+            }
+            
+         #myDiv {
+          display: none;
+          text-align: center;
+         }
+        </style>
+        
+  </head>
+ 
+<!-- THIS IS WHERE THE HTML BEGINS -->
+
+<body onload="myFunction()">
+
+    <section>
+    <div class="loader loader-1" id="loading">
+      <div class="line line1"></div>
+      <div class="line line2"></div>
+      <div class="line line3"></div>
+    </div>
+    
+  </section>
+
+  <div style="display:none;" id="myDiv" class="animate-bottom">
+    <section id="banner">
+        <div class="inner" style="background-image: url('https://2019.igem.org/wiki/images/6/6b/T--Oxford--Sponsors_Bear.jpeg'); background-size: cover;">
+          <div class="translucent-back" style="height: 400px;">
+            <div class= "hero-text"> 
+              <h1> Sponsorship </h1>
+              </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="n1">
+        <div class="container">
+          <div class="row">
+            <div class=".col-md-8 .offset-md-2">
+  
+
+
+</section>
+<style>
+    .column {
+  float: left;
+  width: 25%;
+  padding: 5px;
+}
+</style>
+</div>
+<script>
+var myVar;
+
+function myFunction() {
+  myVar = setTimeout(showPage, 1000);
+}
+
+function showPage() {
+  document.getElementById("loading").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}
+</script>
+</body>
+</html>
+{{Oxford/Footer}}
