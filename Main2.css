@@ -390,7 +390,14 @@ padding-right: 20px;
 @font-face {
     font-family: Source Sans Pro;
     src: url("https://2019.igem.org/wiki/images/7/7a/T--Oxford--SourceSansPro.ttf");
+    font-family: Josefin Sans;
+    src: url("https://2019.igem.org/wiki/images/f/f4/T--Oxford--JosefinSans.ttf");
+    font-family: Montserrat;
+    src: url("https://2019.igem.org/wiki/images/f/f5/T--Oxford--Montserrat.ttf");
+    font-family: Font Awesome;
+    src: url("https://2019.igem.org/wiki/images/7/79/T--Oxford--FontAwesomeMinCSS.ttf")
 }
+
 
 #side {
     float: left;
