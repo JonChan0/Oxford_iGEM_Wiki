@@ -1,81 +1,78 @@
-<!DOCTYPE HTML>
 <html lang="en">
-	<head>
-		<meta http-equiv="content-type" content="text/html; charset=utf-8">
-		<title>loader</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-.loader {
-   position: relative;
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
-        margin: 75px;
-        top: 100px;
-        left: 41%;
-        display: inline-block;
-        vertical-align: middle;
-}
-.loader-1 .line {
-        width: 8px;
-        position: absolute;
-        border-radius: 5px;
-        bottom: 0;
-        background: -webkit-gradient(linear, left top, left bottom, from(#1ee95d), to(#5714ce));
-        background: -webkit-linear-gradient(top, #1ee95d, #5714ce);
-        background: -o-linear-gradient(top, #1ee95d, #5714ce);
-        background: linear-gradient(to bottom, #1ee95d, #5714ce);
-    }
-    
-    .loader-1 .line1 {
-        left: 0;
-        -webkit-animation: line-grow 0.5s ease alternate infinite;
-        animation: line-grow 0.5s ease alternate infinite;
-    }
-    
-    .loader-1 .line2 {
-        left: 20px;
-        -webkit-animation: line-grow 0.5s 0.2s ease alternate infinite;
-        animation: line-grow 0.5s 0.2s ease alternate infinite;
-    }
-    
-    .loader-1 .line3 {
-        left: 40px;
-        -webkit-animation: line-grow 0.5s 0.4s ease alternate infinite;
-        animation: line-grow 0.5s 0.4s ease alternate infinite;
-    }
+  <head>
+     <style>
+        .loader {
+           position: relative;
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                margin: 75px;
+                top: 100px;
+                left: 41%;
+                display: inline-block;
+                vertical-align: middle;
+        }
+        .loader-1 .line {
+                width: 8px;
+                position: absolute;
+                border-radius: 5px;
+                bottom: 0;
+                background: -webkit-gradient(linear, left top, left bottom, from(#1ee95d), to(#5714ce));
+                background: -webkit-linear-gradient(top, #1ee95d, #5714ce);
+                background: -o-linear-gradient(top, #1ee95d, #5714ce);
+                background: linear-gradient(to bottom, #1ee95d, #5714ce);
+            }
+            
+            .loader-1 .line1 {
+                left: 0;
+                -webkit-animation: line-grow 0.5s ease alternate infinite;
+                animation: line-grow 0.5s ease alternate infinite;
+            }
+            
+            .loader-1 .line2 {
+                left: 20px;
+                -webkit-animation: line-grow 0.5s 0.2s ease alternate infinite;
+                animation: line-grow 0.5s 0.2s ease alternate infinite;
+            }
+            
+            .loader-1 .line3 {
+                left: 40px;
+                -webkit-animation: line-grow 0.5s 0.4s ease alternate infinite;
+                animation: line-grow 0.5s 0.4s ease alternate infinite;
+            }
+        
+        /* Safari */
+        @-webkit-keyframes line-grow {
+                0% {
+                    height: 0;
+                }
+                100% {
+                    height: 75%;
+                }
+            }
+            
+            @keyframes line-grow {
+                0% {
+                    height: 0;
+                }
+                100% {
+                    height: 75%;
+                }
+            }
+            
+         #myDiv {
+          display: none;
+          text-align: center;
+         }
+        </style>
+        
+  </head>
+ 
+<!-- THIS IS WHERE THE HTML BEGINS -->
 
-/* Safari */
-@-webkit-keyframes line-grow {
-        0% {
-            height: 0;
-        }
-        100% {
-            height: 75%;
-        }
-    }
-    
-    @keyframes line-grow {
-        0% {
-            height: 0;
-        }
-        100% {
-            height: 75%;
-        }
-    }
-    
- #myDiv {
-  display: none;
-  text-align: center;
- }
-</style>
-
-</head>
-	
 <body onload="myFunction()">
-<h2>How To Create A Loader</h2>
 
-<section>
+    <section>
     <div class="loader loader-1" id="loading">
       <div class="line line1"></div>
       <div class="line line2"></div>
@@ -83,11 +80,8 @@
     </div>
     
   </section>
- 
-<div style="display:none;" id="myDiv" class="animate-bottom">
-  <h2>Tada!</h2>
-  <p>Some text in my newly loaded page..</p>
-</div> 
+
+  <div style="display:none;" id="myDiv" class="animate-bottom"> </div>
 
 <script>
 var myVar;
@@ -101,5 +95,6 @@ function showPage() {
   document.getElementById("myDiv").style.display = "block";
 }
 </script>
-	</body>
+</body>
 </html>
+{{Oxford/Footer}}
