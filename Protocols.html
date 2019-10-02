@@ -1,90 +1,10 @@
 {{Oxford}}
+{{Oxford/Loader}}
 
 <!-- This is where the page-specific HTML begins-->
 <html>
 
-    <style>
-        .loader {
-           position: relative;
-                width: 60px;
-                height: 60px;
-                border-radius: 50%;
-                margin: 75px;
-                top: 100px;
-                left: 41%;
-                display: inline-block;
-                vertical-align: middle;
-        }
-        .loader-1 .line {
-                width: 8px;
-                position: absolute;
-                border-radius: 5px;
-                bottom: 0;
-                background: -webkit-gradient(linear, left top, left bottom, from(#1ee95d), to(#5714ce));
-                background: -webkit-linear-gradient(top, #1ee95d, #5714ce);
-                background: -o-linear-gradient(top, #1ee95d, #5714ce);
-                background: linear-gradient(to bottom, #1ee95d, #5714ce);
-            }
-            
-            .loader-1 .line1 {
-                left: 0;
-                -webkit-animation: line-grow 0.5s ease alternate infinite;
-                animation: line-grow 0.5s ease alternate infinite;
-            }
-            
-            .loader-1 .line2 {
-                left: 20px;
-                -webkit-animation: line-grow 0.5s 0.2s ease alternate infinite;
-                animation: line-grow 0.5s 0.2s ease alternate infinite;
-            }
-            
-            .loader-1 .line3 {
-                left: 40px;
-                -webkit-animation: line-grow 0.5s 0.4s ease alternate infinite;
-                animation: line-grow 0.5s 0.4s ease alternate infinite;
-            }
-        
-        /* Safari */
-        @-webkit-keyframes line-grow {
-                0% {
-                    height: 0;
-                }
-                100% {
-                    height: 75%;
-                }
-            }
-            
-            @keyframes line-grow {
-                0% {
-                    height: 0;
-                }
-                100% {
-                    height: 75%;
-                }
-            }
-            
-         #myDiv {
-          display: none;
-          text-align: center;
-         }
-        </style>
-        
-  </head>
- 
-<!-- THIS IS WHERE THE HTML BEGINS -->
-
-<body onload="myFunction()">
-
-    <section>
-    <div class="loader loader-1" id="loading">
-      <div class="line line1"></div>
-      <div class="line line2"></div>
-      <div class="line line3"></div>
-    </div>
-    
-  </section>
-
-  <div style="display:none;" id="myDiv" class="animate-bottom">
+<body>
     <section id="banner">
         <div class="inner" style="background-image: url('https://2019.igem.org/wiki/images/6/6b/T--Oxford--Sponsors_Bear.jpeg'); background-size: cover;">
           <div class="translucent-back" style="height: 400px;">
@@ -292,18 +212,7 @@
 }
 </style>
 </div>
-<script>
-var myVar;
 
-function myFunction() {
-  myVar = setTimeout(showPage, 1000);
-}
-
-function showPage() {
-  document.getElementById("loading").style.display = "none";
-  document.getElementById("myDiv").style.display = "block";
-}
-</script>
 </body>
 </html>
 {{Oxford/Footer}}
