@@ -444,7 +444,8 @@ padding-top: 15px;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 50%
+    width: 50%;
+    height: 300px;
 }
 
 .faded_image_center_text {
@@ -462,16 +463,17 @@ padding-top: 15px;
 }
 
 .image_faded_overlay {
-    position: absolute;
-    width: 50%;
-    opacity: 0;
-    margin-left: auto;
-    margin-right: auto;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    max-height: inherit;
     display:block;
     transition: .5s ease;
     background-color: white;
+    opacity: 0.8;
 }
 
-.faded_image:hover .overlay {
+.faded_image:hover .image_faded_overlay {
     opacity: 0.5;
   }
