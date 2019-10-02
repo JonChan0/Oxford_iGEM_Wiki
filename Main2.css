@@ -443,7 +443,7 @@ padding-top: 15px;
     margin-left: auto;
     margin-right: auto;
     width: 50%;
-    height: inherit;
+    height: 200px;
 }
 
 .faded_image_center_text {
@@ -473,5 +473,5 @@ padding-top: 15px;
 }
 
 .faded_image:hover .image_faded_overlay {
-    opacity: ;
+    opacity: 0.5;
   }
