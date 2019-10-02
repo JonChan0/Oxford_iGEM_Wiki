@@ -439,14 +439,39 @@ padding-top: 15px;
 }
 
 .faded_image{
-    opacity: 0.5;
+    opacity: 0.75;
     filter: alpha(opacity=50);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%
 }
 
-.faded_image_center {
+.faded_image_center_text {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); 
     font-size: 18px;
 }
+
+.centre_container {
+    position: relative;
+    padding: 5px;
+    text-align: center;
+}
+
+.image_faded_overlay {
+    position: absolute;
+    width: 50%;
+    opacity: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display:block;
+    transition: .5s ease;
+    background-color: white;
+}
+
+.faded_image:hover .overlay {
+    opacity: 0.5;
+  }
