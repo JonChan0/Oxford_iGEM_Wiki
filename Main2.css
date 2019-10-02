@@ -1,5 +1,16 @@
 /****************************** DEFAULT WIKI SETTINGS  ****************************/
   
+@font-face {
+    font-family: "Source Sans Pro";
+    src: url("https://2019.igem.org/wiki/images/7/7a/T--Oxford--SourceSansPro.ttf") format("truetype");
+    font-family: "Josefin Sans";
+    src: url("https://2019.igem.org/wiki/images/f/f4/T--Oxford--JosefinSans.ttf") format("truetype");
+    font-family: "Montserrat";
+    src: url("https://2019.igem.org/wiki/images/f/f5/T--Oxford--Montserrat.ttf") format("truetype");
+    font-family: "Font Awesome";
+    src: url("https://2019.igem.org/wiki/images/7/79/T--Oxford--FontAwesomeMinCSS.ttf") format("truetype");
+}
+
    body,h1,h2,h3,h4,h5,h6,p, ul, li, td, th, figcaption, .team-profile-college {font-family: 'Source Sans Pro', sans-serif;
         margin-bottom: 0px; font-weight: 300; letter-spacing: normal;} 
 
@@ -387,16 +398,7 @@ padding-right: 20px;
 
 }
 
-@font-face {
-    font-family: Source Sans Pro;
-    src: url("https://2019.igem.org/wiki/images/7/7a/T--Oxford--SourceSansPro.ttf");
-    font-family: Josefin Sans;
-    src: url("https://2019.igem.org/wiki/images/f/f4/T--Oxford--JosefinSans.ttf");
-    font-family: Montserrat;
-    src: url("https://2019.igem.org/wiki/images/f/f5/T--Oxford--Montserrat.ttf");
-    font-family: Font Awesome;
-    src: url("https://2019.igem.org/wiki/images/7/79/T--Oxford--FontAwesomeMinCSS.ttf")
-}
+
 
 
 #side {
