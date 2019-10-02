@@ -438,14 +438,12 @@ padding-top: 15px;
     padding: 15px;
 }
 
-.faded_image{
-    opacity: 0.75;
-    filter: alpha(opacity=50);
+.faded_image {
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 50%;
-    height: 300px;
+    height: inherit;
 }
 
 .faded_image_center_text {
@@ -475,5 +473,5 @@ padding-top: 15px;
 }
 
 .faded_image:hover .image_faded_overlay {
-    opacity: 0.5;
+    opacity: ;
   }
