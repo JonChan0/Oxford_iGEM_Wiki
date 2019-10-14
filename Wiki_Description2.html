@@ -1,245 +1,57 @@
+{{Oxford/Loader}}
 {{Oxford}}
 <html lang="en">
 
-<script>
-    // allow button on the black menu bar to show/hide the side menu
-    function hide_show_menu() {
-  
-      // in case you preview mode is selected, the menu is hidden for better visibility 
-      if (window.location.href.indexOf("submit") >= 0) {
-        $(".igem_2019_menu_wrapper").hide();
-      }
-      // if the black menu bar has been loaded
-        if (document.getElementById('bars_item')) {
-        // when the "bars_item" has been clicked
-        $("#bars_item").click(function() {
-          $("#sideMenu").hide();
-          // show/hide the menu wrapper
-          $(".igem_2019_menu_wrapper").fadeToggle("100");
-        });   
-        } 
-      // because the black menu bars loads at a different time than the rest of the page, this function is set on a time out so it can run again in case it has not been loaded yet
-      else {
-            setTimeout(hide_show_menu, 15);
-      }
-    }
-</script>
-
-<head> 
-    <meta charset="utf-8">
-    <!-- This tells the browser that your page is responsive -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> 
-          <!-- This is from CSS templates -->
-    <!--<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">-->
-    
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,900italic,900,700italic,700,600italic,600,400italic,300italic,300,200italic" rel="stylesheet" type ='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Montserrat:200,300,400' rel='stylesheet'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-
-    <!--<script type="text/javascript" async
-      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
-    </script>-->
-  
-    <!-- Allows you to work offline with VSCode_Html_Preview-->
-    <link rel="stylesheet" type="text/css" href="cssbootstrap.css" >
-    <link rel="stylesheet" type="text/css" href="Main.css" >
-    
-
-    <!-- Latest compiled and minified CSS -->
-    <!-- <link rel="stylesheet" href="https://2019.igem.org/Team:Oxford/cssbootstrap?action=raw&amp;ctype=text/css">
-    <link rel="stylesheet" href="https://2019.igem.org/Team:Oxford/maincss?action=raw&amp;ctype=text/css" />
-    --> 
-  
-    <!-- Latest compiled JavaScript -->
-    <!-- <script src="https://2018.igem.org/Team:Oxford/scripts/bootstrapminjs?action=raw&ctype=text/javascript"></script> -->
-     
-     <!-- Bootstrap core JavaScript -->
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-     <!-- <script src="https://2019.igem.org/Team:Oxford/bootstrapminjs?action=raw&ctype=text/javascript"></script> -->
-     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-    
-     <style>
-        .loader {
-           position: relative;
-                width: 60px;
-                height: 60px;
-                border-radius: 50%;
-                margin: 75px;
-                top: 200px;
-                left: 41%;
-                display: inline-block;
-                vertical-align: middle;
-        }
-        .loader-1 .line {
-                width: 8px;
-                position: absolute;
-                border-radius: 5px;
-                bottom: 0;
-                background: -webkit-gradient(linear, left top, left bottom, from(#1ee95d), to(#5714ce));
-                background: -webkit-linear-gradient(top, #1ee95d, #5714ce);
-                background: -o-linear-gradient(top, #1ee95d, #5714ce);
-                background: linear-gradient(to bottom, #1ee95d, #5714ce);
-            }
-            
-            .loader-1 .line1 {
-                left: 0;
-                -webkit-animation: line-grow 0.5s ease alternate infinite;
-                animation: line-grow 0.5s ease alternate infinite;
-            }
-            
-            .loader-1 .line2 {
-                left: 20px;
-                -webkit-animation: line-grow 0.5s 0.2s ease alternate infinite;
-                animation: line-grow 0.5s 0.2s ease alternate infinite;
-            }
-            
-            .loader-1 .line3 {
-                left: 40px;
-                -webkit-animation: line-grow 0.5s 0.4s ease alternate infinite;
-                animation: line-grow 0.5s 0.4s ease alternate infinite;
-            }
-        
-        /* Safari */
-        @-webkit-keyframes line-grow {
-                0% {
-                    height: 0;
-                }
-                100% {
-                    height: 75%;
-                }
-            }
-            
-            @keyframes line-grow {
-                0% {
-                    height: 0;
-                }
-                100% {
-                    height: 75%;
-                }
-            }
-            
-         #myDiv {
-          display: none;
-          text-align: center;
-         }
-        </style>
-        
-  </head>
- 
 <!-- THIS IS WHERE THE HTML BEGINS -->
 
-<body onload="myFunction()">
-
-    <section>
-    <div class="loader loader-1" id="loading">
-      <div class="line line1"></div>
-      <div class="line line2"></div>
-      <div class="line line3"></div>
-    </div>
-    
-  </section>
-
-  <div style="display:none;" id="myDiv" class="animate-bottom">
+<body>
+  
     <section id="banner">
-        <div class="inner" style="background-image: url('https://2019.igem.org/wiki/images/d/d7/T--Oxford--Team_Photo_Mentors.png'); background-size: cover;">
+        <div class="inner" style="background-clip: url('https://2019.igem.org/wiki/images/0/06/T--Oxford--Bacterial_Growth.mov'); background-size: cover;">
           <div class="translucent-back" style="height: 400px;">
             <div class= "hero-text"> 
-              <h1> Project Description & Inspiration </h1>
+              <h1> Description & Project Inspiration </h1>
               </div>
           </div>
         </div>
       </section>
 
-
+      <section id="n1">
+        <div class="container">
+          <div class="row">
+            <div class=".col-md-8 .offset-md-2">
   
-        <!-- One -->
-        <section id="n1">
-                <div class="container">
-                  <div class="row">
-                    <div class=".col-md-8 .offset-md-2">
-                        <h2 class="major">The problem now</h2>
-                        <p> <i>C. difficile</i> infection (CDI) is the leading cause of hospital and nursing home acquired infection in the developed world. 
+<!-- Insert the HTML of your page here + Adjust your Banner Above-->
 
-                        Today, nearly half of all hospitalised patients will be prescribed antibiotics. These antibiotics drastically alter the gut flora, and patients become more susceptible to opportunistic bacteria like <i>C. difficile</i>. 
+              <h2 style="font-weight:bold;">
+                The problem now
+              </h2>
 
-                        Presently, patients over the age of 65 account for more than 80% of the deaths from <i>C. difficile</i> infection (CDI). Population ageing will inevitably increase the number of annual infections.</p>
-                    </div>
-                  </div>
-                </div>
-            </section>
+              <h4>
+                  <i> C. difficile</i> infection (CDI) is the leading cause of hospital and nursing home acquired infection in the developed world. Today, nearly half of all hospitalised patients are prescribed antibiotics. These antibiotics drastically alter the gut flora, killing both beneficial and pathogenic bacteria alike. Such a shift in the dynamics of the gut microbiome allows opportunistic bacteria like <i>C. difficile</i> to  propagate. The resulting toxins produced by <i>C. difficile</i>  toxins lead to extremely unpleasant symptoms such as diarrhoea, bowel perforation and severe dehydration. Presently, patients over the age of 65 account for more than 80% of the deaths from CDI. As such, our ever-aging populations coupled with the inevitable rise of antibiotic resistance makes <i>C. difficile</i> a major threat. 
+              </h4>
+          </div>
+          </div>
+          </div>
+          </section>
 
-        <!-- Two -->
-        <section id="n2">
-                <div class="container">
-                  <div class="row">
-                    <div class=".col-md-8 .offset-md-2">
-                        <h2 class="major">Our Solution</h2>
-                        <p>We hope to change these statistics with a new, revolutionary approach to <i>C. difficile</i>, which harnesses the power of probiotics and quorum sensing—ProQuorum.
+          <section id="n2" style="background-color: #f2f2f2ff; padding-bottom:5px;"">
+              <div class="container">
+                <div class="row">
+                  <div class=".col-md-8 .offset-md-2">
 
-                        We are designing our ProQuorum bacteria to be a super-probiotic. We are using Lactobacillus reuteri as our chassis which are naturally beneficial to the gut flora. 
 
-                        These bacteria will be engineered to target any <i>C. difficile</i> present in the gut. Using quorum sensing, the ProQuorum bacteria will detect <i>C. difficile</i> and subsequently release a <i>C. diff</i>-specific endolysin to kill the <i>C. difficile</i>.</p>
-                    </div>
-                  </div>
-                </div>
-            </section>
 
-        <!-- Three -->
-        <section id="n3">
-                <div class="container">
-                  <div class="row">
-                    <div class=".col-md-8 .offset-md-2">
-                        <h2 class="major">Why SynBio?</h2>
-                        <p>Synthetic biology allows for a specific, targeted approach, which should preserve the other beneficial gut bacteria. The ProQuorum detection system means <i>C. diff</i>-specific endolysin is only secreted when <i>C. difficile</i> is present and should only be able to destroy the <i>C. difficile</i> bacteria which should mitigate any off-target effects.</p>
-                    </div>
-                  </div>
-                </div>
-            </section>
 
-        <!-- Four -->
-        <section id="n4">
-                <div class="container">
-                  <div class="row">
-                    <div class=".col-md-8 .offset-md-2">
-                        <h2 class="major">What was the inspiration for our project?</h2>
-                        <p>When we first started brainstorming for our project, many of us were concerned about the ever-looming threat of antibiotic resistance. When we looked into it, we discovered that the Centres for Disease Control (CDC) had cited <i>Clostridioides difficile</i> as one of the 3 most “urgent threats” with regard to antimicrobial resistance. Of the three, it has the highest incidence of infections per year (CDC, 2015). So we took it upon ourselves to respond to the CDC’s call to arms.
 
-In addition, we realised that the fundamental basis behind any genetic machine is to process some input and in response, provide some output. As such, we envisioned a genetic machine that could detect some biomarker of <i>C. difficile</i> and then as a result, secrete a specific anti-<i>C. difficile</i> molecule, as we have designed.
-                                                               <h2 class="major">So how bad is <i>C. difficile</i>?</h2>
-
-<p>There are typically 500,000 infections per year in the US alone.
-        <i>C. difficile</i> infection (CDI) places a major burden on healthcare systems around the world with extra costs of around $4.8 billion p.a. In the US alone, it is linked to approximately 30,000 deaths per year (CDC, 2015)
-Additionally, CDI has a relatively high frequency of recurrence of approximately 20%-30% (Balsells et al. 2018). This makes it significantly more troublesome to treat, especially with regards to the proliferation of resistant strains.
-Furthermore, the formation of spores which are resistant to heat, acid, antibiotics and even bleach allows <i>C. difficile</i> a pathway through which it can survive antibiotic treatment and then spread to other individuals. Such spores are “plentiful in healthcare facilities” (Leffler et al. 2015) contributing to the patient-to-patient spread and recurrence rate.</p>
-
-<h2 class="major">How does our system work?</h2>
-
-<p>Engineered Lactobacillus reuteri (ProQuorum bacteria) to function as a genetic machine characterised by 
-<br> i) Input: Quorum sensing molecule of <i>C. difficile</i>
-<br> ii) Output: <i>C. difficile</i>-specific endolysin
-<br> Thus, our engineered bacteria can detect the localised presence of <i>C. difficile</i> and in response, secrete an endolysin molecule which specifically binds to <i>C. difficile</i> cell walls and cleaves the peptidoglycan molecules to cause lysis of the <i>C. difficile</i> cells.</p>
-                    </div>
-                    <h2 class="major">Our Project</h2>
-                    <p>We have approached our project from many angles, the links to these sections will appear as summer goes on</p>
-                </div>
-              </div>
-            </section>
-</div>
-<script>
-var myVar;
-
-function myFunction() {
-  myVar = setTimeout(showPage, 1000);
+<style>
+    .column {
+  float: left;
+  width: 25%;
+  padding: 5px;
 }
+</style>
 
-function showPage() {
-  document.getElementById("loading").style.display = "none";
-  document.getElementById("myDiv").style.display = "block";
-}
-</script>
 </body>
 </html>
-
 {{Oxford/Footer}}
