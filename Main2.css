@@ -11,13 +11,14 @@
     src: url("https://2019.igem.org/wiki/images/7/79/T--Oxford--FontAwesomeMinCSS.ttf") format("truetype");
 }
 
-   body,h1,h2,h3,h4,h5,h6,p, ul, li, td, th, figcaption, .team-profile-college {font-family: 'Source Sans Pro', sans-serif;
+   body,h1,h2,h3,h5,h6,p, ul, li, td, th, figcaption, .team-profile-college {font-family: 'Source Sans Pro', sans-serif;
         margin-bottom: 0px; font-weight: 300; letter-spacing: normal;} 
 
         body, html {
         height: 100% !important;
         line-height: 1.8 !important;
         }
+        
   
     #home_logo, #sideMenu { display:none; }
     #sideMenu, #top_title, .patrollink  {display:none;}
@@ -476,4 +477,8 @@ padding-top: 15px;
 
 .faded_image:hover .image_faded_overlay {
     opacity: 0.5;
+  }
+
+  h4 {
+      line-height:150%;
   }
