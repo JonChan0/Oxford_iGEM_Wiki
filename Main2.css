@@ -1,17 +1,17 @@
 /****************************** DEFAULT WIKI SETTINGS  ****************************/
   
 @font-face {
-    font-family: "Source Sans Pro" !important;
-    src: url("https://2019.igem.org/wiki/images/7/7a/T--Oxford--SourceSansPro.ttf") format("truetype") !important ;
+    font-family: "Source Sans Pro";
+    src: url("https://2019.igem.org/wiki/images/7/7a/T--Oxford--SourceSansPro.ttf") format("truetype");
 }
 @font-face { 
-    font-family: "Josefin Sans" !important;
-    src: url("https://2019.igem.org/wiki/images/f/f4/T--Oxford--JosefinSans.ttf") format("truetype") !important;
+    font-family: "Josefin Sans";
+    src: url("https://2019.igem.org/wiki/images/f/f4/T--Oxford--JosefinSans.ttf") format("truetype");
 }
 
 @font-face {
-    font-family: "Montserrat" !important;
-    src: url("https://2019.igem.org/wiki/images/f/f5/T--Oxford--Montserrat.ttf") format("truetype") !important;
+    font-family: "Montserrat";
+    src: url("https://2019.igem.org/wiki/images/f/f5/T--Oxford--Montserrat.ttf") format("truetype");
 
 }
     
