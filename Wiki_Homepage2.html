@@ -5,12 +5,12 @@
 <!-- THIS IS WHERE THE HTML BEGINS -->
 
 <body>
-  <section class="jumbotron jumbotron-fluid">
+  <section class="jumbotron jumbotron-fluid" style="margin-bottom:0px; padding-bottom:0px;">
         <video autoplay muted loop id="hero-video" style="filter: brightness(0%); width: 100%">
             <source src="https://2019.igem.org/wiki/images/c/c0/T--Oxford--InsideTheGut.mp4" type=video/mp4>
                 </video>
 
-                <div class="container">
+                <div class="container" style="margin-bottom:0px;"">
                     <img class="ProQuorum-logo" src="https://2019.igem.org/wiki/images/0/01/T--Oxford--LogoGradient.png">
                     <br>
                 </div>
@@ -22,38 +22,57 @@
                       text-shadow: 5px 5px 10px #2b2b2b;
                       position:absolute;
                       width:50%;
-                      text-align:center;">
+                      text-align:center;
+                      margin-bottom:0px">
                       Empowering probiotics with quorum sensing abilities to treat <i>C. difficile</i> infection
                     </div>
   </section> 
 
-      <section id="n1" style="background-color: grey;">
-        <div class="container">
+      <section id="n1" style="background-color: grey; padding-bottom:15px;">
+        <div class="centre-container">
           <div class="row">
             
-            <div class=".col-md-4">
-
+            <div class="col-md-3" style="border-right: 6px solid black;">
+              <h2> Bad Stat 1 </h2> 
             </div>
 
-            <div class=".col-md-4">
-
+            <div class="col-md-3" style="border-right: 6px solid black;">
+                <h2> Bad Stat 2 </h2> 
               </div>
 
-              <div class=".col-md-4">
-
+              <div class="col-md-3"style="border-right: 6px solid black;">
+                  <h2> Bad Stat 3 </h2> 
                 </div>
+
+              <div class="col-md-3">
+                  <h2> Bad Stat 4 </h2> 
+                </div>
+                
 
             </div>
           </div>
         </section>
 
-  
-<!-- Insert the HTML of your page here + Adjust your Banner Above-->
+
+        <section id="n2" style="background-color: #f2f2f2ff; padding-bottom:15px;">
+            <div class="container">
+              <div class="row">
+                  <div class=".col-md-8 .offset-md-2">
+
+                    <h2>Abstract</h2>
+
+                    <h4><i>Clostridioides difficile</i> is the single most significant cause of hospital-acquired infections in the US with 500,000 infections per year, characterized by inflammation, diarrhea, bowel perforation and potential death. The predominant treatment for <i>C. difficile</i> infection is antibiotic prescription which disrupts the gut microbiome and exacerbates resistance concerns. Our solution is to engineer a <i>Lactobacillus reuteri</i> probiotic chassis to detect the quorum signaling autoinducing peptide of <i>C. difficile</i> in the intestinal lumen. Detection uses the <i>C. difficile</i> two component signaling system, to induce secretion of a <i>C. difficile</i>-specific endolysin to cleave its cell wall and leave the remaining intestinal flora intact. Monte Carlo simulations were performed to analyze the population dynamics of both species and refine our system within the spatial constraints of the human gut topology. Our design offers a targeted therapeutic for <i>C. difficile</i> infection, opening the possibility of a new modular system to treat gastrointestinal bacterial infection.</h4>
+
+
+              </div>
+              </div>
+              </div>
+              </section>
 
 
 <style>
 
-.col-md-3 {
+/* .col-md-3 {
 	--x: 50%;
 	--y: 50%;
 	position: relative;
@@ -66,6 +85,7 @@
 	border: 2px solid transparent;
 	background: linear-gradient(#000, #000) padding-box, radial-gradient(farthest-corner at var(--x) var(--y), #00C9A7, #845EC2) border-box;
 }
+*/
 
 @media (max-width: 768px) {
     .jumbotron {
