@@ -493,3 +493,20 @@ padding-top: 15px;
       line-height:150%;
       font-family:"Source Sans Pro", sans-serif;
   }
+
+  .title_card {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: 20vw;
+  }
+
+  .title_card_text {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    font-size: 2vw;
+  }
+
