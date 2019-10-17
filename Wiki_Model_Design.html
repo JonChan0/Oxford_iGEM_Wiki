@@ -673,18 +673,208 @@
   <div class="container">
     <div class="row">
       <div class=".col-md-8 .offset-md-2">
+
+        <h2>Part III: Spatial Mathematical Model</h2>
             <h4>  
               Consider the following spatial outline of <i>C. difficile</i> being upregulated in the intestine.
             </h4>
-            <img src="" style="width:100%; height:auto">
+            <img src="" style="width:100%; height:auto" alt="Intestinal Render">
 
+            <h4>As MCell takes many computations into account such as diffusion and probabilistic simulations, it would require an unrealistic amount of computational power to model a truly realistic theoretical model at the correct timescale without any assumptions.
+            </h4>
             
+            <div class="panel-group">
+                <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" href="#Spatial_Assumptions">Assumptions</a>
+                  </h4>
+                </div>
+                <div id="Spatial_Assumptions" class="panel-collapse collapse">
+                  <centre><div class="panel-body">
+                      <h4>To obtain qualitative results from the spatial simulations, we made the following assumptions:</h4>
+                      <ul style="font-size: 18px;">
+                        <li>As the size of bacterial cells is minute relative to the intestine, we can ignore the curvature of the intestinal wall upon which the bacterial cells thrive.</li>
+                        <li>Kinetic rate constants are estimated such that 90% of the <i>C. difficile</i> population would be upregulated by 2-3 AIP molecules per cell.</li>
+                        <li>The efficiency of the AgrAC two-component regulatory system in our <i>L. reuteri</i> would be equal to that in <i>C. difficile</i></li>
+                        <li>Upregulated <i>C.difficile</i> does not produce AIP molecules.</li>
+                      </ul>
+                    </div></centre>
+                </div>
+                </div>
+                </div>
+
+                <div class="panel-group">
+                    <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                        <a data-toggle="collapse" href="#Kin_Eqs">Kinetic Equations</a>
+                      </h4>
+                    </div>
+                    <div id="Kin_Eqs" class="panel-collapse collapse">
+                      <centre><div class="panel-body">
+
+
+                          <div class="table-responsive">
+                              <table class="table">
+                                <thead>
+                                  <tr>
+                                    <th>Kinetic Rate Equation</th>
+                                    <th>Kinetic Rate Constant</th>
+                                    <th>Quantitative Value Modelled</th>
+
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>$$[NULL] \to M$$</td>
+                                    <td>$$m$$</td>
+                                  </tr>
+                                  <tr>
+                                      <td>$$M \to [NULL]$$</td>
+                                      <td>$$\delta_M$$</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+
+                        </div></centre>
+                    </div>
+                    </div>
+                    </div>
+
+                    <div class="panel-group">
+                        <div class="panel panel-default">
+                        <div class="panel-heading">
+                          <h4 class="panel-title">
+                            <a data-toggle="collapse" href="#Spatial_Results">Results</a>
+                          </h4>
+                        </div>
+                        <div id="Spatial_Results" class="panel-collapse collapse">
+                          <centre><div class="panel-body">
+
+                            </div></centre>
+                        </div>
+                        </div>
+                        </div>
+
+                        <div class="panel-group">
+                            <div class="panel panel-default">
+                            <div class="panel-heading">
+                              <h4 class="panel-title">
+                                <a data-toggle="collapse" href="#Spatial_Discussion">Discussion</a>
+                              </h4>
+                            </div>
+                            <div id="Spatial_Discussion" class="panel-collapse collapse">
+                              <centre><div class="panel-body">
+    
+                                </div></centre>
+                            </div>
+                            </div>
+                            </div>
+
+
+
       </div>
     </div>
   </div>
 </section>
 
- <section id="n4" style="padding-bottom: 15px;">
+
+<section id="n4" style="background-color: #f2f2f2ff; padding-bottom:15px;">
+<div class="container">
+  <div class="row">
+    <div class=".col-md-8 .offset-md-2">
+      <h2> Part IV: Secondary Amplification System</h2>
+
+      <h4>How then can we beat <i>C. difficile</i> at its own upregulation game?</h4>
+
+      <h4>One way is for the engineered <i>L. reuteri</i> cells to upregulate other <i>L. reuteri</i> cells once a small fraction of the population has been upregulated by <i>C. difficile</i>-regulated AIP. This can be accomplished by incorporating an additional signal secretion & detection system - a secondary amplification system.</h4>
+
+      <h4>To observe the efficacy of our engineered <i>L. reuteri</i> with the secondary amplification system, we incorporated new differential equations into our existing deterministic mathematical model <a href=#n2>here</a> and simulated this new integrated system.</h4>
+    
+      <div class="panel-group">
+          <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" href="#Secondary_Assumptions">Assumptions</a>
+            </h4>
+          </div>
+          <div id="Secondary_Assumptions" class="panel-collapse collapse">
+            <centre><div class="panel-body">
+
+              </div></centre>
+          </div>
+          </div>
+          </div>
+      
+      <div class="panel-group">
+          <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" href="#Secondary_Kinetic">Kinetic Equations & Kinetic Rate Constants</a>
+            </h4>
+          </div>
+          <div id="Secondary_Kinetic" class="panel-collapse collapse">
+            <centre><div class="panel-body">
+
+              </div></centre>
+          </div>
+          </div>
+          </div>
+
+          <div class="panel-group">
+              <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" href="#Secondary_Diff">Differential Equations</a>
+                </h4>
+              </div>
+              <div id="Secondary_Diff" class="panel-collapse collapse">
+                <centre><div class="panel-body">
+
+                  </div></centre>
+              </div>
+              </div>
+              </div>
+
+              <div class="panel-group">
+                  <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a data-toggle="collapse" href="#Secondary_Results">Results</a>
+                    </h4>
+                  </div>
+                  <div id="Secondary_Results" class="panel-collapse collapse">
+                    <centre><div class="panel-body">
+
+                      </div></centre>
+                  </div>
+                  </div>
+                  </div>
+
+                  
+              <div class="panel-group">
+                  <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a data-toggle="collapse" href="#Secondary_Discussion">Discussion</a>
+                    </h4>
+                  </div>
+                  <div id="Secondary_Discussion" class="panel-collapse collapse">
+                    <centre><div class="panel-body">
+
+                      </div></centre>
+                  </div>
+                  </div>
+                  </div>
+    </div>
+  </div>
+</div>
+</section>
+
+
+ <section id="n5" style="padding-bottom: 15px;">
                                             <div class="container">
                                               <div class="row">
                                                 <div class=".col-md-8 .offset-md-2">
