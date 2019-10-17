@@ -442,7 +442,6 @@ padding-top: 15px;
     left:50%;
     transform: translate(-50%, 50%);
     color:white;
-    z-index:-1;
 }
 
 .paragraph_divider {
@@ -512,3 +511,14 @@ padding-top: 15px;
   }
 
 
+  .banner_overlay_text {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    font-size: 5vw;
+    line-height: 5vw;
+    position:absolute;
+    width:50%;
+    text-align:center;
+    margin-bottom:0px;
+}
