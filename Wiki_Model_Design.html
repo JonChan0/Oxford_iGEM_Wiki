@@ -16,12 +16,12 @@
         </div>
       </section>
 
-      <section id="n1">
+      <section id="n1" style="padding-bottom:15px;">
         <div class="container">
           <div class="row">
             <div class=".col-md-8 .offset-md-2">
   
-              <h2 style="text-align:center;"> Part I: Justification of Dynamic Expression vs. Constitutive Expression of Endolysin</h2>
+              <h2 style="text-align:center;"> Part I: Dynamic Expression vs. Constitutive Expression of Endolysin</h2>
 
               <h4>
                   To build our genetic circuit in vitro, we first needed to establish whether expression of endolysin in the ProQuorum system would be constitutive or regulated.
@@ -43,7 +43,7 @@
                             <table class="table">
                               <thead>
                                 <tr>
-                                  <th> Endolysin Concentration Produced per <i>L. reuteri</i> cell /M CFU <sup>-1</sup>
+                                  <th> Endolysin Concentration Produced per <i>L. reuteri</i> cell /M CFU <sup>-1</sup></th>
                                 </tr>
                               </thead>
                               <tbody>
@@ -97,10 +97,10 @@
                           </div>
                           <div id="Assumption" class="panel-collapse collapse">
                             <centre><div class="panel-body">
-                              <ul style="font-size: 16px;">
+                              <ul style="font-size: 18px;">
                                 <li>Each <i>L. reuteri</i> cell produces the theoretically predicted concentration of endolysin.</li>
                                 <li>When endolysin production is induced in the dynamic expression system, all cells begin synthesis simultaneously.</li>
-                                <li>Stress on <i>L. reuteri</i> cells due to expression of sufficient endolysin for lysis of <C. difficile</i> approximates to a decrease in growth rate from 1.26 hr<sup>-1</sup> to 1.06 hr<sup>-1</sup></li>
+                                <li>Stress on <i>L. reuteri</i> cells due to expression of sufficient endolysin for lysis of <i>C. difficile</i> approximates to a decrease in growth rate from 1.26 hr<sup>-1</sup> to 1.06 hr<sup>-1</sup></li>
                               </ul>
                               </div></centre>
                           </div>
@@ -117,6 +117,45 @@
                               <div id="Diff_eq" class="panel-collapse collapse">
                                 <centre><div class="panel-body">
 
+                                    <div class="table-responsive">
+                                        <table class="table">
+                                          <thead>
+                                            <tr>
+                                              <th>Process Modelled</th>
+                                              <th>Differential Equation 1</th>
+                                              <th>Explanation 1</th>
+                                              <th>Differential Equation 2</th>
+                                              <th>Explanation 2</th>
+                                            </tr>
+                                          </thead>
+                                          <tbody>
+                                            <tr>
+                                              <td>Logistic Growth Model of <i>L. reuteri</i> - Constitutive Expression</td>
+                                              <td>$$\frac {dC}{dt} = r_{stressed} \times C \times (1- \frac {C}{N_{lr}})$$</td>
+                                              <td>Endolysin is being expressed constitutively.</td>
+                                              <td></td>
+                                              <td></td>
+                                            </tr>
+
+                                            <tr>
+                                              <td>Logistic Growth Model of <i>L. reuteri</i> - Dynamic Expression</td>
+                                              <td>$$\frac {dR1}{dt} = r_{wildtype} \times R \times (1- \frac {R}{N_{lr}})$$</td>
+                                              <td>If endolysin is not being expressed.</td>
+                                              <td>$$\frac {dR2}{dt} = r_{stressed} \times R \times (1- \frac {R}{N_{lr}})$$</td>
+                                              <td>If endolysin is being expressed.</td>
+                                            </tr>
+
+                                            <tr>
+                                              <td>Linear Expression of Endolysin</td>
+                                              <td>$$\frac {dEc}{dt} = k \times C$$</td>
+                                              <td>For constitutive expression by <i>L. reuteri</i>
+                                              <td>$$\frac {dEr}{dt} = k \times R$$</td>
+                                              <td>For dynamic expression by <i>L. reuteri</i>
+                                              
+                                            </tr>
+                                          </tbody>
+                                        </table>
+                                      </div>
 
                                   </div></centre>
                               </div>
@@ -127,6 +166,374 @@
 </div>
 </div>
 </section>
+
+<section id="n2" style="background-color: #f2f2f2ff; padding-bottom:15px;">
+  <div class="container">
+    <div class="row">
+      <div class=".col-md-8 .offset-md-2">
+      
+          <h2 style="text-align:center;">Part II: Mathematical Model of Two-Component Regulatory System (TCS)</h2>
+
+          <h4>Once we established that expression of the endolysin in our <i>L. reuteri</i> should by dynamic, we needed an external stimulus indicative of <i>C. difficile</i> infection and regulatory system that would transduce such a stimulus to cause induce endolysin expression.
+          </h4> <br>
+
+          <div class="panel-group">
+            <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" href="#Stim_Req">External Stimulus Requirements</a>
+              </h4>
+            </div>
+            <div id="Stim_Req" class="panel-collapse collapse">
+              <centre><div class="panel-body">
+                <h4>Given that our aim is to induce expression of endolysin upon detection of pathogenic <i>C. difficile</i> (as opposed to dormant colonies in the gut), the external signal must be a biomarker of the pathogen. Thus, an excellent candidate is the autoinducer peptide (AIP) molecule, a quorum sensing molecule produced by <i>C. difficile</i>  to trigger toxin expression in neighbouring cells.
+                </h4>
+                </div></centre>
+            </div>
+            </div>
+            </div>
+
+            <div class="panel-group">
+              <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" href="#Reg_Req">Regulatory System Requirements</a>
+                </h4>
+              </div>
+              <div id="Reg_Req" class="panel-collapse collapse">
+                <centre><div class="panel-body">
+                  <h4>
+                    For optimal function of our overall system, the regulatory system must meet certain requirements:
+                  </h4>
+        
+                  <ul style="font-size: 18px;">
+                    <li>Endolysin expression should be triggered when the surrounding population of <i>C. difficile</i> crosses a certain threshold.</li>
+                    <li>The regulatory system must be robust to temporary spikes of external signal(s).</li>
+                    <li>The timing and throughput of endolysin synthesis should be of sufficient magnitude that the surrounding population of <i>C. difficile</i> diminishes before toxin synthesis occurs significantly.</li>
+                  </ul>
+
+                  <h4>
+                    After defining the regulatory system requirements above, we then needed to find a suitable regulatory system - either natural or synthetic. As the AIP quorum signalling molecule of <i>C. Difficile </i> is relatively uncharacterised, it would be very difficult to engineer a custom receptor. Thus, it made sense to use the two-component AgrA/AgrC regulatory system already in-built into <i>C. difficile</i>.
+                  </h4>
+
+                  <h4>
+                    Thus, we chose to mathematically model this AIP detection and two-component AgrA/AgrC regulatory system to provide a model of our corresponding system in vitro.
+                  </h4>
+                  </div></centre>
+              </div>
+              </div>
+              </div>
+
+              <div class="panel-group">
+                <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" href="#Det">Deterministic Mathematical Model Primer</a>
+                  </h4>
+                </div>
+                <div id="Det" class="panel-collapse collapse">
+                  <centre><div class="panel-body">
+
+                      <h4>
+                        <i>C. difficile</i> uses a two-component system (TCS) to detect its signalling molecule (AIP). As seen below, when the AIP binds to its AgrC receptor, it triggers a phosphorylation cascade: the receptor first autophosphorylates; this causes the phosphorylation of AgrA protein which then dimerises. This dimerised AgrA protein acts as the specific transcription factor for the expression of CD27L endolysin.
+                    </h4> <br>
+                        <img src="https://2019.igem.org/wiki/images/e/e6/T--Oxford--Overall_Schematic_Diagram.png" style="width:80%; height:auto; display:block; margin-left:auto; margin-right:auto;">
+
+                  </div>
+
+                    </div></centre>
+                </div>
+                </div>
+
+
+                <div class="panel-group">
+                    <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                        <a data-toggle="collapse" href="#ModelAssumptions">Assumptions of Deterministic Model</a>
+                      </h4>
+                    </div>
+                    <div id="ModelAssumptions" class="panel-collapse collapse">
+                      <centre><div class="panel-body">
+                          <h4>Below are the assumptions:</h4>
+
+                        </div></centre>
+                    </div>
+                    </div>
+                    </div>
+
+                    <div class="panel-group">
+                        <div class="panel panel-default">
+                        <div class="panel-heading">
+                          <h4 class="panel-title">
+                            <a data-toggle="collapse" href="#KineticEquations">Kinetic Equations</a>
+                          </h4>
+                        </div>
+                        <div id="KineticEquations" class="panel-collapse collapse">
+                          <centre><div class="panel-body">
+
+                              <div class="panel-group">
+                                  <div class="panel panel-default">
+                                  <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                      <a data-toggle="collapse" href="#KineticEquationsTranscription">Transcription</a>
+                                    </h4>
+                                  </div>
+                                  <div id="KineticEquationsTranscription" class="panel-collapse collapse">
+                                    <centre><div class="panel-body">
+                            
+                              <div class="table-responsive">
+                                  <table class="table">
+                                    <thead>
+                                      <tr>
+                                        <th>Kinetic Rate Equation</th>
+                                        <th>Kinetic Rate Constant</th>
+
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td>$$[NULL] \to M$$</td>
+                                        <td>$$m$$</td>
+                                      </tr>
+                                      <tr>
+                                          <td>$$M \to [NULL]$$</td>
+                                          <td>$$\delta$$</td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+
+                            </div></centre>
+                        </div>
+                        </div>
+                        </div>
+
+                        <div class="panel-group">
+                            <div class="panel panel-default">
+                            <div class="panel-heading">
+                              <h4 class="panel-title">
+                                <a data-toggle="collapse" href="#KineticEquationsTranslationAgrC">Translation + Membrane Insertion of Cytoplasmic AgrC Receptor</a>
+                              </h4>
+                            </div>
+                            <div id="KineticEquationsTranslationAgrC" class="panel-collapse collapse">
+                              <centre><div class="panel-body">
+                      
+                        <div class="table-responsive">
+                            <table class="table">
+                              <thead>
+                                <tr>
+                                  <th>Kinetic Rate Equation</th>
+                                  <th>Kinetic Rate Constant</th>
+
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>$$M \to M + A$$</td>
+                                  <td>$$Ka$$</td>
+                                </tr>
+
+                                <tr>
+                                  <td>$$M \to M + C$$</td>
+                                  <td>$$Kc$$</td>
+                                </tr>
+
+                                <tr>
+                                  <td>$$C \to R$$</td>
+                                  <td>$$\alpha_C$$</td>
+                                </tr>
+
+                                <tr>
+                                  <td>$$A \to [NULL]$$</td>
+                                  <td>$$\delta_A$$</td>
+                                </tr>
+
+                                <tr>
+                                    <td>$$C \to [NULL]$$</td>
+                                    <td>$$\delta_C$$</td>
+                                </tr>
+
+                                <tr>
+                                  <td>$$R \to [NULL]$$</td>
+                                  <td>$$\delta_R$$</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+
+                      </div></centre>
+                  </div>
+                  </div>
+                  </div>
+
+                  <div class="panel-group">
+                      <div class="panel panel-default">
+                      <div class="panel-heading">
+                        <h4 class="panel-title">
+                          <a data-toggle="collapse" href="#AIPBinding">AIP Binding to Transmembrane AgrC Receptor</a>
+                        </h4>
+                      </div>
+                      <div id="AIPBinding" class="panel-collapse collapse">
+                        <centre><div class="panel-body">
+                
+                  <div class="table-responsive">
+                      <table class="table">
+                        <thead>
+                          <tr>
+                            <th>Kinetic Rate Equation</th>
+                            <th>Kinetic Rate Constant</th>
+                            <th>Inverse Kinetic Rate Constant</th>
+
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>$$S + R \to Rb$$</td>
+                            <td>$$k_{bind}$$</td>
+                            <td>$$k_{ibind}$$</td>
+                          </tr>
+
+                          <tr>
+                            <td>$$Rb \to [NULL]$$</td>
+                            <td>$$\delta_{Rb}$$</td>
+                            <td></td>
+                          </tr>
+
+
+                        </tbody>
+                      </table>
+                    </div>
+
+                </div></centre>
+            </div>
+            </div>
+            </div>
+
+            <div class="panel-group">
+                <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" href="#Autophosphorylation">Autophosphorylation of AgrC Receptor</a>
+                  </h4>
+                </div>
+                <div id="Autophosphorylation" class="panel-collapse collapse">
+                  <centre><div class="panel-body">
+          
+            <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Kinetic Rate Equation</th>
+                      <th>Kinetic Rate Constant</th>
+                      <th>Inverse Kinetic Rate Constant</th>
+
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>$$Rb \leftrightarrow Rbp$$</td>
+                      <td>$$k_{autop}$$</td>
+                      <td>$$k_{iautop}$$</td>
+                    </tr>
+
+
+                  </tbody>
+                </table>
+              </div>
+
+          </div></centre>
+      </div>
+      </div>
+      </div>
+
+      <div class="panel-group">
+          <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" href="#Phosphotransfer">Phosphotransfer to AgrA Protein</a>
+            </h4>
+          </div>
+          <div id="Phosphotransfer" class="panel-collapse collapse">
+            <centre><div class="panel-body">
+    
+      <div class="table-responsive">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Kinetic Rate Equation</th>
+                <th>Kinetic Rate Constant</th>
+                <th>Inverse Kinetic Rate Constant</th>
+
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>$$Rbp + A \leftrightarrow Rb + Ap$$</td>
+                <td>$$k_{phosph}$$</td>
+                <td>$$k_{dphosph}$$</td>
+              </tr>
+
+
+            </tbody>
+          </table>
+        </div>
+
+    </div></centre>
+</div>
+</div>
+</div>
+
+
+<div class="panel-group">
+    <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" href="#Dimer">Dimerisation of AgrA Protein</a>
+      </h4>
+    </div>
+    <div id="Dimer" class="panel-collapse collapse">
+      <centre><div class="panel-body">
+
+<div class="table-responsive">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Kinetic Rate Equation</th>
+          <th>Kinetic Rate Constant</th>
+          <th>Inverse Kinetic Rate Constant</th>
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$$2Ap \leftrightarrow Ap2$$</td>
+          <td>$$\phi_d$$</td>
+          <td>$$\phi_m$$</td>
+        </tr>
+
+
+      </tbody>
+    </table>
+  </div>
+
+</div></centre>
+</div>
+</div>
+</div>
+
+                            
+                            </div></centre>
+                        </div>
+                        </div>
+                        </div>
+          
+        </div>
+    </div>
+  </div>
+</section>
+
+    
 
 <style>
     .column {
