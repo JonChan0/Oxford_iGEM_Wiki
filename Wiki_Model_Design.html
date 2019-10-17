@@ -586,13 +586,13 @@
 
                                           <tr>
                                             <td>AgrA Protein</td>
-                                            <td>$$\frac {dAp}{dt} = k_{phosph} \times Rbp \times A - k_{dphosph} \times Rb \times Ap - 0.5 \times \phi_d \timesAp + \phip_m \times Ap2 - \delta_{Ap} \times Ap$$</td>
+                                            <td>$$\frac {dAp}{dt} = k_{phosph} \times Rbp \times A - k_{dphosph} \times Rb \times Ap - 0.5 \times \phi_d \times Ap + \phi_m \times Ap2 - \delta_{Ap} \times Ap$$</td>
                                             <td>Phosphotransfer/Dephosphorylation of AgrA Protein + Dimerisation/Undimerisation + Degradation of AgrA Protein</td>
                                           </tr>
 
                                           <tr>
                                             <td>Dimerised AgrA Protein</td>
-                                            <td>$$frac \{dAps}{dt} = -0.5 \times \phi_d \times Ap + \phi_m \times Ap2 - \delta_{Ap2} \times Ap2$$</td>
+                                            <td>$$\frac {dAps}{dt} = -0.5 \times \phi_d \times Ap + \phi_m \times Ap2 - \delta_{Ap2} \times Ap2$$</td>
                                             <td>Dimerisatio/Undimerisation of AgrA Protein + Degradation of Dimerised AgrA Protein</td>
                                           </tr>
                                         </tbody>
@@ -619,13 +619,99 @@
                                 </div>
                                 </div>
                                 </div>
+
+                                
+                            <div class="panel-group">
+                                <div class="panel panel-default">
+                                <div class="panel-heading">
+                                  <h4 class="panel-title">
+                                    <a data-toggle="collapse" href="#Discussion">Discussion</a>
+                                  </h4>
+                                </div>
+                                <div id="Discussion" class="panel-collapse collapse">
+                                  <centre><div class="panel-body">
+                                      <h4>
+                                          The two-component regulatory system employed by <i>C. difficile</i> has been confirmed via our model to meet the following design requirements:
+                                      </h4>
+                                      <ul style="font-size: 18px;">
+                                        <li>Endolysin expression is triggered only after the concentration of AIP crosses a certain threshold - a valid indicator of <i>C. difficile</i> population density.</li>
+                                        <li>Endolysin expression is robust to sudden and short-lived spikes in AIP concentration due to its intrinsic delay in response.</li>
+                                      </ul>
+
+                                      <h4>
+                                          However, the system fails to meet the following requirement:
+                                      </h4>
+
+                                      <ul style="font-size:18px;">
+                                        <li>The regulatory system fails to respond to AIP concentration levels before the <i>C. difficile</i> does, so endolysin synthesis by the <i>L. reuteri</i> occurs after toxin synthesis by surrounding <i>C. difficile</i>.</li>
+                                      </ul>
+            
+                                        <h4>
+                                            However, a more pressing issue to consider is the fact that our model so far has the intrinsic assumption of being perfectly mixed. In reality, the human gut topology violates this assumption because not only is it unlikely for <i>C. difficile</i> and <L. reuteri</i> to be well mixed together, but it is also unlikely for colonies of each bacterium to be in immediate proximity. 
+                                        </h4>
+
+                                        <h4>
+                                            Thus, there is a distinct possiblity that the <i>L. Reuteri</i> population may not receive sufficient AIP signal from a <i>C. difficile</i> colony located farther down the gut. Additionally, the ratio of <i>L. reuteri</i> to <i>C. difficile</i> in the human gut would be 1:100 at maximum. This further decreases the probability of upregulation of <i>L. reuteri</i> cells.
+                                        </h4>
+
+                                        <h4>
+                                            To examine how the relative spatial locations of the two bacterial populations would adversely affect the model, we qualitatively modelled the system response assuming various spatial orientations using the ‘Monte Carlo Simulator (MCell)’ addon to Blender. It uses “spatially realistic 3D cellular models and specialised Monte Carlo algorithms to simulate the movements and reactions of molecules within and between cells” (MCell.org).
+                                        </h4>
+
+
+                                    </div></centre>
+                                </div>
+                                </div>
+                                </div>
           
         </div>
     </div>
   </div>
 </section>
 
-
+ <section id="n4" style="padding-bottom: 15px;">
+                                            <div class="container">
+                                              <div class="row">
+                                                <div class=".col-md-8 .offset-md-2">
+                                    
+                                                    <h2 style="text-align: center;">
+                                                      References
+                                                      </h2>
+                                    
+                                                    <div class="table-responsive">
+                                                      <table class="table">
+                                                        <thead>
+                                                          <tr>
+                                                            <th>Reference</th>
+                                                          </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                          <tr>
+                                                            <td>“MCell Home.” MCell Home, https://mcell.org/.</td>
+                                                            
+                                                          </tr>
+                                
+                                                          <tr>
+                                                            <td>2</td>
+                                                            
+                                                              </td>
+                                                          </tr>
+                                                          <tr>
+                                                            <td>3</td>
+                                                            
+                                                          </tr>
+                                                          <tr>
+                                                          <td>4</td>
+                                                         
+                                                        </td>
+                                                      </tr>
+                                                        </tbody>
+                                                      </table>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </section>
 
     
 
