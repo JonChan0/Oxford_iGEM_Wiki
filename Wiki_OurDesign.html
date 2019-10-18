@@ -7,6 +7,9 @@
 <body>
   
     <section id="banner">
+      <div class="container" style="width:100%; padding-right:0; padding-left:0;">
+        <div class="row">
+          <div class="col-md-12">
         <div class="inner" style="background-image: url('https://2019.igem.org/wiki/images/6/6b/T--Oxford--Sponsors_Bear.jpeg'); background-size: cover;">
           <div class=image_faded_overlay" style="background-color: #FFBF00; opacity:0.2">
           <div class="translucent-back" style="height: 400px;">
@@ -16,16 +19,136 @@
           Our Design
         </div>
         </div>
+
+      </div>
+    </div>
+  </div>
       </section>
 
-      <section id="n1">
+      <section id="n1" style="padding-bottom:15px;">
         <div class="container">
           <div class="row">
             <div class=".col-md-8 .offset-md-2">
   
-<!-- Insert the HTML of your page here + Adjust your Banner Above-->
+              <h4>Our overall design incorporates both sensitive <i>C. difficile</i> detection and targeted killing.</h4>
 
+              <h4><i>C. difficile</i> uses quorum signalling to coordinate high population density with toxin synthesis. Such toxins, notably TcdA and TcdB<sup>1</sup>, cause inflammation of the gut lining and consequently, the symptoms of <i>C. difficile</i> infection (CDI). Such quorum signalling molecules thus provide an ideal biomarker for our detection system. Detection of these molecules (as opposed to the toxins) allows our ProQuorum system to detect high-density colonies of <i>C. difficile</i> before significant toxin release.</h4>
+
+              </div>
+              </div>
+              </div>
 </section>
+
+<section id="n2" style="background-color: #f2f2f2ff; padding-bottom:15px;">
+    <div class="container">
+      <div class="row">
+        <div class=".col-md-8 .offset-md-2">
+
+          <h2>Detection/Regulatory System</h2>
+
+          <h4><i>C. difficile</i> produces the quorum signalling molecule, specifically referred to as the auto-inducer peptide (AIP) via two membrane proteins AgrB and AgrD, with the latter being modified to form AIP. This AIP is then secreted into the extracellular media.</h4>
+
+          <h4>Thus, for our ProQuorum system, we make use of <i>C. difficile</i>’s own detection system for AIP. This is a two-component detection system consisting of the two proteins AgrA and AgrC. AgrC acts as a specific transmembrane receptor for AIP and upon ligand binding, the activated receptor causes phosphorylation and subsequent dimerisation of AgrA. This dimer then acts as a specific transcription factor to activate the Agr promoter.<sup>2</sup></h4>
+
+          <img src="https://2019.igem.org/wiki/images/2/2d/T--Oxford--detectionsystemgraphic.png" style="width:75%; display:block; margin-left: auto; margin-right: auto;" alt="Detection/Regulatory System">
+        </div>
+        </div>
+        </div>
+        </section>
+
+        <section id="n3" style="padding-bottom:15px;">
+            <div class="container">
+              <div class="row">
+                <div class=".col-md-8 .offset-md-2">
+      
+                  <h2>Endolysin/Expression System</h2>
+
+                  <h4>
+                      The activation of the Agr promoter will induce the expression of the <i>C. difficile</i>-specific  CD27L endolysin, derived from the bacteriophage &PhiCD27L.<sup>3</sup> The endolysin is subsequently secreted via the Sec pathway courtesy of its slpMOD secretion tag. This tag has been specifically developed for use in commensal gut bacteria as <i>Lactococcus lactis</i><sup>4</sup> and <i>Lactobacillus johnsonii</i>.<sup>5</sup> Thus, it provides a suitable secretion tag for our chassis of <i>Lactobacillus reuteri</i>.
+                  </h4>
+
+                  <h4>
+                      The CD27L endolysin, as a <i>N</i>-acetylmuramoyl-L-alanine amidase<sup>6</sup>, specifically recognises glycopeptides of the <i>C. difficile</i> cell wall and cleaves amide bonds to cause degradation of the peptidoglycan cell wall. The resulting cell undergoes osmotic lysis. Such a choice of drug molecule enables rapid and targeted lysis of pathogenic <i>C. difficile</i> cells whilst preserving the remainder of the gut microbiome.
+                  </h4>
+
+                  <img src="https://2019.igem.org/wiki/images/f/fa/T--Oxford--endolysinaction.png " style="width:75%; display:block; margin-left: auto; margin-right: auto;" alt="Expression/Secretion System">
+
+                  </div>
+                  </div>
+                  </div>
+    </section>
+
+    
+<section id="n4" style="background-color: #f2f2f2ff; padding-bottom:15px;">
+    <div class="container">
+      <div class="row">
+        <div class=".col-md-8 .offset-md-2">
+
+          <h4>This overall system enables both the specific detection and targeted killing of <i>C. difficile</i> colonies, providing substantial improvements over the broad-spectrum antibiotics as metronidazole and vancomycin<sup>1</sup> currently used to treat CDI.
+          </h4>
+
+          <img src="https://2019.igem.org/wiki/images/e/e6/T--Oxford--Overall_Schematic_Diagram.png" style="width:75%; display:block; margin-left: auto; margin-right: auto;" alt="Overall System">
+
+        </div>
+        </div>
+        </div>
+        </section>
+
+
+        <section id="n6">>
+            <div class="container">
+              <div class="row">
+                <div class=".col-md-8 .offset-md-2">
+    
+                    <h2 style="text-align: center;">
+                      References
+                      </h2>
+    
+                    <div class="table-responsive">
+                      <table class="table">
+                        <thead>
+                          <tr>
+                            <th> #</th>
+                            <th>Reference</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>1</td>
+                            <td>Smits, Wiep Klaas, et al. “Clostridium Difficile Infection.” Nature Reviews Disease Primers, vol. 2, no. 1, July 2016, doi:10.1038/nrdp.2016.20.</td>
+                          </tr>
+
+                          <tr>
+                            <td>2</td>
+                            <td>Darkoh, Charles, et al. “Toxin Synthesis by Clostridium Difficile Is Regulated through Quorum Signaling.” MBio, Feb. 2015.
+                              </td>
+                          </tr>
+                          <tr>
+                            <td>3</td>
+                            <td>Mayer, M. J., et al. “Molecular Characterization of a Clostridium Difficile Bacteriophage and Its Cloned Biologically Active Endolysin.” Journal of Bacteriology, vol. 190, no. 20, 2008, pp. 6734–6740., doi:10.1128/jb.00686-08.</td>
+                          </tr>
+                          <tr>
+                          <td>4</td>
+                          <td>Fernandez, A., et al. “Enhanced Secretion of Biologically Active Murine Interleukin-12 by Lactococcus Lactis.” Applied and Environmental Microbiology, vol. 75, no. 3, May 2008, pp. 869–871., doi:10.1128/aem.01728-08.</td>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>5</td>
+                        <td>Gervasi, Teresa, et al. “Expression and Delivery of an Endolysin to Combat Clostridium Perfringens.” Applied Microbiology and Biotechnology, vol. 98, no. 6, 2013, pp. 2495–2505., doi:10.1007/s00253-013-5128-y.</td>
+                      </tr>
+
+                      <tr>
+                        <td>6</td>
+                        <td>Mayer M. J. et al., Structure-Based Modification of a Clostridium difficile-Targeting Endolysin Affects Activity and Host Range, Journal of Microbiology, Oct 2011</td>
+                      </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
 
 <style>
     .column {
