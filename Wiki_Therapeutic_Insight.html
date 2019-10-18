@@ -22,18 +22,18 @@
               <div class=".col-md-8 .offset-md-2">
 
                 <h4>After extensively developing the design of our genetic circuits, we mathematically modelled the population dynamics of <i>L. reuteri</i> and <i>C. difficile</i> to determine the optimal time at which probiotic should be administered to obtain optimal therapeutic effect.
-                </h4>
+                </h4><br>
 
                 <div class="panel-group">
                     <div class="panel panel-default">
                     <div class="panel-heading">
                       <h4 class="panel-title">
-                        <a data-toggle="collapse" href="#Assumptions">Regulatory System Primer</a>
+                        <a data-toggle="collapse" href="#Primer">Regulatory System Primer</a>
                       </h4>
                     </div>
-                    <div id="_Assumptions" class="panel-collapse collapse">
+                    <div id="Primer" class="panel-collapse collapse">
                       <centre><div class="panel-body">
-          
+                        <h4><i>C. difficile</i> employs the use of two transmembrane proteins AgrB and AgrD to produce its AIP quorum sensing molecule, as seen below. This occurs via the insertion of cytosolic AgrB and AgrD into the cell membrane, followed by the conversion of AgrD protein into AIP.</h4>
                           <img src="https://2019.igem.org/wiki/images/e/e6/T--Oxford--Overall_Schematic_Diagram.png" style="width:80%; height:auto; display:block; margin-left:auto; margin-right:auto;">
 
                         </div></centre>
@@ -48,7 +48,7 @@
                         <a data-toggle="collapse" href="#Assumptions">Assumptions</a>
                       </h4>
                     </div>
-                    <div id="_Assumptions" class="panel-collapse collapse">
+                    <div id="Assumptions" class="panel-collapse collapse">
                       <centre><div class="panel-body">
           
                         <ul style="font-size: 18px;">
@@ -74,16 +74,150 @@
                               <div class="panel panel-default">
                               <div class="panel-heading">
                                 <h4 class="panel-title">
-                                  <a data-toggle="collapse" href="#Kinetic">Translation of AgrB and AgrD Proteins</a>
+                                  <a data-toggle="collapse" href="#Trans">Translation of AgrB and AgrD Proteins</a>
                                 </h4>
                               </div>
-                              <div id="Kinetic" class="panel-collapse collapse">
+                              <div id="Trans"" class="panel-collapse collapse">
                                 <centre><div class="panel-body">
-                                  
+                                    <div class="table-responsive">
+                                        <table class="table">
+                                          <thead>
+                                            <tr>
+                                              <th>Kinetic Rate Equation</th>
+                                              <th>Kinetic Rate Constant</th>
+                                              <th>Kinetic Rate Constant Value Modelled</th>
+                        
+                                            </tr>
+                                          </thead>
+                                          <tbody>
+                                            <tr>
+                                              <td>$$M \to M + B$$</td>
+                                              <td>$$Kb$$</td>
+                                              <td></td>
+                                            </tr>
+
+                                            <tr>
+                                              <td>$$M \to M + D$$</td>
+                                              <td>$$Kd$$</td>
+                                              <td></td>
+                                            </tr>
+                        
+                        
+                                          </tbody>
+                                        </table>
+                                      </div>
                                   </div></centre>
                               </div>
                               </div>
                               </div>
+
+                              <div class="panel-group">
+                                  <div class="panel panel-default">
+                                  <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                      <a data-toggle="collapse" href="#MInsert">Membrane Insertion of Cytosolic AgrB and AgrD Proteins</a>
+                                    </h4>
+                                  </div>
+                                  <div id="MInsert" class="panel-collapse collapse">
+                                    <centre><div class="panel-body">
+
+                                        <div class="table-responsive">
+                                            <table class="table">
+                                              <thead>
+                                                <tr>
+                                                  <th>Kinetic Rate Equation</th>
+                                                  <th>Kinetic Rate Constant</th>
+                                                  <th>Kinetic Rate Constant Value Modelled</th>
+                            
+                                                </tr>
+                                              </thead>
+                                              <tbody>
+                                                <tr>
+                                                  <td>$$B \to Bt$$</td>
+                                                  <td>$$\alpha_{Bt}$$</td>
+                                                </tr>
+
+                                                  <td>$$D \to Dt$$</td>
+                                                  <td>$$\alpha_{Dt}$$</td>
+                            
+                            
+                                              </tbody>
+                                            </table>
+                                          </div>
+                                      </div></centre>
+                                  </div>
+                                  </div>
+                                  </div>
+
+                                  
+                              <div class="panel-group">
+                                  <div class="panel panel-default">
+                                  <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                      <a data-toggle="collapse" href="#Aip">Conversion of AgrD to AIP</a>
+                                    </h4>
+                                  </div>
+                                  <div id="Aip" class="panel-collapse collapse">
+                                    <centre><div class="panel-body">
+                                        <div class="table-responsive">
+                                            <table class="table">
+                                              <thead>
+                                                <tr>
+                                                  <th>Kinetic Rate Equation</th>
+                                                  <th>Kinetic Rate Constant</th>
+                                                  <th>Kinetic Rate Constant Value Modelled </th>
+                                                </tr>
+                                              </thead>
+                                              <tbody>
+                                                <tr>
+                                                  <td>$$Dt \overset{\mbox{Bt}}{\to} AIP$$</td>
+                                                  <td>$$k_S</td>
+                                                  <td></td>
+                                                </tr>
+                            
+                            
+                                              </tbody>
+                                            </table>
+                                          </div>
+                                      </div></centre>
+                                  </div>
+                                  </div>
+                                  </div>
+
+                                  <div class="panel-group">
+                                      <div class="panel panel-default">
+                                      <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                          <a data-toggle="collapse" href="#Degradation">Degradation of Molecules</a>
+                                        </h4>
+                                      </div>
+                                      <div id="Degradation" class="panel-collapse collapse">
+                                        <centre><div class="panel-body">
+                                            <div class="table-responsive">
+                                                <table class="table">
+                                                  <thead>
+                                                    <tr>
+                                                      <th>Kinetic Rate Equation</th>
+                                                      <th>Kinetic Rate Constant</th>
+                                                      <th>Kinetic Rate Constant Value Modelled</th>
+                                
+                                                    </tr>
+                                                  </thead>
+                                                  <tbody>
+                                                    <tr>
+                                                      <td>$$X \to NULL (where X=B, D, Bt, Dt, S)</td>
+                                                      <td>$$\delta_X$$</td>
+                                                      <td></td>
+                                                    </tr>
+                                
+                                
+                                                  </tbody>
+                                                </table>
+                                              </div>
+                                          </div></centre>
+                                      </div>
+                                      </div>
+                                      </div>
 
                         </div></centre>
                     </div>
