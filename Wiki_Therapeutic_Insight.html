@@ -54,6 +54,7 @@
                         <ul style="font-size: 18px;">
                           <li>Populations of <i>C. difficile</i> and <i>L. reuteri</i> are perfectly mixed.</li>
                           <li>The gut provides sufficient nutrients that there is no interspecific or intraspecific competition for nutrients.</li>
+                          <li>The delay between <i>C. difficile</i> reaching its threshold density, and its subsequent release of toxins is negligible on the timescale of hours.</li>
                         </ul>
                         </div></centre>
                     </div>
@@ -93,13 +94,13 @@
                                             <tr>
                                               <td>$$M \to M + B$$</td>
                                               <td>$$Kb$$</td>
-                                              <td></td>
+                                              <td>$$5.00 \times 10^{-1}4 \ hr^{-1}$$</td>
                                             </tr>
 
                                             <tr>
                                               <td>$$M \to M + D$$</td>
                                               <td>$$Kd$$</td>
-                                              <td></td>
+                                              <td>$$5.00 \times 10^{-11} \ hr^{-1}$$</td>
                                             </tr>
                         
                         
@@ -135,10 +136,12 @@
                                                 <tr>
                                                   <td>$$B \to Bt$$</td>
                                                   <td>$$\alpha_{Bt}$$</td>
+                                                  <td>$$3.334 \ hr^{-1}$$</td>
                                                 </tr>
 
                                                   <td>$$D \to Dt$$</td>
                                                   <td>$$\alpha_{Dt}$$</td>
+                                                  <td>$$3.334 \ hr^{-1}$$</td>
                             
                             
                                               </tbody>
@@ -172,7 +175,7 @@
                                                 <tr>
                                                   <td>$$Dt \overset{\mbox{Bt}}{\to} AIP$$</td>
                                                   <td>$$k_S$$</td>
-                                                  <td></td>
+                                                  <td>$$4.00 \times 10^8 \ M^{-1} hr^{-1}$$</td>
                                                 </tr>
                             
                             
@@ -207,7 +210,7 @@
                                                     <tr>
                                                       <td>$$X \to NULL \ (where X=B, D, Bt, Dt, S)$$</td>
                                                       <td>$$\delta_X$$</td>
-                                                      <td></td>
+                                                      <td>$$3.334 \ hr^{-1}$$</td>
                                                     </tr>
                                 
                                 
@@ -233,7 +236,56 @@
                         </div>
                         <div id="Diff" class="panel-collapse collapse">
                           <centre><div class="panel-body">
-          
+
+                            <h4><i>C. difficile</i>'s AgrAC two-component detection & regulatory system can be described by the same differential equations as developed in <a href="https://2019.igem.org/Team:Oxford/Model/Design#Diff_equations">previous sections.</a></h4>
+                            <h4>Additionally, <i>C. difficile</i> will produce the quorum signalling AIP molecules which are modelled as the following differential equations:</h4>
+                            <div class="table-responsive">
+                                <table class="table">
+                                  <thead>
+                                    <tr>
+                                      <th>Concentration Modelled</th>
+                                      <th>Differential Equation</th>
+                                      <th>Process Modelled</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td>Cytosolic AgrB Protein</td>
+                                      <td>$$\frac {dB}{dt} = Kb \times M - (\alpha_{Bt} + \delta_{B}) \times B$$</td>
+                                      <td>Translation + Degradation + Membrane Insertion</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Cytosolic AgrD Protein</td>
+                                        <td>$$\frac {dD}{dt} = Kd \times M - (\alpha_{Dt} + \delta_{D}) \times D$$</td>
+                                        <td>Translation + Degradation + Membrane Insertion</td>
+                                      </tr>
+
+                                      <tr>
+                                          <td>Transmembrane AgrB Protein</td>
+                                          <td>$$ $$</td>
+                                          <td></td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Transmembrane AgrD Protein</td>
+                                            <td>$$\frac {dDt}{dt} = \alpha_Dt \times D - \delta_{Dt} - k_S \times Bt \times Dt$$</td>
+                                            <td>Membrane Insertion + Degradation + Conversion into AIP</td>
+                                          </tr>
+
+                                          <tr>
+                                              <td>AIP</td>
+                                              <td>$$\frac {dAIP}{dt} =k_S \times Bt \times Dt + k_{ibind} \times Rb_{cd} - k_{bind} \times R_{cd} \times S + k_{ibind} \times Rb - k_{bind} \times S - \delta_S \times S$$</td>
+                                              <td>Conversion into AIP + Binding/Unbinding of AIP on <i>C. difficile</i> + Binding/Unbinding on <i>L. reuteri</i> + BindingDegradation</td>
+                                            </tr>
+
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+
+                              
+
                             </div></centre>
                         </div>
                         </div>
