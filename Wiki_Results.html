@@ -24,7 +24,7 @@
     </div>
         </section>
 
-      <section id="n1">
+      <section id="n1" style="padding-bottom: 15px;">
         <div class="container">
           <div class="row">
             <div class=".col-md-8 .offset-md-2">
@@ -282,7 +282,12 @@
       
           <h4>Additionally, the colony PCR reaction itself requires optimization, as its results were frequently inconsistent and often produced false negative results. The source of such errors was the difficulty in lysing the <i>L. reuteri</i> cells. As explained in our <a href="https://2019.igem.org/Team:Oxford/Protocols#Lactobacillus_colony_PCR"><i>Lactobacillus</i> colony PCR</a> protocol, this issue was circumvented by growing the colonies in liquid culture and then subjecting them to sonication, and finally using the lysate as the template for the PCR.</h4>
         
-        <h3>CD27L Endolysin</h3>
+          <section id="n3" style="padding-bottom: 15px;">
+              <div class="container">
+                <div class="row">
+                  <div class=".col-md-8 .offset-md-2">
+
+          <h3>CD27L Endolysin</h3>
 
         <img src="https://2019.igem.org/wiki/images/1/1a/T--Oxford--slpMOD_CD27L.png" style="width:100%" alt="slpMOD_CD27L_Construct">
         <p style="font-size: 14px;">Fig. 2: SlpMod-CD27L: the diagram shows the organization of our construct as assembled in the pTRKH3 vector. The relevant features are the presence of the secretion (slpMod) and purification tags (6His and SpyTag) linked to the CD27L endolysin. Importantly, an mClover3 reporter is co-transcribed with CD27L, but not fused to it, in order to avoid altering the activity of the enzyme.
@@ -417,6 +422,16 @@
         <h4>Such lines of future research may be particularly important in light of the fact that no endolysin expression could be detected by either western blotting with anti-6His antibodies, or by SpyCatcher band shift assays. </h4>
         <h4>A better understanding of the pathways involved in stress response might allow us to use synthetic biology to improve the resilience of the strain and allow it to yield therapeutically effective amounts of endolysin. Simple potential alternative solutions include designing a Lactobacillus-specific vector with an inducible promoter, or reducing the strength of the promoter. </h4>
       </div>
+
+      </div>
+      </div>
+      </section>
+
+      <section id="n4" style="background-color: #f2f2f2ff; padding-bottom:15px;">
+          <div class="container">
+            <div class="row">
+              <div class=".col-md-8 .offset-md-2">
+
    
         <h3>AgrAC</h3>
 
@@ -449,6 +464,15 @@
         <h4>Given successful transformation, in order to test the system’s feasibility in <i>L. reuteri</i>, several experiments were planned, such as the construction of a reporter system that could be induced by AIP, or the detection of phosphorylated AgrA and the subsequent determination of signalling dynamics parameters. This would have enhanced the accuracy of our mathematical model. </h4>
         <h4>However, similarly to the situation of CD27L, no protein could be detected by either Anti-HA western blot or in-gel SpyCatcher detection. This is likely for similar reasons as mentioned previously.  As a potential solution, we attempted to grow our transformed cells at lower temperature (28 ⁰C instead of 37 ⁰C) in order to allow for increased protein folding opportunity, but no positive results were obtained. </h4>
         <h4>Another potential explanation for the lack of protein expression may be the very weak activity of the slp promoter in Lactobacillus species, as shown by Lizier et al. (2010)<sup>6</sup>. While slp had been chosen specifically to avoid overloading the cell with proteins not required at high concentrations, further optimization of the promoter and other regulatory sequences needs to be optimised. The need for improvement is further compounded by the fact that AgrAC must be expressed constitutively, unlike CD27L, in order to enable the detection of AIP.</h4>
+      </div>
+      </div>
+    </div>
+      </section>
+
+      <section id="n5" style="padding-bottom: 15px;">
+          <div class="container">
+            <div class="row">
+              <div class=".col-md-8 .offset-md-2">
 
         <h3> SpyTag</h3>
 
@@ -526,6 +550,16 @@
                     <br>
                     <h4>Overall, this demonstrates SpyTag as a potential multi-use tag, now allowing for purification in addition to downstream SpyCatcher applications.</h4>
 
+                     </div>
+                     </div>
+                    </div>
+                     </section> 
+
+                     <section id="n6" style="background-color: #f2f2f2ff; padding-bottom:15px;">
+                        <div class="container">
+                          <div class="row">
+                            <div class=".col-md-8 .offset-md-2">
+
                     <h3>AIP (Auto-Inducing Peptide)</h3>
 
         <h4>To test the efficacy of our own future quorum sensing mechanism in <i>Lactobacillus reuteri</i>, we had to obtain or synthesise <i>C. difficile’s</i> auto-inducing peptide (AIP). iGEM Nottingham very kindly sent us samples of <i>C. difficile</i>’s supernatant to help us characterise <i>C. difficile</i>’s AIP. These three samples included sterile culture media, supernatant from a 3 hour pre-log phase culture and supernatant from a 48hr culture. </h4>
@@ -537,7 +571,7 @@
         <h4>Unfortunately, amidst all our spectra, only one yielded a small peak around 612.36 Da, as seen in Figure 2.1.</h4>
         <h4>Mass spectra for the 3hr prelog supernatant and 48hr supernatant samples were first obtained. These spectra were compared to determine the relative abundances of different peaks.
             AIP molecules are generally in the range of approximately 500 Da to 1100 Da so we focussed on the peaks within this range.
-            </h4>
+            </h4><br>
 
             <div class="panel-group">
                 <div class="panel panel-default">
@@ -568,8 +602,8 @@
                     </div>
                     </div>
 
-                    <h4>Upon comparison of the two mass spectra, it was evident that the 48hr sample generally had greater abundance of the molecular species present. However, it is also clear that the peaks at 1018.9,1030.9 and 1070.9 Da had greater abundance in the 48hr sample compared to the 3hrr pre-log sample. This is in opposition to Darkoh’s original findings<sup>8</sup> which showed that toxin-induced activity ceased when the supernatant was passed through a 1kDa filter. 
-                    </h4>
+                    <h4>Upon comparison of the two mass spectra, it was evident that the 48hr sample generally had greater abundance of the molecular species present. However, it is also clear that the peaks at 1018.9,1030.9 and 1070.9 Da had greater abundance in the 48hr sample compared to the 3hr pre-log sample. This is in opposition to Darkoh’s original findings<sup>8</sup> which showed that toxin-induced activity ceased when the supernatant was passed through a 1kDa filter. 
+                    </h4><br>
 
                     <div class="panel-group">
                         <div class="panel panel-default">
@@ -605,7 +639,7 @@
                             <h4>Specifically, following acetone purification, some samples were incubated with 200 mM hydroxylamine at room temperature for two hours at a pH of 8.5.</h4>
 
                             <h4>Unfortunately, no noticeable shifts in large peaks were seen as shown in Figure 4. The large peaks around 1000Da are still present. However, the information gained from ESI is limited, and we are hoping to do tandem mass spectrometry (MS/MS) on the peaks at 1018.9, 1030.9 and 1070.9 Da to see the fragmentation patterns and hopefully discern the structures of these molecules. </h4>
-
+                            <br>
 
                             <div class="panel-group">
                                 <div class="panel panel-default">
@@ -668,6 +702,7 @@
                                             <h4>In our search for the AIP, we certainly made headway towards discovering its chemical identity. However, we were not able to confirm the information stated previously by Darkoh et al. (2014)<sup>8</sup> We anticipate that tandem mass-spectrometry may be critical in determining AIP’s true identity.</h4>
 
     </div>
+  </div>
   </div>
 </section>
 
