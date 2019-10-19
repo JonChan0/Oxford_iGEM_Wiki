@@ -7,14 +7,23 @@
 <body>
   
     <section id="banner">
-        <div class="inner" style="background-image: url('https://2019.igem.org/wiki/images/6/6b/T--Oxford--Sponsors_Bear.jpeg'); background-size: cover;">
-          <div class="translucent-back" style="height: 400px;">
-            <div class= "hero-text"> 
-                <h1>Therapeutic Insight</h1>
-              </div>
+        <div class="container" style="width:100%; padding-right:0; padding-left:0;">
+          <div class="row">
+            <div class="col-md-12">
+          <div class="inner" style="background-image: url('https://2019.igem.org/wiki/images/6/6b/T--Oxford--Sponsors_Bear.jpeg'); background-size: cover;">
+            <div class=image_faded_overlay" style="background-color: #CA3433; opacity:0.2">
+            <div class="translucent-back" style="height: 400px;">
+            </div>
           </div>
+          <div class="banner_overlay_text">
+            Therapeutic Insight
+          </div>
+          </div>
+  
         </div>
-      </section>
+      </div>
+    </div>
+        </section>
 
       <section id="n1" style="padding-bottom:15px;">
           <div class="container">
@@ -263,8 +272,8 @@
 
                                       <tr>
                                           <td>Transmembrane AgrB Protein</td>
-                                          <td>$$ $$</td>
-                                          <td></td>
+                                          <td>$$\frac {dB}{dt} = \alpha_B \times B - \delta_{Bt} \times Bt $$</td>
+                                          <td>Translation + Degradation</td>
                                         </tr>
 
                                         <tr>
@@ -284,7 +293,41 @@
                                 </table>
                               </div>
 
-                              
+                              <h4>Now that we have a cellular mathematical model of both <i>C. difficile</i> and <i>L. reuteri</i>, it is straightforward to convert it to a population model by using the following differential equations: </h4>
+
+
+                              <div class="table-responsive">
+                                  <table class="table">
+                                    <thead>
+                                      <tr>
+                                        <th>Concentration Modelled</th>
+                                        <th>Differential Equation</th>
+                                        <th>Process Modelled</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td>Population of <i>L. reuteri</i></td>
+                                        <td>$$\frac {dNl}{dt} = r_{lr} \times Nt \ times (1- \frac {Nt}{N_{lr}})$$</td>
+                                        <td>Logistic Growth of <i>L. reuteri</i></td>
+                                      </tr>
+
+                                      <tr>
+                                          <td>Population of <i>C. difficile</i></td>
+                                          <td>$$\frac {dNc}{dt} = r_{cd} \times Nc \ times (1- \frac {Nc}{N_{cd}})$$</td>
+                                          <td>Logistic Growth of <i>C. difficile</i></td>
+                                        </tr>
+
+                                        <tr>
+                                          <td>Total mRNA in Population of <i>L. reuteri</i></td>
+                                          <td>$$\frac {dM}{dt} = m \times Nc - \delta_M \times M$$</td>
+                                          <td>Transcription in Entire Population + Degradation</td>
+                                        </tr>
+                                  
+                                    </tbody>
+                                  </table>
+                                </div>
+
 
                             </div></centre>
                         </div>
@@ -300,7 +343,83 @@
                             </div>
                             <div id="Results" class="panel-collapse collapse">
                               <centre><div class="panel-body">
+
+                                  <div class="panel-group">
+                                      <div class="panel panel-default">
+                                      <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                          <a data-toggle="collapse" href="#Results_Fig1">Fig. 1 <i>L. reuteri</i> Growth Curve</a>
+                                        </h4>
+                                      </div>
+                                      <div id="Results_Fig1" class="panel-collapse collapse">
+                                        <centre><div class="panel-body">
           
+                                          <img src="" style="width:100%" alt="Fig. 2 L. reuteri Growth Curve">
+                                          <p style="font-size: 14px;">Assuming initial population = 1</p>
+                                        </div></centre>
+                                      </div>
+                                      </div>
+                                      </div>
+
+                                      <div class="panel-group">
+                                          <div class="panel panel-default">
+                                          <div class="panel-heading">
+                                            <h4 class="panel-title">
+                                              <a data-toggle="collapse" href="#Results_Fig2">Fig. 2 <i>C. difficile</i> Growth Curve</a>
+                                            </h4>
+                                          </div>
+                                          <div id="Results_Fig2" class="panel-collapse collapse">
+                                            <centre><div class="panel-body">
+                                                <img src="" style="width:100%" alt="Fig. 2 C. difficile Growth Curve">
+                                                <p style="font-size: 14px;">Assuming initial population = 1</p>
+                                              </div></centre>
+                                          </div>
+                                          </div>
+                                          </div>
+
+                                          <h4> As seen in the above figures, <i>L. reuteri</i> grows normally to its carrying capacity of 10<sup>6</sup> CFU. Meanwhile, <i>C. difficile</i> grows normally to its carrying capacity of 10<sup>8</sup> CFU and starts to die when <i>L. reuteri</i> begins exponential growth at approximately 36 hours. It is evident that our probiotic is successfully responding to the growing <i>C. difficile</i> colony by producing sufficient endolysin to treat the infection.</h4>
+
+                                         <h4> While While our probiotic successfully treats CDI within 60 hours, it fails to kill the <i>C. difficile</i> colony before toxin synthesis occurs. This is seen in Figure 3 below.</h4>
+                                         <br>
+                                          <div class="panel-group">
+                                              <div class="panel panel-default">
+                                              <div class="panel-heading">
+                                                <h4 class="panel-title">
+                                                  <a data-toggle="collapse" href="#Results_Fig3">Fig. 3 Upregulation Profile of <i>C. difficile</i> and <i>L. reuteri</i></a>
+                                                </h4>
+                                              </div>
+                                              <div id="Results_Fig3" class="panel-collapse collapse">
+                                                <centre><div class="panel-body">
+                                                    <img src="" style="width:100%" alt="Fig. 3 Upregulation Profile of<i>C. difficile</i>> and <i>L. reuteri</i>"">
+                                                    
+                                                  </div></centre>
+                                              </div>
+                                              </div>
+                                              </div>
+
+                                              <h4>The delay in upregulation of <i>L. reuteri</i> compared to <i>C. difficile</i> is caused by slower growth of the former compared to the latter. The <i>C. difficile</i> population is able to reach its threshold population density and triggers toxin synthesis approximately 15 hours before <i>L. reuteri</i> is upregulated and thus, synthesises endolysin.</h4>
+
+                                              <h4>These results led us to run simulations where <i>C. difficile</i> growth was delayed by a certain amount of time. This is equivalent to a prophylactic approach whereby our probiotic is introduced into the gut before <i>C. difficile</i> colonies flourish. This is shown in Figure 4 below.
+                                              </h4> <br>
+
+                                              <div class="panel-group">
+                                                  <div class="panel panel-default">
+                                                  <div class="panel-heading">
+                                                    <h4 class="panel-title">
+                                                      <a data-toggle="collapse" href="#Results_Fig4">Fig. 4 </a>
+                                                    </h4>
+                                                  </div>
+                                                  <div id="Results_Fig4" class="panel-collapse collapse">
+                                                    <centre><div class="panel-body">
+                                                        <img src="" style="width:100%" alt="">
+                                                        
+                                                      </div></centre>
+                                                  </div>
+                                                  </div>
+                                                  </div>
+
+
+
                                 </div></centre>
                             </div>
                             </div>
