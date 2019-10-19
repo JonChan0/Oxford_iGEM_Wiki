@@ -1,0 +1,89 @@
+{{Oxford/Loader}}
+{{Oxford}}
+<html lang="en">
+
+<!-- THIS IS WHERE THE HTML BEGINS -->
+
+<body>
+  
+    <section id="banner">
+        <div class="inner" style="background-image: url('https://2019.igem.org/wiki/images/6/6b/T--Oxford--Sponsors_Bear.jpeg'); background-size: cover;">
+          <div class="translucent-back" style="height: 400px;">
+            <div class= "hero-text"> 
+                <h1>Supplementary Materials</h1>
+              </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="n1">
+        <div class="container">
+          <div class="row">
+            <div class=".col-md-8 .offset-md-2">
+
+              <h2>Appendix 1: How Much Endolysin Needs to be Produced per <i>L. reuteri</i> cell for <i>C. difficile</i> Lysis?</h2>
+
+              <h4>To answer this question, let us first consider the experimentally derived value rate of <i>B. subtilis</i> lysis by CD27L endolysin, as noted in the <a href="https://2019.igem.org/Results">Results page</a></h4>
+
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Average Lysis Rate /Cells hr<sup>-1</sup></th>
+
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>$$4.19 \times 10^-5$$</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <h4>Additionally, from literature, we can approximate the population density of <i>C. difficile</i> in the gut lumen:</h4>
+
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Approximate Population Density /CFU (g of lumenal content)<sup>-1</sup></th>
+
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>$$10^8$$</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <h4> Now consider the following ordinary differential equation describing <i>C. difficile</i> death due to endolysin:</h4>
+
+              <h4>$$\frac {dN}{dt} = - k \times E \times N \ where$$</h4>
+              <h4>$$ N = Number \ of \ C. \ difficile \ cells$$</h4>
+              <h4>$$ E = Endolysin \ concentration$$</h4>
+              <h4>$$k = Killing \ Rate \ of \ C. \ difficile \ due \ to \ endolysin$$</h4>
+
+              <h4>Upon solving this ODE, we obtain $$E = \frac {ln \frac {N_{initial}}{N_{final}}} {k \times (t_{final} - t_{initial})}$$</h4>
+
+              <h4>Let us also assume that the required amount of endolysin must be produced within 10 hours. This is a valid approximation as <i>C. difficile</i> infection generally develops within 24-48 hours.</i></h4>
+
+              <h4>Thus, the calculation for the total concentration of endolysin required to reduce the <i>C. difficile</i> population from 10<sup>-8</sup> CFU/g of </sup></h4>
+</div>
+</div>
+</div>
+</section>
+
+<style>
+    .column {
+  float: left;
+  width: 25%;
+  padding: 5px;
+}
+</style>
+
+</body>
+</html>
+{{Oxford/Footer}}

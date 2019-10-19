@@ -1,73 +1,13 @@
+{{Oxford/Loader}}
 {{Oxford}}
 <html lang="en">
-
-<script>
-    // allow button on the black menu bar to show/hide the side menu
-    function hide_show_menu() {
-  
-      // in case you preview mode is selected, the menu is hidden for better visibility 
-      if (window.location.href.indexOf("submit") >= 0) {
-        $(".igem_2019_menu_wrapper").hide();
-      }
-      // if the black menu bar has been loaded
-        if (document.getElementById('bars_item')) {
-        // when the "bars_item" has been clicked
-        $("#bars_item").click(function() {
-          $("#sideMenu").hide();
-          // show/hide the menu wrapper
-          $(".igem_2019_menu_wrapper").fadeToggle("100");
-        });   
-        } 
-      // because the black menu bars loads at a different time than the rest of the page, this function is set on a time out so it can run again in case it has not been loaded yet
-      else {
-            setTimeout(hide_show_menu, 15);
-      }
-    }
-</script>
-
-<head> 
-    <meta charset="utf-8">
-    <!-- This tells the browser that your page is responsive -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> 
-          <!-- This is from CSS templates -->
-    <!--<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">-->
-    
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,900italic,900,700italic,700,600italic,600,400italic,300italic,300,200italic" rel="stylesheet" type ='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Montserrat:200,300,400' rel='stylesheet'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-
-    <!--<script type="text/javascript" async
-      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
-    </script>-->
-  
-    <!-- Allows you to work offline with VSCode_Html_Preview-->
-    <link rel="stylesheet" type="text/css" href="cssbootstrap.css" >
-    <link rel="stylesheet" type="text/css" href="Main.css" >
-    
-
-    <!-- Latest compiled and minified CSS -->
-    <!-- <link rel="stylesheet" href="https://2019.igem.org/Team:Oxford/cssbootstrap?action=raw&amp;ctype=text/css">
-    <link rel="stylesheet" href="https://2019.igem.org/Team:Oxford/maincss?action=raw&amp;ctype=text/css" />
-    --> 
-  
-    <!-- Latest compiled JavaScript -->
-    <!-- <script src="https://2018.igem.org/Team:Oxford/scripts/bootstrapminjs?action=raw&ctype=text/javascript"></script> -->
-     
-     <!-- Bootstrap core JavaScript -->
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-     <!-- <script src="https://2019.igem.org/Team:Oxford/bootstrapminjs?action=raw&ctype=text/javascript"></script> -->
-     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-    
-  </head>
  
 <!-- THIS IS WHERE THE HTML BEGINS -->
 
 <body>
 
 <section id="banner">
-            <div class="inner" style="background-image: url('https://2019.igem.org/wiki/images/5/55/T--Oxford--Team_Photo_Cropped.png'); background-size: cover;">
+            <div class="inner" style="background-image: url('https://2019.igem.org/wiki/images/c/c0/T--Oxford--Team_Photo_NoCrop.png'); background-size: cover;">
               <div class="translucent-back" style="height: 400px;">
                 <div class= "hero-text"> 
                   <h1> Meet the Team </h1>
@@ -94,7 +34,10 @@
 										<div class="row">
                                         <div class="column">
                                             <div class="card">
-                                              <img src="https://2019.igem.org/wiki/images/e/ed/T--Oxford--David_Team_Photo.jpg" alt="David" style="width:100%">
+                                              <img src="https://2019.igem.org/wiki/images/e/ed/T--Oxford--David_Team_Photo.jpg" alt="David" style="width:100%" class="image">
+                                              <div class="middle">
+                                                <div class="quote">David lives and breathes iGEM. You will find him in the lab at any hour of the day. If he's not there, he's either revising for his MCAT or producing our daily meme content.</div>
+                                              </div>
                                               <div class="container">
                                                 <h1>David Schramm</h1>
                                                 <h2>Co-Leader</h2>
@@ -104,7 +47,10 @@
                                           </div>
                                             <div class="column">
                                                         <div class="card">
-                                                          <img src="https://2019.igem.org/wiki/images/3/3a/T--Oxford--Tasha_Team_Photo_Crop.jpeg" alt="Natasha" style="width:100%">
+                                                          <img src="https://2019.igem.org/wiki/images/3/3a/T--Oxford--Tasha_Team_Photo_Crop.jpeg" alt="Natasha" style="width:100%" class="image">
+                                                          <div class="middle">
+                                                            <div class="quote">Tasha is the ultimate coordinator, bringing the team together with her manifold consultancy skills and uplifting aura. She has the ability to appear graceful and effortless, even when everything is falling apart. Her side hustle is being our impromptu bike mechanic.</div>
+                                                          </div>
                                                           <div class="container">
                                                             <h1>Natasha Cooke</h1>
                                                             <h2>Co-Leader</h2>
@@ -114,7 +60,10 @@
                                                       </div>
                                             <div class="column">
                                               <div class="card">
-                                                <img src="https://2019.igem.org/wiki/images/4/47/T--Oxford--Abi_Team_Photo.jpg" alt="Abigail" style="width:100%">
+                                                <img src="https://2019.igem.org/wiki/images/4/47/T--Oxford--Abi_Team_Photo.jpg" alt="Abigail" style="width:100%" class="image">
+                                                <div class="middle">
+                                                  <div class="quote">Abi has limitless amounts of patience and organisation, keeping us on track with deadlines. She also designed our beautiful wiki, painstakingly debugging it line by line. </div>
+                                                </div>
                                                 <div class="container">
                                                   <h1> Abigail Goodship</h1>
                                                   <h2>Operations Officer</h2>
@@ -132,9 +81,11 @@
 										<div class="row">
                                             <div class="column">
                                                 <div class="card">
-                                                 <img  src="https://2019.igem.org/wiki/images/d/d8/T--Oxford--Jonathan_Team_Photo.jpg"
-                                                    alt="Jonathan" style="width:100%">
-                                                  <div class="container">
+                                                 <img  src="https://2019.igem.org/wiki/images/d/d8/T--Oxford--Jonathan_Team_Photo.jpg"alt="Jonathan" style="width:100%" class="image">
+                                                 <div class="middle">
+                                                  <div class="quote">Jonathan is a jack of all trades - his affinity for code guides him to the wiki (where he rules over GitHub like a god) and modelling while his biochemical tendencies gets him in the lab. Just never for PCR or coldroom work. </div>
+                                                 </div>
+                                                 <div class="container">
                                                     <h1>Jonathan Chan</h1>
                                                     <h2>Publications Officer</h2>
                                                     <p class="title">1st Year Biochemistry</p>
@@ -143,8 +94,11 @@
                                             </div>
                                             <div class="column">
                                                 <div class="card">
-                                                    <img src="https://2019.igem.org/wiki/images/2/27/T--Oxford--Calin_Team_Photo.jpg" alt="Calin" style="width:100%">
-                                                      <div class="container">
+                                                    <img src="https://2019.igem.org/wiki/images/2/27/T--Oxford--Calin_Team_Photo.jpg" alt="Calin" style="width:100%" class="image">
+                                                    <div class="middle">
+                                                      <div class="quote">Calin brings a unique spirit to the lab. Endlessly persevering but surrounded by a cloud of despair. If he has to do another electroporation, he might turn the electrodes towards himself.</div>
+                                                    </div>
+                                                    <div class="container">
                                                         <h1>Calin Dragoi</h1>
                                                         <h2>Wet-Lab Coordinator</h2>
                                                         <p class="title">2nd Year Biochemistry</p>
@@ -153,7 +107,10 @@
                                                   </div>
                                             <div class="column">
                                             <div class="card">
-                                              <img src="https://2019.igem.org/wiki/images/4/47/T--Oxford--Daniel_Team_Photo.jpg" alt="Daniel" style="width:100%">
+                                              <img src="https://2019.igem.org/wiki/images/4/47/T--Oxford--Daniel_Team_Photo.jpg" alt="Daniel" style="width:100%" class="image">
+                                              <div class="middle">
+                                                <div class="quote">Dani is an all rounder. He has had a hand in pretty much everything from the modelling to wiki to protein purification. If he sees another purification column he will scream. </div>
+                                              </div>
                                               <div class="container">
                                                 <h1>Dániel Felföldi</h1>
                                                 <h2>Secretary</h2>
@@ -171,7 +128,10 @@
                                                     <div class="row">
                                                         <div class="column">
                                                                 <div class="card">
-                                                                  <img src="https://2019.igem.org/wiki/images/7/76/T--Oxford--Kathy_Team_Photo.jpg" alt="Katharina" style="width:100%">
+                                                                  <img src="https://2019.igem.org/wiki/images/7/76/T--Oxford--Kathy_Team_Photo.jpg" alt="Katharina" style="width:100%" class="image">
+                                                                  <div class="middle">
+                                                                    <div class="quote">Kathy has brought her eye for design to the team, designing our presentations and posters with flair. She can talk to anyone and has connected us with a plethora of interesting people to talk to.</div>
+                                                                  </div>
                                                                   <div class="container">
                                                                     <h1>Katharina Novikov</h1>
                                                                     <h2>Human Practices Officer</h2>
@@ -181,7 +141,10 @@
                                                               </div>
                                                         <div class="column">
                                                             <div class="card">
-                                                              <img src="https://2019.igem.org/wiki/images/0/0b/T--Oxford--Mishi_Team_Photo_Crop.jpeg" alt="Minakshi" style="width:100%">
+                                                              <img src="https://2019.igem.org/wiki/images/0/0b/T--Oxford--Mishi_Team_Photo_Crop.jpeg" alt="Minakshi" style="width:100%" class="image">
+                                                              <div class="middle">
+                                                                <div class="quote">Single handedly steered us elegantly through the murky waters of modelling. An all round queen and lover of iced caramel latte. Her only flaw is her crazy sleep schedule.</div>
+                                                              </div>
                                                               <div class="container">
                                                                 <h1>Minakshi Ashok</h1>
                                                                 <h2>Modelling Leader</h2>
@@ -191,7 +154,10 @@
                                                         </div>
                                                         <div class="column">
                                                             <div class="card">
-                                                              <img src="https://2019.igem.org/wiki/images/a/a6/T--Oxford--Quentin_Team_Photo.jpg" alt="Quentin" style="width:100%">
+                                                              <img src="https://2019.igem.org/wiki/images/a/a6/T--Oxford--Quentin_Team_Photo.jpg" alt="Quentin" style="width:100%" class="image">
+                                                              <div class="middle">
+                                                                <div class="quote">Quentin is our resident chemist who is baffled by everything in the lab other than mass spec. He also has a passion for English (which is odd considering he is a Frenchman) and often indulges it as our unofficial proof reader.</div>
+                                                              </div>
                                                               <div class="container">
                                                                 <h1>Quentin Gueroult</h1>
                                                                 <h2>Treasurer</h2>
@@ -204,66 +170,10 @@
                                             </div>
                             </section>
              </section>
-                    <!-- <section id="footer"> 
-						<div class="inner"> -->
-							<!--h2 class="major">Get in touch</h2-->
-							<!--<p>Cras mattis ante fermentum, malesuada neque vitae, eleifend erat. Phasellus non pulvinar erat. Fusce tincidunt, nisl eget mattis egestas, purus ipsum consequat orci, sit amet lobortis lorem lacus in tellus. Sed ac elementum arcu. Quisque placerat auctor laoreet.</p>
-							<form method="post" action="#"--->
-								<!--div class="fields">
-									<div class="field">
-										<label for="name">Name</label>
-										<input type="text" name="name" id="name" />
-									</div>
-									<div class="field">
-										<label for="email">Email</label>
-										<input type="email" name="email" id="email" />
-									</div>
-									<div class="field">
-										<label for="message">Message</label>
-										<textarea name="message" id="message" rows="4"></textarea>
-									</div>
-								</div>
-								<ul class="actions">
-									<li><input type="submit" value="Send Message" /></li>
-								</ul>
-							</form-->
-						<!--	<ul class="contact">
-                                <h2 class="major"> Contact Us </h2> -->
-								<!--li class="icon solid fa-home"-->
-                                <!-- <p> <font size=5> <u>Our Address</u></font><br/>
-									Biochemistry Department<br/>
-									South Parks Road<br/>
-									Oxford, UK, OX1 2DL</p> -->
-                <!--/li-->
-                
-								<!--li class="icon solid--> <!-- <p>Email us:  <a href="mailto:oxfordigem@bioch.ox.ac.uk">oxfordigem@bioch.ox.ac.uk</a></br> -->
-								<!--li class="icon brands fa-facebook-f"--> <!-- FaceBook:  <a href="https://www.facebook.com/oxfordigem">facebook.com/oxfordigem</a><br/> -->
-								<!--li class="icon brands fa-instagram"--> <!-- Instagram:  <a href="https://www.instagram.com/oxfordigem">instagram.com/oxfordigem</a><br/> -->
-                                <!--li class="icon brands fa-twitter"--> <!-- Twitter: <a href="https://www.twitter.com/OxfordiGEM">twitter.com/OxfordiGEM</a><br/></p> -->
-             <!-- </ul>
-              
-							<ul class="copyright">
-								<li>iGEM Team Oxford 2019</li>
-							</ul>
-						</div>
-					</section> */
-
-			</div>
-
-			</div> -->
-
-		<!-- Scripts -->
-			<script src="https://2019.igem.org/Team:Oxford/jqueryminjs?action=raw&amp;ctype=text/javascript"></script>
-			<script src="https://2019.igem.org/Team:Oxford/jqueryscrollexminjs?action=raw&amp;ctype=text/javascript"></script>
-			<script src="https://2019.igem.org/Team:Oxford/browserminjs?action=raw&amp;ctype=text/javascript"></script>
-			<script src="https://2019.igem.org/Team:Oxford/breakpointsminjs?action=raw&amp;ctype=text/javascript"></script>
-			<script src="https://2019.igem.org/Team:Oxford/utiljs?action=raw&amp;ctype=text/javascript"></script>
-			<script src="https://2019.igem.org/Team:Oxford/mainjs?action=raw&amp;ctype=text/javascript"></script>
 
 </body>
 
       <style>
-          @import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
         
         /*Intro */
 
@@ -280,20 +190,19 @@
         /* Three columns side by side */
         .column {
           float: left;
-          width: 28%;
+          width: 33.3333%;
           margin-bottom: 16px;
-          padding: 0 3em;
+          padding: 0 4em;
         }
 
-        /* Three rows down */
-        .row {
+        /* .row {
             float: top;
             max-height: 80%;
             margin-top: 16px;
             margin-bottom: 16px;
-            margin-left: 175px;
+            margin-left: 175px !important;
             padding: 0 8px;
-        }
+        } */
         
         /* Display the columns below each other instead of side by side on small screens */
         @media screen and (max-width: 650px) {
@@ -307,16 +216,54 @@
      .card {
             max-height: 100%;
             width: 100%;
+            margin-bottom: 40px;
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
             transition: transform .3s ease;
         }
+
+        .image {
+          opacity: 1;
+          display: block;
+          width: 100%;
+          height: auto;
+          transition: .5s ease;
+          backface-visibility: hidden;
+        }
+
+        .middle {
+          transition: .5s ease;
+          opacity: 0;
+          position: absolute;
+          text-align: center;
+          top: 40px;
+          left: 0;
+        }
+
+        .quote {
+         background-color: black;
+         opacity: 0.8; 
+         color: white;
+         font-size: 1em;
+         font-family: "Josefin Sans";
+         padding: 16px 32px;
+        }
+
+        .card:hover .image{
+          opacity: 0.3;
+        }
+
+        
         .card:hover{
          transform: scale(1.05); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
         }
-        
+
+        .card:hover .middle {
+         opacity: 1;
+        }
+
         /* Some left and right padding inside the container */
         .container {
-          padding: 0 0px !important;
+          /* padding: 0 0px !important; */
           font-family: "Josefin Sans" !important;
 
         }
@@ -377,6 +324,7 @@
 #globalWrapper {font-size: 100% !important;}
         
         </style>
+
 
 </html>
 {{Oxford/Footer}}

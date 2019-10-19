@@ -1,0 +1,191 @@
+{{Oxford/Loader}}
+{{Oxford}}
+<html lang="en">
+
+<!-- THIS IS WHERE THE HTML BEGINS -->
+
+<body>
+  
+    <section id="banner">
+        <div class="inner" style="background-image: url('https://2019.igem.org/wiki/images/6/6b/T--Oxford--Sponsors_Bear.jpeg'); background-size: cover;">
+          <div class="translucent-back" style="height: 400px;">
+            <div class= "hero-text"> 
+              <h1>Part Improvement</h1>
+              </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="n1" style="padding-bottom: 15px;">
+        <div class="container">
+          <div class="row">
+            <div class=".col-md-8 .offset-md-2">
+  
+<!-- Insert the HTML of your page here + Adjust your Banner Above-->
+
+<h4> A fundamental crux of the ProQuorum system is the expression of the endolysin which is responsible for the actual lysis and consequent killing of the pathogenic <i> C.difficile </i>. Thus, there is a clear need for an endolysin that fulfills the criteria of being</h4>
+  <ol style="font-size:18px;"> 
+    <li>optimally expressed </li>
+    <li>  optimally secreted and </li>  
+    <li > optimally effective against <i>C.difficile</i>.</li>
+  </ol>
+ <br>
+
+   </div>
+   </div>
+   </div>
+  </section>
+  
+  <section id ="n2" style="background-color: #f2f2f2ff; padding-bottom:20px;">
+      <div class="container">
+          <div class="row">
+  <div class="col-md-6" style="float:left; padding-bottom: 15px;">
+  
+  <h4> Thus, we redesigned the BBa_K895005 part submitted by the 2012 Dundee team<sup>1 </sup>, which consists of: </h4>
+  
+  <ol style="font-size:18px;"> 
+    <li> truncated form of the CD27L endolysin, shown by Mayer et al. (2011)<sup>2 </sup>to increase both efficacy and host range </li>
+   <li>Type VI secretion protein derived from <i> S. typhimurium </i> </li>
+  </ol>
+  
+   
+  </div>
+ 
+  
+  <div class="col-md-6" style="float:right; padding-bottom: 15px;">
+  
+  <h4> In contrast, our novel part BBa_K3183009 (CD27L_Assay) encodes: </h4>
+  
+  <ol style="font-size:18px;"> <li>  full-length form of the CD27L endolysin<sup>3 </sup> </li></ol>
+  <!-- <ol> secretion tag for the Sec-pathway of Lactococcus lactis <sup>4</sup> --> 
+  
+  
+  </div>
+</div>
+  <div class="row">
+  <div class="col-md-6">
+      <img src="https://2019.igem.org/wiki/images/c/c7/T--Oxford--pET_Dundee_Diagram.png" style="bottom: 5px; max-width:100%; height:auto; display:block; margin-left:auto; margin-right: auto;">
+  </div>
+  <div class="col-md-6">
+      <img src="https://2019.igem.org/wiki/images/d/d7/T--Oxford--pET_Assay_Diagram.png" style="bottom: 5px; max-width:100%; height:auto; display:block; margin-left:auto; margin-right: auto;">
+  </div>
+</div>
+</div>
+  </section>
+
+  
+  
+  <section id="n3" style="padding-bottom:15px;">
+      <div class="container">
+          <div class="row">
+            <div class=".col-md-8 .offset-md-2">
+
+              <h4> 
+                Incorporating both of these parts into pET28A, our expression vector, we planned on testing the relative efficacies of <i>B.subtilis </i>killing as per our killing assays. 
+                Thus, we followed our generic pipeline of 
+<ol style="font-size:18px;"> 
+  <li> transformation of both constructs into E.coli (BL21 (DE3)-RIPL Competent E.coli) </li>
+<li> miniprep + sequencing to verify successful transformation </li>
+<li> induction of expression with IPTG </li>
+</ol> 
+<br>
+However, despite identical growth and induction conditions, expression of the Dundee 2012 iGEM endolysin was unsuccessful, even in triplicate, as shown in Figure 1. In contrast, expression of the CD27L_Assay part was successful and quantitatively verified via both mass spectrometry and BCA assay, as in the <a href="https:2019.igem.org/Team:Oxford/Results" > Results </a>page.
+
+              </h4>
+
+              <img src="">
+              </div>
+              </div>
+              </div>
+              </section>
+
+    <section id="n4" style="background-color: #f2f2f2ff; padding-bottom:15px;">
+      <div class="container">
+        <div class="row">
+          <div class=".col-md-8 .offset-md-2">
+
+            <h4>
+              Thus, to solve this issue, we decided to attempt expression of only the truncated endolysin from the Dundee 2012 Biobrick, without its substantially large Type VI secretion tag. This resulted in BBa_K31830012 (CD27L_Truncated 1-179). 
+
+Upon analysis, there is evident expression of the truncated endolysin as seen in Figure 2. However, given identical conditions of growth and induction, there appears to be greater expression of the full-length endolysin, which may perhaps indicate greater stability.
+
+            </h4>
+
+
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="n5" style="padding-bottom: 15px;">
+        <div class="container">
+          <div class="row">
+            <div class=".col-md-8 .offset-md-2">
+
+                <h4>
+                    As a further improvement, we decided to measure the killing efficacy of the CD27L_Assay endolysin as no killing data was provided for the Dundee 2012 BBa_K895005 part. As seen in Figure 3, there is a substantial decrease in OD600 over time relative to the negative controls.
+                </h4>
+
+                <img src="">
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="n6">
+            <div class="container">
+              <div class="row">
+                <div class=".col-md-8 .offset-md-2">
+    
+                    <h2 style="text-align: center;">
+                      References
+                      </h2>
+    
+                    <div class="table-responsive">
+                      <table class="table">
+                        <thead>
+                          <tr>
+                            <th> #</th>
+                            <th>Reference</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>1</td>
+                            <td>“Wet Lab Strategy.” Team:Dundee/Strategy, http://2012.igem.org/Team:Dundee/Strategy.</td>
+                          </tr>
+
+                          <tr>
+                            <td>2</td>
+                            <td>Mayer, M. J., et al. “Structure-Based Modification of a Clostridium Difficile-Targeting Endolysin Affects Activity and Host Range.” Journal of Bacteriology, vol. 193, no. 19, 2011, pp. 5477–5486., doi:10.1128/jb.00439-11.
+                              </td>
+                          </tr>
+                          <tr>
+                            <td>3</td>
+                            <td>Mayer, M. J., et al. “Molecular Characterization of a Clostridium Difficile Bacteriophage and Its Cloned Biologically Active Endolysin.” Journal of Bacteriology, vol. 190, no. 20, 2008, pp. 6734–6740., doi:10.1128/jb.00686-08.</td>
+                          </tr>
+                          
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+
+</section>
+
+<style>
+    .column {
+  float: left;
+  width: 25%;
+  padding: 5px;
+}
+
+</style>
+
+</body>
+</html>
+{{Oxford/Footer}}

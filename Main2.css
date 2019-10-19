@@ -1,0 +1,524 @@
+/****************************** DEFAULT WIKI SETTINGS  ****************************/
+  
+@font-face {
+    font-family: "Source Sans Pro";
+    src: url("https://2019.igem.org/wiki/images/7/7a/T--Oxford--SourceSansPro.ttf") format("truetype");
+}
+@font-face { 
+    font-family: "Josefin Sans";
+    src: url("https://2019.igem.org/wiki/images/f/f4/T--Oxford--JosefinSans.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("https://2019.igem.org/wiki/images/f/f5/T--Oxford--Montserrat.ttf") format("truetype");
+
+}
+    
+@font-face {
+    font-family: "Font Awesome";
+    src: url("https://2019.igem.org/wiki/images/7/79/T--Oxford--FontAwesomeMinCSS.ttf") format("truetype");
+}
+
+
+   body,h1,h2,h3,h5,h6,p, ul, li, td, th, figcaption, .team-profile-college {font-family: 'Source Sans Pro', sans-serif;
+        margin-bottom: 0px; font-weight: 300; letter-spacing: normal;} 
+
+        body, html {
+        height: 100% !important;
+        line-height: 1.8 !important;
+        }
+        
+  
+    #home_logo, #sideMenu { display:none; }
+    #sideMenu, #top_title, .patrollink  {display:none;}
+    #content { width:100%; padding:0px;  margin-top:-7px; margin-left:0px;}
+    body {background-color:#f2f2f2; }
+    #bodyContent h1 {
+       font-family: 'Source Sans Pro', sans-serif;
+       font-weight: 400;
+       font-size: 45px;
+       color: black !important;
+    }
+
+    #bodyContent h2, #bodyContent h3, #bodyContent h4, #bodyContent h5 {
+        font-family: 'Source Sans Pro', sans-serif; font-weight: 400;
+        text-align:left;
+        margin-bottom: 0px !important;
+        text-decoration: none !important;
+    }
+
+    #bodyContent h3 {
+        font-weight: bold;
+        text-align: left; 
+        font-style: normal;
+
+    }
+   
+   #bodyContent p, #bodyContent a {
+        font-family: 'Source Sans Pro', sans-serif; font-weight: 300;
+        margin-bottom: 0px !important;
+        letter-spacing: normal !important;
+    }
+  
+* {
+    border-radius: 0 !important;
+}
+  
+  
+/**************************** NAVBAR *************************************/
+  
+/* Add a dark background color with a little bit see-through */ 
+.navbar {
+    left: -20px !important;
+    right: -20px !important;
+    top: -20px !important;
+    padding-top: 25px;
+    padding-bottom: 5px;
+    padding-left: 25px;
+    padding-right: 25px;
+    background-color:#1c2427;
+
+    border-color: black !important;
+    border: 0;
+
+    font-size: 13px !important;
+    /*opacity:0.95;*/
+    margin-top: 17px;
+    transition: background-color 0.5s ease-out;
+    list-style-type: none !important;
+}
+/*.navbar-nav {
+    margin-top: 2.1em !important;
+  
+} */
+
+.navbar li {
+    margin: 0 2px;
+    list-style: none !important;
+}
+
+/* Add a gray color to all navbar links */
+.navbar li a, .navbar .navbar-brand { 
+    color: #78a3c0 !important;
+    font-size: 15px !important;
+}
+
+/* the color of the single Link ('safety') on hover */
+.navbar-nav li a:hover {
+    color: white !important;
+}
+
+/* The active link this seems to be useless at the moment*/
+.navbar-nav li.active a {
+    color: black;
+    background-color:#29292c;
+}
+
+/* Remove border color from the collapsible button */
+.navbar-default .navbar-toggle {
+    border-color: transparent;
+}
+
+.navbar-default {
+    border-color:transparent;
+}
+
+.navbar-collapse>ul:before {
+    content: "";
+    margin-top: 40px;
+}
+
+@media (min-width: 768px){
+    .navbar-collapse>ul:before {
+        content: "";
+        margin-top: 0px;
+    }
+
+    .navbar-right {
+        margin: 1.7em !important;
+        /* margin-top:12px !important;
+        margin-bottom:12px; */
+    }
+
+    /* .navbar-left {
+        margin-left: 2% !important;
+        margin-top: 0px !important;
+        margin-bottom: 12px;
+        margin-right: 2% !important;
+    }
+*/
+    .navbar-header {
+        margin-top: 15px !important;
+        margin-bottom: 5px;
+        /* margin-right:50% !important; */
+    }
+
+   /* .nav.navbar-nav.navbar-right.list-unstyled {
+        float: right;
+    } */
+    .navbar>li>a {
+    }
+}
+
+
+@media (max-width: 761px){
+.dropdown-menu li a {
+    /* mobile dropdown list */
+    background-color:#1c2427;
+    margin-top: 20px;
+    margin-bottom: 20px;
+   /* list-style-type: none !important;
+    font-size: 15px !important;
+    font-style: 'Montserrat'; */
+}
+}
+
+/* the color of the Dropdown on click - ? */
+.open .dropdown-toggle {
+    background-color: #1c2427;
+    list-style-type: none !important;
+}
+
+ .dropdown-menu {
+    border: none;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background-color: #1c2427;
+    display:none;
+    list-style-type: none !important;
+} 
+
+/* the color of the Dropdown links */
+.dropdown-menu li a {
+   color: #78a3c0;
+   font-size: 15px !important;
+   list-style-type: none !important;
+   list-style: none !important;
+}
+
+/* the color of the dropdown links on hover */
+.dropdown-menu li a:hover {
+    background-color: #1c2427;
+    color: white;
+    -o-transition:.5s;
+   -ms-transition:.5s;
+   -moz-transition:.5s;
+   -webkit-transition:.5s;
+   transition: .5s;
+   list-style-type: none !important;
+   list-style: none !important
+}
+
+
+/*
+.dropdown {
+    float:right;
+    width: 125px !important;
+    height:40px !important;
+    background-color:white;
+    text-align:center;
+    list-style-type: none !important;
+    list-style: none !important; 
+  }
+*/
+
+/* Show the dropdown menu on hover */
+/* .dropdown:hover .dropdown-menu {display: inline-block !important; 
+} */
+
+
+
+.navbar-toggle .icon-bar 
+{
+    background: white;
+}
+
+.navbar-header img {
+    height: 65px;
+}
+
+#globalWrapper {
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+#top_menu_14 {
+    height: 18px;
+}
+
+#top_menu_14 #user_item {
+    margin-top: -3px;
+    padding-top: 0px;
+}
+
+#top_menu_14 #bars_item img {
+    vertical-align: top;
+}
+
+@media (max-width: 810px) {
+    #home-link {
+        display:none;
+    }
+}
+
+.nav .open>a, .nav>li>a:hover, .nav .open:hover>a, .nav .dropdown:hover>a{
+    -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  transition:.5s;
+  /* color box around main dropdown goes when click on link */
+  background-color:#1c2427;
+  color: white !important;
+}
+
+.nav .open .dropdown-menu, .nav .dropdown-menu {
+    border: none;
+}
+
+/* color of box around main dropdown when clicked */
+.nav .open>a:hover, .nav a:focus {
+    background-color: #1c2427 !important;
+}
+
+@media (min-width: 979px) {
+  ul.nav li.dropdown:hover > ul.dropdown-menu {
+    display: block;
+    /* color of box around whole dropdown list box normal display */
+    background-color: #1c2427;
+    border-top: 2px solid #1c2427;
+  animation-name: slidenavAnimation;
+  animation-duration:.5s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+
+  -webkit-animation-name: slidenavAnimation;
+  -webkit-animation-duration:.5s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+  -webkit-animation-fill-mode: forwards;
+
+  -moz-animation-name: slidenavAnimation;
+  -moz-animation-duration:.5s;
+  -moz-animation-iteration-count: 1;
+  -moz-animation-timing-function: ease;
+  -moz-animation-fill-mode: forwards;
+  }
+}
+
+.open > .dropdown-menu {
+
+}
+@keyframes slidenavAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes slidenavAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.navbar.scrolled {
+    /* color of box around whole dropdown list box normal display */
+    background-color: rgba(24, 30, 32, 0.9);
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1000px;
+    }
+}
+
+
+/**** PAGE CONTENT ****/
+
+#bodyContent {
+    background-color: white;
+}
+
+#bodyContent h1 {
+    text-align: center;
+    font-size: 48pt;
+    /*font-weight: lighter;*/
+}
+
+#bodyContent h2 {
+    text-align: center;
+    font-size: 24pt;
+    /*font-weight: bold;*/
+}
+
+#bodyContent h3 {
+    text-align: left;
+    font-size: 14pt;
+    /*font-weight: bold;*/
+    text-decoration: underline;
+}
+
+#bodyContent h4 {
+    text-align: left;
+    font-size: 14pt;
+    text-decoration: underline;
+}
+
+#bodyContent p {
+    font-size: 14pt;
+    margin-top: 10px;
+}
+
+#bodyContent .table {
+    font-size: 12pt;
+    
+}
+
+.img-center {
+    margin: 6pt auto;
+}
+
+.img-reponsive {
+    margin-top: 6pt;
+    margin-bottom: 6pt;
+
+}
+#bodyContent .imager{
+float: right;
+/*width: 200px;*/
+text-align: center;
+font-size: 12px;
+padding-left: 20px;
+
+}
+
+#bodyContent .imagel{
+float: left;
+/*width: 200px;*/
+text-align: center;
+font-size: 12px;
+padding-right: 20px;
+
+}
+
+
+
+
+#side {
+    float: left;
+padding-right: 20px;
+padding-top: 15px;
+}
+#sider {
+    float: right;
+padding-left: 20px;
+padding-top: 15px;
+}
+
+
+/* This section defines the hero image sections of each page */
+
+.hero-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(http://2018.igem.org/wiki/images/a/af/T--Oxford--lab8.jpg) !important;
+    height: 50% !important;
+    background-position:center !important;
+    background-repeat:no-repeat;
+    background-size: cover !important;
+    position:relative;
+}
+
+.hero-text {
+    text-align:center;
+    position:relative !important;
+    top:25%;
+    left:50%;
+    transform: translate(-50%, 50%);
+    color:white;
+}
+
+.paragraph_divider {
+    text-align: center;
+    padding: 15px;
+}
+
+.faded_image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: 200px;
+
+}
+
+.faded_image_center_text {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    font-size: 18px;
+}
+
+.centre_container {
+    position: relative;
+    padding: 5px;
+    text-align: center;
+}
+
+.image_faded_overlay {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    max-height: inherit;
+    display:block;
+    transition: .5s ease;
+    background-color: white;
+    opacity: 0.8;
+
+}
+
+.faded_image:hover .image_faded_overlay {
+    opacity: 0.5;
+  }
+
+  h3, h4 {
+      line-height:150%;
+      font-family:"Source Sans Pro", sans-serif;
+  }
+
+  .title_card {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: 20vw;
+  }
+
+  .title_card_text {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    font-size: 2vw;
+  }
+
+
+  .banner_overlay_text {
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    font-size: 5vw;
+    line-height: 5vw;
+    position:absolute;
+    width:50%;
+    text-align:center;
+    margin-bottom:0px;
+}

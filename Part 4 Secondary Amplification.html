@@ -1,0 +1,297 @@
+<section id="n4" style="background-color: #f2f2f2ff; padding-bottom:15px;">
+  <div class="container">
+    <div class="row">
+      <div class=".col-md-8 .offset-md-2">
+        <h2> Part IV: Secondary Amplification System</h2>
+
+        <h4>How then can we beat <i>C. difficile</i> at its own upregulation game?</h4>
+
+        <h4>One way is for the engineered <i>L. reuteri</i> cells to upregulate other <i>L. reuteri</i> cells once a small fraction of the population has been upregulated by <i>C. difficile</i>-regulated AIP. This can be accomplished by incorporating an additional signal secretion & detection system - a secondary amplification system.</h4>
+
+        <h4>To observe the efficacy of our engineered <i>L. reuteri</i> with the secondary amplification system, we incorporated new differential equations into our existing deterministic mathematical model <a href=#n2>here</a> and simulated this new integrated system.</h4>
+        <br>
+
+        <div class="panel-group">
+            <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" href="#Secondary_Assumptions">Secondary Amplification System Primer</a>
+              </h4>
+            </div>
+            <div id="Secondary_Assumptions" class="panel-collapse collapse">
+              <centre><div class="panel-body">
+                  <h4>For our generic secondary amplification system, consider a signal X and its complementary receptor Y which can only be produced by previously AgrA/C-upregulated <i>L. reuteri</i> cells. Such a signal X is assumed to secreted and then bind with membrane receptor Y in neighbouring <i>L. reuteri</i> cells to form complex XY. This complex thus acts as a transcription factor that upregulates the <i>L. reuteri</i> cell.</h4>
+                </div></centre>
+            </div>
+            </div>
+            </div>
+
+        <div class="panel-group">
+            <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" href="#Secondary_Assumptions">Assumptions</a>
+              </h4>
+            </div>
+            <div id="Secondary_Assumptions" class="panel-collapse collapse">
+              <centre><div class="panel-body">
+
+                </div></centre>
+            </div>
+            </div>
+            </div>
+        
+        <div class="panel-group">
+            <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" href="#Secondary_Kinetic">Kinetic Equations & Kinetic Rate Constants</a>
+              </h4>
+            </div>
+            <div id="Secondary_Kinetic" class="panel-collapse collapse">
+              <centre><div class="panel-body">
+
+                  <div class="panel-group">
+                      <div class="panel panel-default">
+                      <div class="panel-heading">
+                        <h4 class="panel-title">
+                          <a data-toggle="collapse" href="#Secondary_Transcription">Transcription of Signalling Molecule X & Receptor Y</a>
+                        </h4>
+                      </div>
+                      <div id="Secondary_Transcription" class="panel-collapse collapse">
+                        <centre><div class="panel-body">
+          
+                            <div class="table-responsive">
+                                <table class="table">
+                                  <thead>
+                                    <tr>
+                                      <th>Kinetic Rate Equation</th>
+                                      <th>Kinetic Rate Constant</th>
+                                      <th>Kinetic Rate Constant Value Modelled</th>
+                
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td>$$NULL \to Mxy$$</td>
+                                      <td>$$m2 (if [Ap2] \geq 2 \times 10^-9); 0 (if [Ap2] \lt 2 \times 10^-9$$</td>
+                                      <td></td>
+                                    </tr>
+                
+                
+                                  </tbody>
+                                </table>
+                              </div>
+                          
+                          </div></centre>
+                      </div>
+                      </div>
+                      </div>
+
+                      
+                  <div class="panel-group">
+                      <div class="panel panel-default">
+                      <div class="panel-heading">
+                        <h4 class="panel-title">
+                          <a data-toggle="collapse" href="#Secondary_Translation">Translation of Signalling Molecule & Receptor Y</a>
+                        </h4>
+                      </div>
+                      <div id="Secondary_Translation" class="panel-collapse collapse">
+                        <centre><div class="panel-body">
+          
+                            <div class="table-responsive">
+                                <table class="table">
+                                  <thead>
+                                    <tr>
+                                      <th>Kinetic Rate Equation</th>
+                                      <th>Kinetic Rate Constant</th>
+                                      <th>Kinetic Rate Constant Value Modelled</th>
+                
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td>$$Mxy \to X$$</td>
+                                      <td>$$v$$</td>
+                                      <td></td>
+                                    </tr>
+
+                                    <tr>
+                                      <td>$$Mxy \to Y$$</td>
+                                      <td>$$v$$</td>
+                                    </tr>
+                
+                
+                                  </tbody>
+                                </table>
+                              </div>
+                          
+                          </div></centre>
+                      </div>
+                      </div>
+                      </div>
+
+                      <div class="panel-group">
+                          <div class="panel panel-default">
+                          <div class="panel-heading">
+                            <h4 class="panel-title">
+                              <a data-toggle="collapse" href="#Secondary_TF">Ligand Binding of X to Receptor Y</a>
+                            </h4>
+                          </div>
+                          <div id="Secondary_TF" class="panel-collapse collapse">
+                            <centre><div class="panel-body">
+              
+                                <div class="table-responsive">
+                                    <table class="table">
+                                      <thead>
+                                        <tr>
+                                          <th>Kinetic Rate Equation</th>
+                                          <th>Kinetic Rate Constant</th>
+                                          <th>Kinetic Rate Constant Value Modelled</th>
+                    
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr>
+                                          <td>$$X + Y \to XY$$</td>
+                                          <td>$$\k_{ir}$$</td>
+                                          <td></td>
+                                        </tr>
+                    
+                    
+                                      </tbody>
+                                    </table>
+                                  </div>
+                              
+                              </div></centre>
+                          </div>
+                          </div>
+                          </div>
+                          
+                          <div class="panel-group">
+                              <div class="panel panel-default">
+                              <div class="panel-heading">
+                                <h4 class="panel-title">
+                                  <a data-toggle="collapse" href="#Degradation_Secondary">Degradation of Molecules</a>
+                                </h4>
+                              </div>
+                              <div id="Degradation_Secondary" class="panel-collapse collapse">
+                                <centre><div class="panel-body">
+                                    <div class="table-responsive">
+                                        <table class="table">
+                                          <thead>
+                                            <tr>
+                                              <th>Kinetic Rate Equation</th>
+                                              <th>Kinetic Rate Constant</th>
+                                              <th>Kinetic Rate Constant Value Modelled</th>
+                        
+                                            </tr>
+                                          </thead>
+                                          <tbody>
+                                            <tr>
+                                              <td>$$X \to NULL (where X=Mxy, X, Y)$$</td>
+                                              <td>$$\delta_X$$</td>
+                                              <td></td>
+                                            </tr>
+                        
+                        
+                                          </tbody>
+                                        </table>
+                                      </div>
+                                  </div></centre>
+                              </div>
+                              </div>
+                              </div>
+                
+                </div></centre>
+            </div>
+            </div>
+            </div>
+
+            <div class="panel-group">
+                <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" href="#Secondary_Diff">Differential Equations</a>
+                  </h4>
+                </div>
+                <div id="Secondary_Diff" class="panel-collapse collapse">
+                  <centre><div class="panel-body">
+
+                      <div class="table-responsive">
+                          <table class="table">
+                            <thead>
+                              <tr>
+                                <th>Concentration Modelled</th>
+                                <th>Differential Equation</th>
+                                <th>Process Modelled</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>mRNA for Signaling Molecule X & Receptor Y</td>
+                                <td>%%\frac {dMxy}{dt} = m2 - \delta_{Mxy} \times Mxy - v \times Mxy (if [Ap2] \geq 2 \times 10^-9)
+                                  \\\frac {dMxy}dt = 0 (if {Ap2} \lt 2 \times 10^-9)$$</td>
+                                <td>Transcription (only if upregulated <i>L. reuteri</i>) +  Degradation + Translation</td>
+                              </tr>
+
+                              <tr>
+                                <td>Signalling Molecule X</td>
+                                <td>$$\frac {dX}{dt} = v \times Mxy - k_{ir} \times X \times Y - \delta_X \times X$$</td>
+                                <td>Translation + Ligand Binding + Degradation</td>
+                              </tr>
+
+                              <tr>
+                                  <td>Signalling Molecule Y</td>
+                                  <td>$$\frac {dY}{dt} = v \times Mxy - k_{ir} \times X \times Y - \delta_Y \times Y$$</td>
+                                  <td>Translation + Ligand Binding + Degradation</td>
+                                </tr>
+
+                                <tr>
+                                  <td>Ligand-Receptor Complex XY</td>
+                                  <td>$$\frac {dXY}{dt} = k_{ir} \times X \times Y - \delta_{XY} \times XY$$</td>
+                                  <td>Ligand Binding + Degradation</td>
+                                </tr>
+                            </tbody>
+                          </table>
+                        </div>
+
+                    </div></centre>
+                </div>
+                </div>
+                </div>
+
+                <div class="panel-group">
+                    <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                        <a data-toggle="collapse" href="#Secondary_Results">Results</a>
+                      </h4>
+                    </div>
+                    <div id="Secondary_Results" class="panel-collapse collapse">
+                      <centre><div class="panel-body">
+
+                        </div></centre>
+                    </div>
+                    </div>
+                    </div>
+
+                    
+                <div class="panel-group">
+                    <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                        <a data-toggle="collapse" href="#Secondary_Discussion">Discussion</a>
+                      </h4>
+                    </div>
+                    <div id="Secondary_Discussion" class="panel-collapse collapse">
+                      <centre><div class="panel-body">
+
+                        </div></centre>
+                    </div>
+                    </div>
+                    </div>
+      </div>
+    </div>
+  </div>
+  </section>
