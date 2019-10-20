@@ -93,45 +93,67 @@
           
               <div class="centre_container">
                   <div class="row">
+
                   <div class="col-md-3">
-                      <a href="https://2019.igem.org/Team:Oxford/Our_solution" style="padding-right:0;"> 
-                      <div class="title_card" style="background-color:#FFBF00; opacity: 0.8">
-                  <!-- Note that the faded image must be square aspect ratio-->
-                       <div class="title_card_text">Design</div>
-                      
-                      </div>
-                      </a>
-                  </div>
-  
-                  <div class="col-md-3"> 
-                      <a href="https://2019.igem.org/Team:Oxford/wetlab" style="padding-right:0;" > 
-                          <div class="title_card" style="background-color:lightskyblue; opacity:0.8">
-                      <!-- Note that the faded image must be square aspect ratio-->
-                           <div class="title_card_text">Wet Lab</div>
-                          
+                    <div class="flip-card">
+                        <a href="https://2019.igem.org/Team:Oxford/Our_solution" style="padding-right:0;"> 
+                          <div class="flip-card-inner">
+                            <div class="flip-card-front" style="background-color:#FFBF00; opacity: 0.8">
+                                <div class="title_card_text">Design</div>
+                            </div>
+                            <div class="flip-card-back" style="background-color:#FFBF00; opacity: 0.8">
+                                <div class="title_card_text" style="font-size:1.5vw; line-height: 1.5vw;">The design of our ProQuorum system has gradually evolved over time - endlessly towards our ultimate goal of treating this urgent threat of <i>C. difficile</i> infection. Click to learn more.</div>
+                            </div>
                           </div>
                           </a>
-                      </div>
-  
+                    </div>
+                  </div>
+
                   <div class="col-md-3">
-                      <a href="https://2019.igem.org/Team:Oxford/Model" style="padding-right:0;" >
-                              <div class="title_card" style="background-color:#CA3433; opacity:0.8">
-                          <!-- Note that the faded image must be square aspect ratio-->
-                               <div class="title_card_text">Modelling</div>
-                             
+                      <div class="flip-card">
+                          <a href="https://2019.igem.org/Team:Oxford/wetlab" style="padding-right:0;"> 
+                            <div class="flip-card-inner">
+                              <div class="flip-card-front" style="background-color:lightskyblue; opacity:0.8">
+                                  <div class="title_card_text">Wet Lab</div>
+                              </div>
+                              <div class="flip-card-back" style="background-color:lightskyblue; opacity:0.8">
+                                  <div class="title_card_text" style="font-size:1.5vw; line-height: 1.5vw;">Our wet lab progress, fraught with countless obstacles, has been a journey of our endeavour to make our dreams reality. Click here for more. </div>
+                              </div>
+                            </div>
+                            </a>
+                      </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="flip-card">
+                            <a href="https://2019.igem.org/Team:Oxford/Model" style="padding-right:0;"> 
+                              <div class="flip-card-inner">
+                                <div class="flip-card-front" style="background-color:#CA3433; opacity:0.8">
+                                    <div class="title_card_text">Modelling</div>
+                                </div>
+                                <div class="flip-card-back" style="background-color:#CA3433; opacity:0.8">
+                                    <div class="title_card_text" style="font-size:1.5vw; line-height: 1.5vw;">Our modelling team has provided valuable insight into our system as a potential therapeutic with intricate mathematical models and elegant spatial models. Click here for more. </div>
+                                </div>
                               </div>
                               </a>
-                          </div>   
-                          
-                          <div class="col-md-3">
-                              <a href="https://2019.igem.org/Team:Oxford/Human_Practices" style="padding-right:0;" >
-                                      <div class="title_card" style="background-color:#98FB98; opacity:0.8;">
-                                  <!-- Note that the faded image must be square aspect ratio-->
-                                       <div class="title_card_text">Human Practices</div>
-                                     
-                                      </div>
-                                      </a>
-                                  </div>   
+                        </div>
+                      </div>
+
+                      <div class="col-md-3">
+                          <div class="flip-card">
+                              <a href="https://2019.igem.org/Team:Oxford/Human_Practices" style="padding-right:0;"> 
+                                <div class="flip-card-inner">
+                                  <div class="flip-card-front" style="background-color:#98FB98; opacity:0.8;">
+                                      <div class="title_card_text">Human Practices</div>
+                                  </div>
+                                  <div class="flip-card-back" style="background-color:#98FB98; opacity:0.8;">
+                                      <div class="title_card_text" style="font-size:1.5vw; line-height: 1.5vw;">Human practices have proved crucial in connecting our project to reality, providing an endless stream of improvements to our project. Click here for more. </div>
+                                  </div>
+                                </div>
+                                </a>
+                          </div>
+                        </div>
+                       
 
                       </div>
                   </div>
@@ -190,6 +212,53 @@
     position: absolute;
     width:50%;
     }
+/* Below is the CSS code for the flipping cards */
+    /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+  background-color: transparent;
+  width: 100%;
+  height: 20vw;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  display: block;
+  margin-left:auto;
+  margin-right: auto;
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateX(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  color: black;
+  transform: rotateX(180deg);
+}
 
 </style>
 
