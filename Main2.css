@@ -481,12 +481,12 @@ padding-top: 15px;
     display:block;
     transition: .5s ease;
     background-color: white;
-    opacity: 0.8;
+    opacity: 0.9;
 
 }
 
 .faded_image:hover .image_faded_overlay {
-    opacity: 0.5;
+    opacity: 0.7;
   }
 
   h3, h4 {
