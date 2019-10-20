@@ -25,7 +25,86 @@
     </div>
         </section>
 
-      <section id="n1" style="padding-bottom: 15px;">
+        <section id="n1" style="padding-bottom: 15px;">
+            <div class="container">
+              <div class="row">
+                <div class=".col-md-8 .offset-md-2">
+
+                  <h2><i>E. coli</i></h2>
+
+                  <h3>Strain of Choice</h3>
+
+                  <h4><i>Escherichia coli</i> strains are commonly used host organisms in labs because they have several advantages: cheap, replicate rapidly, have well characterized and optimized systems, etc. which make them very convenient for lab work. </h4>
+                  <h4>In our project, we opted for using <i>E. coli</i> as well when we had to amplify plasmid DNA, express proteins for purification or just for testing constructs before they were transformed into <i>L. reuteri</i>. </h4>
+                  <h4>We mainly used two strains for our <i>E. coli</i> work: NEBTurbo competent cells for cloning, and BL21(DE3)-RIPL competent cells for protein expression.</h4>
+
+                  </div>
+                  </div>
+                  </div>
+        </section>
+
+        <section id="n2" style="background-color: #f2f2f2ff; padding-bottom:15px;">
+            <div class="container">
+              <div class="row">
+                <div class=".col-md-8 .offset-md-2">
+
+                  <h3>Gibson Assembly of Constructs</h3>
+
+                  <h4>For our project, we designed several constructs which were used for various experiments. To assemble these constructs, we used the protocol developed by Gibson et al. (2009)<sup>1</sup>. </h4>
+
+                  <h4>The Gibson assembly (GA) offers a quick and easy method to construct DNA fragments and recombinant plasmids. This method uses a DNA exonuclease that creates single stranded DNA overhangs which can anneal with other complementary overhangs, DNA polymerase that fills in any gaps, and DNA ligase that connects the DNA fragments together, all in one reaction mixture<sup>1</sup>.</h4>
+
+                  <img src="" style="width:75%; display:block; margin-left: auto; margin-right: auto;" alt="Figure 1: Overview of Gibson Assembly">
+
+                  <p style="font-size:14px;">Figure 1. Overview of Gibson Assembly. (Gibson Assembly by NivinN is licensed under CC BY 4.0)</p>
+
+                  <h4>This method was an alternative to using restriction enzymes. We used the Gibson Assembly to construct all of our recombinant plasmids. Having our main inserts synthetized by IDT, we only needed to clone the fragment into the corresponding vector. This was achieved by creating overhangs using appropriate primers in polymerase chain reactions (PCR) in the inserts and the vector backbones. The resulting fragments were separated by agarose gel electrophoresis to purify only those bands that corresponded to our fragment of interest. The purified DNA was then used for Gibson Assembly, which linked the fragments together creating the final recombinant plasmid constructs.</h4>
+
+                  <h4>Moreover, this method enabled us to easily troubleshoot our assemblies simply by ordering new primers. We have encountered such issues, notably when we needed a construct with only a promoter and a reporter gene (e.g. erm-mClover3,ldh-mClover3) or when one of the constructs was missing terminators due to the complex secondary structures that would have been difficult for IDT to synthesise. Instead, we were able to attach such terminators, using PCR and Gibson assembly, from another construct.</h4>
+
+                  <h4>The products of Gibson Assembly reactions were transformed into <i>E. coli</i> (NEBTurbo cloning strain) competent cells, selected on agar plates, and correct assembly of product was validated by sequencing.</h4>
+
+
+                  </div>
+                  </div>
+                  </div>
+        </section>
+
+        <section id="n3" style="padding-bottom: 15px;">
+            <div class="container">
+              <div class="row">
+                <div class=".col-md-8 .offset-md-2">
+
+                  <h3>Expression +  Purification of CD27L & Truncated Endolysins for Killing Assay</h3>
+
+                  <h4>One of the main components of our experimental work is the killing of <i>C. difficile</i> by using CD27L, an endolysin from ɸCD27 bacteriophage. CD27L is a protein with two domains: an N-terminal N-acetylmuramoyl-L-alanine amidase homologue and a C-terminal domain. It has been argued that the N-terminal domain has the same specificity as the full length CD27L and improved catalytic activity<sup>2</sup>.</h4>
+
+                  <h4>We were interested in testing this endolysin in different conditions, to see how it behaves in different environments. Thus, to carry out those experiments, we expressed both the CD27L and CD27L<sub>1-179</sub> endolysins, allowing us to compare them and test how they behave.</h4>
+
+                  <h4>For our purification strategy, we expressed the endolysins in <i>E. coli</i> and purified it via  immobilized metal ion affinity chromatography (IMAC) to obtain a partially purified protein solution. Then, after confirming by SDS-PAGE that we had the correct product, we dialysed our protein into phosphate buffered saline (PBS). With such a purification strategy, we aimed to obtain a pure enough sample of active endolysin for killing  assays.</h4>
+
+                  <h4>To express our endolysin, we fused our endolysin with a N-terminal 6x-His tag and a SpyTag<sup>3</sup>, which enables the utilisation of two different affinity chromatography (AC) methods, as well as tandem affinity purification (TAP). </h4>
+
+                  <h4>The constructed part was cloned into an IPTG-inducible, T7 expression system-based pET28a vector. For our host organism, we used the BL21(DE3)-RIPL expression strain, which is optimized for the T7 expression system and rare codons. We grew our cells in LB at 37&#8451; and then induced the cultures in mid-log phase with IPTG at 180RPM 21&#8451;. Following induction overnight, the cells were harvested using centrifugation and lysed by sonication. Purification was then carried out as mentioned above.</h4>
+
+                  <h4>Our choice of buffer was based on previous kill assays in literature, which used PBS as the main buffer for the reaction<sup>2</sup>. Specifically, in cases where our yield was low (i.e. CD27L<sub>1-179</sub> construct) we used spin concentration to achieve total protein concentration that is suitable for assays. </h4>
+
+                  <h4>During purification, we encountered several issues with both the CD27L and CD27L<sub>1-179</sub> proteins. The latter was expressed at insufficiently high concentrations for assaying, so spin concentration was used to achieve high enough concentrations.</h4>
+
+                  <h4>Additionally, our progress with CD27L was also hindered by the precipitation of our samples during dialysis. Specifically, our CD27L endolysin precipitated in substantial quantities (protein concentration decreasing from 5mg/ml to 0.3mg/ml) in three batches of our five.</h4>
+
+                  <h4>Our initial hypothesis was that this occurred due to the lack of reducing conditions. This hypothesis was based on the structural model of CD27L, where it is shown there are several surface cysteine residues. However, adding beta-mercaptoethanol to all steps of purification, including dialysis, did not resolve this issue. Thus, to fully address this question, further investigation is required.</h4>
+
+                  <h4>Tandem Affinity Purification (TAP) was also planned to obtain higher purity samples. However, we decided that our one step affinity chromatography yielded sufficient purity for our particular CD27L applications.</h4>
+
+
+                  </div>
+                  </div>
+                  </div>
+        </section>
+
+
+      <section id="l1" style="padding-bottom: 15px;">
         <div class="container">
           <div class="row">
             <div class=".col-md-8 .offset-md-2">
@@ -139,7 +218,7 @@
 </div>
 </section>
 
-<section id="n2" style="background-color: #f2f2f2ff; padding-bottom:15px;">
+<section id="l2" style="background-color: #f2f2f2ff; padding-bottom:15px;">
     <div class="container">
       <div class="row">
         <div class=".col-md-8 .offset-md-2">
@@ -330,6 +409,16 @@
                               </tr>
                             </thead>
                             <tbody>
+
+                              <tr>
+                                <td>1</td>
+                                <td>Gibson, Daniel G., et al. “Enzymatic Assembly of DNA Molecules up to Several Hundred Kilobases.” Nature Methods, vol. 6, no. 5, May 2009, pp. 343–45. www.nature.com, doi:10.1038/nmeth.1318.</td>
+                              </tr>
+
+                              <tr>
+                                <td>2</td>
+                                <td>Mayer, M. J., et al. “Structure-Based Modification of a Clostridium Difficile-Targeting Endolysin Affects Activity and Host Range.” Journal of Bacteriology, vol. 193, no. 19, Oct. 2011, pp. 5477–86. DOI.org (Crossref), doi:10.1128/JB.00439-11.</td>
+                              </tr>
                               <tr>
                                 <td>1</td>
                                 <td>Jacobsen, C.N. et al., Screening of Probiotic Activities of Forty-Seven Strains of Lactobacillus spp. by In Vitro Techniques and Evaluation of the Colonization Ability of Five Selected Strains in Humans, Applied and Environmental Microbiology, Nov. 1999, p. 4949–4956</td>
