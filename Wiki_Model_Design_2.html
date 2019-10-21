@@ -341,7 +341,8 @@
                         <li> Signal X and receptor Y expression produces negligible cellular stress</li>
                         <li> Kinetic rates of the secondary amplification system are identical to those for AgrAC two-component regulatory system as in the <a href="https://2019.igem.org/Team:Oxford/Model/Design">Model Design</a>page.</li>
                         <li> Signal X and receptor Y can freely diffuse through cell membranes.</li>
-                        <li> The</li>
+                        <li> The upregulation profile due to signal-receptor complex XY can be approximated using an upregulation cut-off concentration as previously assumed for the AgrAC two-component regulatory system as in the <a href="https://2019.igem.org/Team:Oxford/Model/Design">Model Design</a>page. </li>
+                        <li> A single molecule of signal-receptor complex XY is sufficient co cause upregulation. Consequently, the decrease in XY concentration can be ignored.</li>
                       </ol>
         
                       </div></centre>
@@ -358,15 +359,11 @@
                   </div>
                   <div id="Secondary_Kinetic" class="panel-collapse collapse">
                     <centre><div class="panel-body">
-                            <div class="panel-group">
-                                    <div class="panel panel-default">
-                                    <div class="panel-heading">
-                                      <h4 class="panel-title">
-                                        <a data-toggle="collapse" href="#Secondary_Transcription">Transcription of Signalling Molecule X & Receptor Y</a>
-                                      </h4>
-                                    </div>
-                                    <div id="Secondary_Transcription" class="panel-collapse collapse">
-                                      <centre><div class="panel-body">
+                        <h3>Transcription of Signalling Molecule X & Receptor Y</h3>
+                           
+                        <h4>As previously described in the mathematical model for the AgrAC two-component regulatory system as in the <a href="https://2019.igem.org/Team:Oxford/Model/Design">Model Design</a>page, let the upregulation cutoff for the dimerised, phospohrylated AgrA such that 10 pM of AIP can upregulated a single cell. This corresponds to a concentration of $$6.514 \times 10^-9 \ M$$ of dimerised, phosphorylated AgrA protein.</h4>
+                                        
+                        <h4>As mRNA transcription is triggered by dimerised, phosphorylated AgrA, the relevant kinetic equations are written as:</h4>
                         
                                           <div class="table-responsive">
                                               <table class="table">
@@ -381,29 +378,19 @@
                                                 <tbody>
                                                   <tr>
                                                     <td>$$NULL \to Mxy$$</td>
-                                                    <td>$$m2 \ (if [Ap_2] \geq 2 \times 10^-9); \\ 0 \ (if [Ap_2] \lt 2 \times 10^-9)$$</td>
-                                                    <td></td>
+                                                    <td>$$m2 \ (if [Ap_2] \geq 6.514 \times 10^-9 \ M); \\ 0 \ (if [Ap_2] \lt 6.514 \times 10^-9 \ M)$$</td>
+                                                    <td>$$8.33 \ $$</td>
                                                   </tr>
                               
                               
                                                 </tbody>
                                               </table>
                                             </div>
-                                        
-                                        </div></centre>
-                                    </div>
-                                    </div>
-                                    </div>
+
+                            
+                             <h3>Translation of Signalling Molecule & Receptor Y</h3>
         
-                                    <div class="panel-group">
-                                            <div class="panel panel-default">
-                                            <div class="panel-heading">
-                                              <h4 class="panel-title">
-                                                <a data-toggle="collapse" href="#Secondary_Translation">Translation of Signalling Molecule & Receptor Y</a>
-                                              </h4>
-                                            </div>
-                                            <div id="Secondary_Translation" class="panel-collapse collapse">
-                                              <centre><div class="panel-body">
+                                   
                                 
                                                   <div class="table-responsive">
                                                       <table class="table">
@@ -432,20 +419,8 @@
                                                       </table>
                                                     </div>
                                                 
-                                                </div></centre>
-                                            </div>
-                                            </div>
-                                            </div>
-        
-                                            <div class="panel-group">
-                                                    <div class="panel panel-default">
-                                                    <div class="panel-heading">
-                                                      <h4 class="panel-title">
-                                                        <a data-toggle="collapse" href="#Secondary_TF">Ligand Binding of X to Receptor Y</a>
-                                                      </h4>
-                                                    </div>
-                                                    <div id="Secondary_TF" class="panel-collapse collapse">
-                                                      <centre><div class="panel-body">
+                                          <h3>Ligand Binding of X to Receptor Y & Subsequent Formation of Transcription Factor</h3>
+      
                                         
                                                           <div class="table-responsive">
                                                               <table class="table">
@@ -468,21 +443,37 @@
                                                                 </tbody>
                                                               </table>
                                                             </div>
+
+                                                            <h3>Upregulation of Cell by Transcription Factor of Secondary Signalling System</h3>
                                                         
-                                                        </div></centre>
-                                                    </div>
-                                                    </div>
-                                                    </div>  
-        
-                                                    <div class="panel-group">
-                                                            <div class="panel panel-default">
-                                                            <div class="panel-heading">
-                                                              <h4 class="panel-title">
-                                                                <a data-toggle="collapse" href="#Degradation_Secondary">Degradation of Molecules</a>
-                                                              </h4>
-                                                            </div>
-                                                            <div id="Degradation_Secondary" class="panel-collapse collapse">
-                                                              <centre><div class="panel-body">
+                                                            <div class="table-responsive">
+                                                                <table class="table">
+                                                                  <thead>
+                                                                    <tr>
+                                                                      
+                                                                      <th>Kinetic Rate Constant</th>
+                                                                      <th>Kinetic Rate Constant Value Modelled</th>
+                                                
+                                                                    </tr>
+                                                                  </thead>
+                                                                  <tbody>
+                                                                    <tr>
+                                                                      
+                                                                      <td>$$P$$</td>
+                                                                      <td>$$1 \ (if XY \geq 0.25 \times 10^-5) \ or \ 0 \ (if XY \lt 0.25 \times 10^-5)</td>
+                                                                      <td></td>
+                                                                    </tr>
+                                                
+                                                
+                                                                  </tbody>
+                                                                </table>
+                                                              </div>
+
+                                                              <h4>Such a upregulation cutoff of XY was deliberately chosen so that small concentrations of XY transcription factor can upregulate the cell.</h4>
+
+                                                              <h3>Degradation of Molecules</h3>
+
+
                                                                   <div class="table-responsive">
                                                                       <table class="table">
                                                                         <thead>
@@ -574,7 +565,16 @@
                           </div>
                           <div id="Secondary_Results" class="panel-collapse collapse">
                             <centre><div class="panel-body">
+
+                              <img src="https://2019.igem.org/wiki/images/6/60/T--oxford--secondary_amplification_upregulation.png" style="width:75%; margin-left: auto; margin-right: auto; display: block;" alt="Figure 1">
+                              <p style="font-size:14px;">Figure 1. Upregulation Profile with Secondary Amplification System, AIP Concentration Modulated. Specifically, AIP added at 350 minutes and removed at 650 minutes.</p>
+
+                              <img src="https://2019.igem.org/wiki/images/c/c3/T--oxford--secondary_amplification_Ap2.png" style="width:75%; margin-left: auto; margin-right: auto; display: block;" alt="Figure 2">
+                              <p style="font-size:14px;">Figure 2. Dynamics of Dimerised, Phosphorylated AgrA Protein with Secondary Amplification System, AIP Concentration Modulated. Specifically, AIP added at 350 minutes and removed at 650 minutes.</p>
         
+                              <img src="https://2019.igem.org/wiki/images/7/71/T--oxford--secondary_amplification_XY.png" style="width:75%; margin-left: auto; margin-right: auto; display: block;" alt="Figure 3">
+                              <p style="font-size:14px;">Figure 3. Dynamics of Signal-Receptor Complex XY with Secondary Amplification System, AIP Concentration Modulated. Specifically, AIP added at 350 minutes and removed at 650 minutes.</p>
+
                               </div></centre>
                           </div>
                           </div>
@@ -590,6 +590,10 @@
                           </div>
                           <div id="Secondary_Discussion" class="panel-collapse collapse">
                             <centre><div class="panel-body">
+
+                              <h4>Figures 1, 2 and 3 above depict the cell being upregulated for a subsantial duration of time after the timepoint at which the concentration of dimerised, phosphorylated AgrA (i.e the primary signalling system's transcription factor) has decreased below its upregulation cut-off concentration. This is due to the delay for the concentration of XY to decrease below its own upregulation cut-off concentration.</h4>
+
+                              <h4>Therefore, not only does the secondary amplification system help trigger endolysin production in <i>L. reuteri</i> in unfavourable spatial orientations, but it also maintains upregulation of the cell following signal depletion. This is beneficial for our probiotic as it increases therapeutic efficacy in its suppression of <i>C. difficile</i> pathogenicity.</h4>
         
                               </div></centre>
                           </div>
