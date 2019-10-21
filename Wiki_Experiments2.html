@@ -1,0 +1,666 @@
+{{Oxford/Loader}}
+{{Oxford}}
+<html lang="en">
+
+<!-- THIS IS WHERE THE HTML BEGINS -->
+
+<body>
+  
+  <section id="banner">
+    <div class="container" style="width:100%; padding-right:0; padding-left:0;">
+      <div class="row">
+        <div class="col-md-12">
+      <div class="inner" style="background-image: url('https://2019.igem.org/wiki/images/a/a4/T--Oxford--DS_Wet_Lab_Photo.jpeg'); background-size: cover; background-position:center;">
+        <div class="image_faded_overlay" style="background-color: white; opacity: 0.7">
+          <div class="translucent-back" style="height: 400px;">
+          </div>
+        </div>
+      <div class="banner_overlay_text">
+        Experiments
+      </div>
+      </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+        
+
+        <section id="n1" style="padding-bottom: 15px;">
+            <div class="container">
+              <div class="row">
+                <div class=".col-md-8 .offset-md-2">
+
+                  <h2><i>E. coli</i></h2>
+
+  
+
+                  <h3>Choice of Strain</h3>
+
+                  <h4><i>Escherichia coli</i> strains are commonly used host organisms in labs because they possess  several advantages. For example, they are cheap, replicate rapidly, and have well a characterised and optimised cloning and expression systems, and produce good yield of plasmid and many recombinant proteins. 
+                  </h4>
+                  <h4>In our project, we opted for using <i>E. coli</i> we had to amplify plasmid DNA, express proteins for purification or test constructs before they were transformed into <i>L. reuteri</i>. 
+                  </h4>
+                  <h4>We mainly used two strains for our <i>E. coli</i> work: NEBTurbo competent cells for cloning and BL21(DE3)-RIPL competent cells for protein expression.</h4>
+               
+                  <h3>Choice of Expression Vector</h3>
+                  
+                  <h4>Initially, we opted to use the pBAD33 vector with its arabinose-inducible promoter. This promoter can be tightly regulated by arabinose and can induce very strong expression. <sup>10</sup>  However, for our constructs, induction with pBAD did not occur efficiently, hence our use of the IPTG-inducible T7 expression system in the pET28a vector.</h4>
+
+                </div>
+               </div>
+               </div>
+        </section>
+               
+                  <section id="n2" style="background-color: #f2f2f2ff; padding-bottom:15px;">
+                      <div class="container">
+                        <div class="row">
+                          <div class=".col-md-8 .offset-md-2">
+                            <h3>Experimentation</h3>
+
+                  <h4>Our experimentation with <i>E. coli</i> involved many different techniques which are detailed below:</h4>
+                    <br>
+                  <div class="panel-group">
+                      <div class="panel panel-default">
+                      <div class="panel-heading">
+                        <h4 class="panel-title">
+                          <a data-toggle="collapse" href="#Ecoli_Gibson_Assembly">Gibson Assembly of Constructs</a>
+                        </h4>
+                      </div>
+                      <div id="Ecoli_Gibson_Assembly" class="panel-collapse collapse">
+                        <centre><div class="panel-body">
+                            <h4>For our project, we designed several constructs which were used for various experiments. To assemble these constructs, we used Gibson assembly.<sup>1</sup></h4>
+
+                            <h4>The Gibson assembly offers a quick and easy method to construct DNA fragments and recombinant plasmids. DNA with overlapping ends are added Gibson assembly master mixes, which contain T5 exonuclease, <i>Taq</i>ligase, and Phusion DNA polymerase<sup>1</sup>. Fragments are then assembled all together in a 4-step process (Fig. 1).
+                            </h4>
+          
+                            <img src="https://2019.igem.org/wiki/images/2/2c/T--Oxford--GA.png" style="width:75%; display:block; margin-left: auto; margin-right: auto;" alt="Figure 1: Overview of Gibson Assembly">
+          
+                            <p style="font-size:14px;">Figure 1. Overview of Gibson Assembly. (Gibson Assembly by NivinN is licensed under CC BY 4.0)</p>
+          
+                            <h4>Despite the Biobrick standard being based around restriction enzymes, we used Gibson Assembly to construct all of our recombinant plasmids. Having our main inserts synthesized by IDT, we only needed to clone the fragment into the corresponding vector. This was achieved by creating overhangs using appropriate primers in polymerase chain reaction (PCR) in the inserts and the vector backbones. The resulting fragments were separated by agarose gel electrophoresis to purify only the bands corresponding to our fragment of interest. The purified DNA was then used for Gibson Assembly, which linked the fragments together, creating the final recombinant plasmid constructs.</h4>
+          
+                            <h4>Moreover, this method enabled us to easily troubleshoot our assemblies simply by ordering new primers. We encountered such issues, notably when we needed a construct with only a promoter and a reporter gene (e.g. erm-mClover3, ldh-mClover3) or when terminators made large IDT gBlocks difficult to synthesise. In both cases, we were able to attach parts together easily using PCR and Gibson assembly.
+                              </h4>
+          
+                            <h4>The products of Gibson Assembly reactions were then transformed into <i>E. coli</i> (NEBTurbo) competent cells (made in-house). These colonies were selected on antibiotic-containing LB agar plates before colony PCR and validation by Sanger sequencing (Source Bioscience).</h4>
+          
+                </div></centre>
+            </div>
+            </div>
+            </div>
+
+            <div class="panel-group">
+                <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" href="#Ecoli_Expression">Expression +  Purification of CD27L & Truncated Endolysins for Killing Assay</a>
+                  </h4>
+                </div>
+                <div id="Ecoli_Expression" class="panel-collapse collapse">
+                  <centre><div class="panel-body">
+                      <h4>One of the main components of our experimental work was focused around CD27L, an endolysin from ɸCD27 bacteriophage that targeted <i>C. difficile</i>. CD27L is a protein with two domains: an N-terminal N-acetylmuramoyl-L-alanine amidase homologue and a C-terminal domain. It has been argued that the N-terminal domain has the same specificity as the full length CD27L and improved catalytic activity.<sup>2</sup></h4>
+
+                      <h4>We were interested in testing different versions of the endolysin (one from <a href=”http://parts.igem.org/Part:BBa_K895005”>Team Dundee 2012</a> as well as a <a href=”http://parts.igem.org/Part:BBa_K3183012”>truncated</a> and <a href=”http://parts.igem.org/Part:BBa_K3183009”>full-length</a> endolysin) in different conditions, to see how it behaves in different environments. Thus, to carry out those experiments, we expressed both the CD27L and CD27L<sub>1-179</sub> endolysins, allowing us to compare them and test how they behave.
+                      </h4>
+
+                      <img src="https://2019.igem.org/wiki/images/6/65/T--Oxford--Taleof3Endolysins.png" style="width:75%; display:block; margin-left:auto; margin-right:auto;" alt="Figure 1.">
+                      <p style="font-size:14px;">Figure 1. Constructs of CD27L Parts: </p>
+    
+                      <h4>For our purification strategy, we expressed the endolysins in <i>E. coli</i> and purified it via  immobilized metal ion affinity chromatography (IMAC) to obtain a partially purified protein solution. Then, after confirming by SDS-PAGE that we had the correct product, we dialysed our protein into phosphate buffered saline (PBS). With such a purification strategy, we aimed to obtain a pure enough sample of active endolysin for killing  assays.</h4>
+    
+                      <h4>To express our endolysin, we fused our endolysin with a N-terminal 6x-His tag and a SpyTag<sup>3</sup>, which enables the utilisation of two different affinity chromatography (AC) methods, as well as tandem affinity purification (TAP). </h4>
+    
+                      <h4>The constructed part was cloned into an IPTG-inducible, T7 expression system-based pET28a vector. For our host organism, we used the BL21(DE3)-RIPL expression strain, which is optimized for the T7 expression system and rare codons. We grew our cells in LB at 37&deg;C and then induced the cultures in mid-log phase with IPTG at 180RPM 21&deg;C;. Following induction overnight, the cells were harvested using centrifugation and lysed by sonication. Purification was then carried out as mentioned above.</h4>
+    
+                      <h4>Our choice of buffer was based on previous kill assays in literature, which used PBS as the main buffer for the reaction<sup>2</sup>. Specifically, in cases where our yield was low (i.e. CD27L<sub>1-179</sub> construct), we used spin concentration to achieve total protein concentration suitable for killing assays.  </h4>
+    
+                      <h4>During purification, we encountered several issues with both the CD27L and CD27L<sub>1-179</sub> proteins. The latter was expressed at insufficiently high concentrations for assaying, so spin concentration was used to achieve high enough concentrations.</h4>
+    
+                      <h4>Additionally, our progress with CD27L was also hindered by the precipitation of our samples during dialysis. Specifically, our CD27L endolysin precipitated in substantial quantities (protein concentration decreasing from 5mg/ml to 0.3mg/ml) in three batches of our five.</h4>
+    
+                      <h4>Our initial hypothesis was that this occurred due to the lack of reducing conditions. This hypothesis was based on the structural model of CD27L, where it is shown there are several surface cysteine residues. However, adding beta-mercaptoethanol to all steps of purification, including dialysis, did not resolve this issue. Thus, to fully address this question, further investigation is required.</h4>
+    
+                      <h4>Tandem Affinity Purification (TAP) was also planned to obtain higher purity samples. However, we decided that our one step affinity chromatography yielded sufficient purity for our particular CD27L applications.</h4>
+    
+          </div></centre>
+      </div>
+      </div>
+      </div>
+
+      <div class="panel-group">
+          <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" href="#Ecoli_Assay">CD27L Endolysin Assay</a>
+            </h4>
+          </div>
+          <div id="Ecoli_Assay" class="panel-collapse collapse">
+            <centre><div class="panel-body">
+                <h4>To test the CD27L endolysin, we had to create an assay demonstrating whether it is able to function as it was shown in the literature<sup>2,4</sup>. From such preliminary research, we discovered that CD27L, besides being active against <i>Clostiridoides difficile</i>, is also able to cleave amide bonds in the cell wall of other bacteria with the same peptidoglycan type, A1γ. Thus, we used <i>Bacillus subtilis</i>, a Category 1 Gram-positive bacterium<sup>2</sup> as our surrogate target due to safety concerns with the Category 2 <i>C. difficile</i>.</h4>
+                <h4>In order to assay whether <i>B. subtilis</i> is lysed by our endolysin, we measured absorbance at 600nm (OD600) throughout an 8 hour time period at every 15 minutes. This way, we were able to monitor how the <i>B. subtilis</i> culture is affected by CD27L. </h4>
+                <h4>Notably, our kill assay differs from the one described by Mayer et al. (2008)<sup>4</sup>. Their protocol involved washing and concentrating the cells to OD600 = 2.0 in Phosphate Buffered Saline (PBS), followed by mixing with CD27L and measuring the rate of decrease in OD600. </h4>
+                <h4>However, our protocol involved growing up a <i>B. subtilis</i> culture until they reached mid-log phase (OD600 ≈ 0.6), then diluting them in Lysogenic Broth (LB), adding our solution (CD27L or Lysozyme or PBS) and then measuring the growth over time by monitoring the change in OD600. The measurements were made automatically by a plate reader, BMG FLUOstar Omega and the cells were grown in a 96 well plate from Greiner (CellStar® 96 well plate F-type). </h4>
+
+                
+
+                <br>
+
+                <h4>To explore the capabilities of the endolysin, we carried out killing assays under different conditions. First, we tested the concentration dependence of our endolysin activity. Second, we tested the specificity of our endolysin by assaying CD27L against both <i>E. coli</i> and <i>L. reuteri</i>. </h4>
+                <h4>Given that our CD27L construct has a SpyTag, we were also able to attempt protein oligomerisation to see greater activity from the oligomer. The SpyTag/SpyCatcher system allows for irreversible protein conjugation through the formation of an isopeptide bond. Oligomerisation can be achieved using previously characterised SpyCatcher-o-Hept. This contains SpyCatcher/Coiled-Coil monomers that forms heptamers in solution<sup>5</sup>. Although we attempted oligomerisation, our data were ultimately inconclusive.</h4>
+                <h4>Additionally, we performed scanning electron microscopy on our <i>B. subtilis</i> samples. Such a technique allowed us to visually confirm changes in <i>B. subtilis</i> cell wall morphology upon application of endolysin. This supports the hypothesis that the endolysin acts to degrade the peptidoglycan cell wall, ultimately causing lysis.<sup>2</sup></h4>
+
+                <img src="https://2019.igem.org/wiki/images/3/3b/T--Oxford--SEM-for-experiments.png" style="width:75%; display:block; margin-left:auto; margin-right:auto;" alt="B. subtilis SEM">
+                <p style="font-size: 14px;">Figure 1. SEM Images of <i>B. subtilis</i> Post-Treatment with CD27L Endolysin</p>  
+    </div></centre>
+</div>
+</div>
+</div>
+
+
+<div class="panel-group">
+    <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" href="#Ecoli_Dundee">Expression of 2012 iGEM Dundee Endolysin Part BBa_K895005</a>
+      </h4>
+    </div>
+    <div id="Ecoli_Dundee" class="panel-collapse collapse">
+      <centre><div class="panel-body">
+        
+          <h4>Our part improvement revolved around the comparison between our full length CD27L endolysin construct against the 2012 iGEM Dundee part BBa_K895005, as further detailed on the <a href=”https://2019.igem.org/Team:Oxford/Improve”>Part Improvement</a>page. </h4>
+          <h4>Experimentally, we cloned the construct as in Figure 1 into the pET28a vector (IPTG-inducible, T7 expression system). The particular construct included an HA-tag, allowing for affinity labelling for Western Blot. Assembled constructs were transformed into BL21(DE3)-RIPL cells. Upon induction however, both SDS-PAGE gels and Western blots gave negative results, hence a lack of expression. Our solution was thus to remove the <i>VgrG</i> Type VI secretion protein on the original part, and repeat our efforts to express this part.</h4>
+          <img src="https://2019.igem.org/wiki/images/a/a8/T--Oxford--Experiments-Dundee.png" style="width:75%; display:block; margin-left:auto; margin-right:auto;" alt="Figure 1: Dundee Construct">
+
+          <p style="font-size: 14px;">Figure 1. Dundee 2012 iGEM Part BBa_K895005 Construct</p>
+
+</div></centre>
+</div>
+</div>
+</div>
+
+<div class="panel-group">
+    <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" href="#Ecoli_AIP">Recombinant AIP Production</a>
+      </h4>
+    </div>
+    <div id="Ecoli_AIP" class="panel-collapse collapse">
+      <centre><div class="panel-body">
+          <h4>Our ProQuorum system relies on the detection of the <i>C. difficile</i>-specific quorum sensing signalling molecule known as AIP (autoinducer peptide). This molecule is hypothesized to be a small cyclic peptide that is synthesized from AgrD (precursor) by AgrB (a transmembrane protein) <sup>6</sup>.</h4>
+
+          <img src="https://2019.igem.org/wiki/images/a/a6/T--Oxford--transmembrane.png" style="width:75%; display: block; margin-left: auto; margin-right:auto;" alt="TM Helix Analysis">
+          <p style="font-size: 14px;">Figure 1. Transmembrane Prediction for AgrB Protein via TMHMM 2.0<sup>7</sup></sup></p>
+          <h4>We attempted to create a recombinant construct of AgrBD to produce recombinant AIP. This would have allowed us to test our AgrAC detection system in <i>L. reuteri</i>. A similar approach has been carried out previously with <i>Staphylococcus aureus</i><sup>8</sup>.</h4>
+
+          <h4>Initially, our construct was designed in the arabinose-inducible pBAD vector. However, due to difficulties with induction, we switched to the  IPTG-inducible pET vector, as seen below.</h4>
+
+          <img src="" style="width:75%; display:block; margin-left:auto; margin-right:auto;" alt="Figure 2: AgrBD Construct">
+
+          <p style="font-size: 14px;">Figure 2. AgrBD Construct</p>
+
+</div></centre>
+</div>
+</div>
+</div>
+
+<div class="panel-group">
+    <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" href="#Ecoli_Spy">Spy&Go Purification of SpyTag Fused mClover3</a>
+      </h4>
+    </div>
+    <div id="Ecoli_Spy" class="panel-collapse collapse">
+      <centre><div class="panel-body">
+     
+        <h4>We also explored the novel affinity chromatography method of Spy&Go purification. This method uses a fusion tag, called SpyTag developed by Zakeri et al. (2012)<sup>3</sup>> which binds to its stationary phase called SpyDock via noncovalent interactions. The SpyTag fused protein, after binding, can be eluted conveniently with 2.5 M imidazole (a relatively cheap compound). Moreover, the purification itself is claimed as a more sensitive alternative to His-tag Ni-NTA purification method<sup>5</sup>.</h4>
+        <h4>To test this purification, we used mClover3, a bright and photostable green fluorescent protein which has not previously been registered in the Part Registry, fused with 6xHis and SpyTag fusion tags<sup>9</sup>.</h4>
+
+
+        <h4>The protein was cloned into an IPTG inducible pET28a vector containing a T7 expression system. The assembled vector was transformed into BL21(DE3)-RIPL expression strains. We grew our cells in LB at 37&deg;C; and induced the cultures in mid-log phase with IPTG at 180RPM 21&deg;C;. The cells were harvested through centrifugation and lysed using sonication. </h4>
+
+        <h4>Since both Ni-NTA and Spy&Go purification methods require different buffer conditions, we halved each culture before sonication and resuspended them in the optimal buffer for lysis. After obtaining a clarified lysate through centrifugation, the lysate was loaded onto either a SpyDock or Ni-NTA column. The recommended protocols were used for both purification steps and 0.5mL elution fractions were collected. The purification was then checked by SDS-PAGE.</h4>
+
+        <h4>Subsequently, we would ideally have a convenient method of assessing the purity of our samples. However, we were not able to obtain samples of sufficient purity to perform assay based quantification. Instead, we utilized densitometric measurements in SDS-PAGE gels after Coomassie Blue staining using BioRad’s Chemidoc XRS and Image Lab (6.0.1) software to measure Lane% (which we refer to as purity), as shown in Figure 2 below.</h4>
+        <img src="https://parts.igem.org/wiki/images/4/4b/T--Oxford--Densitometry_Characterization2019.png" style="width:75%; display: block; margin-left: auto; margin-right:auto;" alt="Figure 2. Comparison of Spy&Go Purification vs. Ni-NTA purification by Densitometry">
+
+        <p style="font-size: 14px;">Figure 2. Comparison of Spy&Go Purification vs. Ni-NTA purification by Densitometry</p>
+
+        <h4>However, to first use this method of purity quantification, we created a standard curve to test how linear the densitometry is and how the purity values changes with different concentrations of protein loaded. </h4>
+
+        <h4>Specifically, we used partially purified mClover3 (by IMAC). We created a series of dilutions and loaded them onto the same SDS-PAGE gel. Then, after staining with Coomassie blue and destaining, we captured the image and analysed it with Image Lab. The bands and lanes were detected automatically. Exact protein concentrations were obtained by carrying out BCA assays to ensure that the same amount of protein was loaded into each well. </h4>
+
+      </div></centre>
+</div>
+</div>
+</div>
+
+
+<div class="panel-group">
+    <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" href="#Ecoli_Promoters">Fluorometry Assay of Constitutive Promoter Strength</a>
+      </h4>
+    </div>
+    <div id="Ecoli_Promoters" class="panel-collapse collapse">
+      <centre><div class="panel-body">
+
+        <h4>In our <i>L. reuteri</i> system, we implemented a constitutive promoter for both the testing of endolysin secretion and to express the AgrAC detection system. However, we also considered that such promoters might be useful for <i>E. coli</i> synthetic biological systems as well. </h4>
+        <h4>To test the strength of these promoters, we decided to use fluorometric measurements. Specifically, we used mClover3 as our reporter gene, pTRKH3 as our expression vector in NEBTurbo <i>E. coli</i> cells.</h4>       
+          
+</div></centre>
+</div>
+</div>
+</div>
+
+      
+                  
+
+                  </div>
+                  </div>
+                  </div>
+        </section>
+
+
+
+
+
+      <section id="l1" style="padding-bottom: 15px;">
+        <div class="container">
+          <div class="row">
+            <div class=".col-md-8 .offset-md-2">
+  
+              <h2><i>Lactobacillus reuteri</i></h2>
+
+              <h3>Introduction</h3>
+              
+              <h4><i>Lactobacillus reuteri</i> is a well characterized probiotic bacterial species and the chassis of choice for our ProQuorum system. Some of the criteria we considered essential for the strain included:</h4>
+
+              <ol style="font-size:18px;">
+                <li>the ability to survive and proliferate in the human gut</li>
+                <li>the potential for efficient endolysin production and secretion</li>
+                <li>the capability to express the two-component signalling system functionally</li>
+              </ol>
+
+              <h4>Regarding the first criterion, many of the <i>Lactobacillus</i> species have been shown to successfully colonise the gut and even promote its normal physiology, while also inhibiting the proliferation of specific pathogenic species<sup>10</sup>. </h4>
+
+              <h4>Regarding the second criterion, the genus has the added advantage of belonging to the group of Gram-positive bacteria, which we thought to be relevant for the secretion of the CD27L endolysin. This is given the lack of the potential barrier of the outer membrane of Gram-negative bacteria. At the same time, the lack of an outer membrane would facilitate the diffusion of the autoinducer peptide (AIP) of <i>C. difficile</i> (indeed, itself a Gram positive species) to the AgrC receptor. </h4>
+
+              <h4>Regarding the third criterion, <i>L. reuteri</i> has been shown to express the AgrAC system and be induced by AIP previously<sup>11</sup>. As part of our project, we aimed to show that the CD27L endolysin can be expressed and released into the extracellular milieu by <i>L. reuteri</i> and that AgrAC can be expressed and carry out its normal function.</h4>
+            <br>
+
+            <div class="panel-group">
+                <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" href="#Electroporation">Transformation via Electroporation</a>
+                  </h4>
+                </div>
+                <div id="Electroporation" class="panel-collapse collapse">
+                  <centre><div class="panel-body">
+                      <h4>While the transformation process was initially envisioned as a minor step that would enable us to perform more relevant assays on our system such as killing assays, it became a significant part of our project after many weeks with no positive results. </h4>
+
+                      <h4>Initially, we attempted to work with the <i>L. reuteri</i> strain DSM20016,; however, after unsuccessfully attempting every electroporation protocol for the species we could find in the literature, we ultimately discovered that following uptake of our <i>E. coli</i>-derived miniprep DNA, our transformed DNA was digested by <i>L. reuteri</i> nucleases. This was due to the particular methylation patterns on our <i>E. coli</i>-derived DNA. In our endeavour to resolve this issue, we turned to the Quadram Institute in Norwich, who have kindly helped us by providing a <i>Lactobacillus reuteri</i> 100-23c strain, for which transformation worked seamlessly.  </h4>
+      
+          </div></centre>
+      </div>
+      </div>
+      </div>
+
+      <div class="panel-group">
+          <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" href="#L_reuteri_CD27l">CD27L Endolysin</a>
+            </h4>
+          </div>
+          <div id="L_reuteri_CD27l" class="panel-collapse collapse">
+            <centre><div class="panel-body">
+                <h4>For our experimentation with the CD27L endolysin, our intended course of action was to constitutively express the CD27L endolysin (due to the scarcity of options available for inducible expression vectors in <i>Lactobacillus spp.</i>). We would then assay its relative abundance inside and outside the cell. This would be determined via in gel SpyCatcher detection and/or by Western blot using anti-hexahistidine antibodies. </h4>
+                <h4>In addition, endolysin activity assays were planned to prove that cellular processing in the new host would not alter the enzyme’s regular functionality, as well as to assess whether therapeutically effective activity would be reached in the extracellular medium. </h4>
+                <h4>While attempts to express the protein in our chassis have failed, we have shown that constitutive protein expression brings about significant cellular stress; this has been determined by a combination of growth assays, fluorometry and fluorescence microscopy. Though such results have not been desirable, they open new avenues for approaching for expression strategies to limit cellular stress and strongly support the use of an AIP-inducible system.</h4>
+
+    </div></centre>
+</div>
+</div>
+</div>
+
+<div class="panel-group">
+    <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" href="#L_reuteri_AgrAC">AgrAC Two-Component Regulatory System</a>
+      </h4>
+    </div>
+    <div id="L_reuteri_AgrAC" class="panel-collapse collapse">
+      <centre><div class="panel-body">
+          <h4>AgrC and AgrA are the proteins of the <i>C. difficile</i> quorum sensing signalling system responsible for AIP detection and transcriptional regulation, respectively. Their expression should be constant in the ProQuorum strain, such that we opted for their regulation by slp, a weak, yet constitutively active promoter<sup>12</sup>.</h4>
+          <h4>As part of our plans, we intended to produce a reporter system containing the AgrAC couple, as well as a fluorescent reporter under the control of the Agr promoter. This reporter system would be induced by AIP., and thus validate the AgrAC regulatory system in <i>L. reuteri</i>.</h4>
+          <h4>In addition, we intended to detect intermediary states in the signal transduction pathway, such as the phosphorylated form of AgrA, with the aid of phospho-aspartyl specific antibodies. However, similarly to the case of CD27L endolysin, the detection of expression failed.</h4>
+
+</div></centre>
+</div>
+</div>
+</div>
+
+<div class="panel-group">
+    <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" href="#L_reuteri_AIP">Autoinducer Peptide (AIP) Isolation & Detection</a>
+      </h4>
+    </div>
+    <div id="L_reuteri_AIP" class="panel-collapse collapse">
+      <centre><div class="panel-body">
+          <h4>Another workstream of our project involved the purification of AIP for the AgrAC induction assays. For this, the 2019 Nottingham iGEM team kindly provided us with sterilised <i>C. difficile</i> culture supernatant, from which we attempted to extract AIP by acetone precipitation<sup>6</sup> and then detect it by mass spectrometry (MS). We attempted to enhance the MS results through the reaction of the AIP thiolactone with hydroxylamine. </h4>
+</div></centre>
+</div>
+</div>
+</div>
+
+<div class="panel-group">
+    <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" href="#L_reuteri_Prom">Promoter Comparison</a>
+      </h4>
+    </div>
+    <div id="L_reuteri_Prom" class="panel-collapse collapse">
+      <centre><div class="panel-body">
+          <h4>To tailor our system to the optimal parameters derived from our mathematical model of the ProQuorum <i>L. reuteri</i> strain, we designed an assay for the measurement of the erm and ldh promoters’ strength. Such information would be essential for fine-tuning the expression of all our parts, allowing us to strike a balance between the need to obtain high CD27L yields and the need to minimise cellular stress on the chassis. </h4>
+</div></centre>
+</div>
+</div>
+</div>
+
+    </div> 
+      
+</div>
+</div>
+</section>
+
+<section id="l2" style="background-color: #f2f2f2ff; padding-bottom:15px;">
+    <div class="container">
+      <div class="row">
+        <div class=".col-md-8 .offset-md-2">
+          <h3>The Constructs</h3>
+
+          <h4>For all our <i>L. reuteri</i> work we used the pTRKH3 vector, a plasmid specifically designed for efficient protein expression in <i>Lactobacillus spp.</i><sup>12</sup>, which we have purchased from Addgene. All constructs have been assembled by performing Gibson assembly on PCR amplified template synthesized by IDT.</h4>
+          <br>
+
+          <div class="panel-group">
+              <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" href="#L_reuteri_SLPMOD">slpMOD_CD27L (BBa_K3183300)</a>
+                </h4>
+              </div>
+              <div id="L_reuteri_SLPMOD" class="panel-collapse collapse">
+                <centre><div class="panel-body">
+                    <img src="https://2019.igem.org/wiki/images/1/1a/T--Oxford--slpMOD_CD27L.png" style="width:100%">
+          </div></centre>
+          </div>
+          </div>
+          </div>
+
+          <div class="panel-group">
+              <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" href="#L_reuteri_AgrAC_Construct">AgrAC (BBa_K3183102)</a>
+                </h4>
+              </div>
+              <div id="L_reuteri_AgrAC_Construct" class="panel-collapse collapse">
+                <centre><div class="panel-body">
+                    <img src="https://2019.igem.org/wiki/images/2/2e/T--Oxford--AgrAC.png" style="width:100%">
+          </div></centre>
+          </div>
+          </div>
+          </div>
+
+          <div class="panel-group">
+              <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" href="#L_reuteri_ermGFP_Construct">erm-GFP (BBa_K3183100)</a>
+                </h4>
+              </div>
+              <div id="L_reuteri_ermGFP_Construct" class="panel-collapse collapse">
+                <centre><div class="panel-body">
+                    <img src="https://2019.igem.org/wiki/images/d/d6/T--Oxford--Erm_GFP.png" style="width: 100%;">
+          </div></centre>
+          </div>
+          </div>
+          </div>
+
+          <div class="panel-group">
+              <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" href="#L_reuteri_ldh_Construct">ldh-mClover (BBa_K3183101)</a>
+                </h4>
+              </div>
+              <div id="L_reuteri_ldh_Construct" class="panel-collapse collapse">
+                <centre><div class="panel-body">
+                    <img src="https://2019.igem.org/wiki/images/7/71/T--Oxford--ldh_mClover.png" style="width: 100%;">
+          </div></centre>
+          </div>
+          </div>
+          </div>
+
+          <br>
+          <div class="panel-group">
+              <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" href="#L_reuteri_Terminology">Terminology</a>
+                </h4>
+              </div>
+              <div id="L_reuteri_Terminology" class="panel-collapse collapse">
+                <centre><div class="panel-body">
+
+                    <div class="table-responsive">
+                        <table class="table">
+                          <thead>
+                            <tr>
+                              <th>Name</th>
+                              <th>Description</th>
+              
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>erm promoter</td>
+                              <td>Constitutive <i>Lactobacillus</i>-specific promoter</td>
+                            </tr>
+
+                            <tr>
+                                <td>ldh promoter</td>
+                                <td>Constitutive <i>Lactobacillus</i>-specific promoter</td>
+                              </tr>
+
+                              <tr>
+                                  <td>slp promoter</td>
+                                  <td>Weak, constitutive <i>Lactobacillus</i>-specific promoter</td>
+                                </tr>
+
+                                <tr>
+                                    <td>6His</td>
+                                    <td>Hexahistidine tag, used for protein purification</td>
+                                  </tr>
+
+                                  <tr>
+                                      <td>SpyTag</td>
+                                      <td>Purification and affinity tag</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>HA</td>
+                                        <td>Haemagglutinin tag, used for immunological detection</td>
+                                      </tr>
+
+                                      <tr>
+                                          <td>slpMOD<sup>13</sup></td>
+                                          <td><i>L. reuteri</i>-optimised secretion tag</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>CD27L</td>
+                                            <td>Bacteriophage-derived <i>C. difficile</i>-specific endolysin</td>
+                                          </tr>
+
+                                          <tr>
+                                            <td>mClover3</td>
+                                            <td>Fluorescent reporter gene</td>
+                                          </tr>
+
+                                          <tr>
+                                            <td>GFP</td>
+                                            <td>Fluorescent reporter gene</td>
+                                          </tr>
+                                          
+                                          <tr>
+                                            <td>AgrA</td>
+                                            <td>Signal transducer & transcriptional activator</td>
+                                          </tr>
+
+                                          <tr>
+                                            <td>AgrC</td>
+                                            <td>Membrane protein, the AIP receptor and AgrA-directed kinase</td>
+                                          </tr>
+              
+              
+                          </tbody>
+                        </table>
+                      </div>
+               
+          </div></centre>
+          </div>
+          </div>
+          </div>
+        
+
+
+          </div>
+        </div>
+        </div>
+        </section>
+
+     
+
+    
+
+          
+
+            <section id="n6">>
+                <div class="container">
+                  <div class="row">
+                    <div class=".col-md-8 .offset-md-2">
+        
+                        <h2 style="text-align: center;">
+                          References
+                          </h2>
+        
+                        <div class="table-responsive">
+                          <table class="table">
+                            <thead>
+                              <tr>
+                                <th> #</th>
+                                <th>Reference</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+
+                              <tr>
+                                <td>1</td>
+                                <td>Gibson, Daniel G., et al. “Enzymatic Assembly of DNA Molecules up to Several Hundred Kilobases.” Nature Methods, vol. 6, no. 5, May 2009, pp. 343–45. www.nature.com, doi:10.1038/nmeth.1318.</td>
+                              </tr>
+
+                              <tr>
+                                <td>2</td>
+                                <td>Mayer, M. J., et al. “Structure-Based Modification of a Clostridium Difficile-Targeting Endolysin Affects Activity and Host Range.” Journal of Bacteriology, vol. 193, no. 19, Oct. 2011, pp. 5477–86. DOI.org (Crossref), doi:10.1128/JB.00439-11.</td>
+                              </tr>
+
+                              <tr>
+                                <td>3</td>
+                                <td>Reddington, Samuel C., and Mark Howarth. “Secrets of a Covalent Interaction for Biomaterials and Biotechnology: SpyTag and SpyCatcher.” Current Opinion in Chemical Biology, vol. 29, Dec. 2015, pp. 94–99. DOI.org (Crossref), doi:10.1016/j.cbpa.2015.10.002.</td>
+                                
+                              </tr>
+
+                              <tr>
+                                <td>4</td>
+                                <td>Mayer, Melinda J., et al. “Molecular Characterization of a Clostridium Difficile Bacteriophage and Its Cloned Biologically Active Endolysin.” Journal of Bacteriology, vol. 190, no. 20, Oct. 2008, pp. 6734–40. jb.asm.org, doi:10.1128/JB.00686-08.</td>
+
+                            
+                              </tr>
+
+                              <tr>
+                                <td>5</td>
+                                <td>Anuar, Irsyad N. A. Khairil, et al. “Spy&Go Purification of SpyTag-Proteins Using Pseudo-SpyCatcher to Access an Oligomerization Toolbox.” Nature Communications, vol. 10, no. 1, Apr. 2019, pp. 1–13. www.nature.com, doi:10.1038/s41467-019-09678-w.</td>
+
+                              </tr>
+
+                              <tr>
+                                <td>6</td>
+                                <td>Darkoh, Charles, et al. “Toxin Synthesis by Clostridium Difficile Is Regulated through Quorum Signaling.” MBio, vol. 6, no. 2, May 2015, pp. e02569-14. mbio.asm.org, doi:10.1128/mBio.02569-14.</td>
+                              </tr>
+
+                              <tr>
+                                <td>7</td>
+                                <td>Sonnhammer, E. L., et al. “A Hidden Markov Model for Predicting Transmembrane Helices in Protein Sequences.” Proceedings. International Conference on Intelligent Systems for Molecular Biology, vol. 6, 1998, pp. 175–82.</td>
+
+                              </tr>
+
+                              <tr>
+                                <td>8</td>
+                                <td>Thoendel, Matthew, and Alexander R. Horswill. “Identification of Staphylococcus Aureus AgrD Residues Required for Autoinducing Peptide Biosynthesis.” Journal of Biological Chemistry, vol. 284, no. 33, Aug. 2009, pp. 21828–38. www.jbc.org, doi:10.1074/jbc.M109.031757.</td>
+                              </tr>
+
+                              <tr>
+                                <td>9</td>
+                                <td>Bajar, Bryce T., et al. “Improving Brightness and Photostability of Green and Red Fluorescent Proteins for Live Cell Imaging and FRET Reporting.” Scientific Reports, vol. 6, no. 1, Feb. 2016, p. 20889. DOI.org (Crossref), doi:10.1038/srep20889.</td>
+                              </tr>
+                              <tr>
+                                <td>10</td>
+                                <td>Jacobsen, C.N. et al., Screening of Probiotic Activities of Forty-Seven Strains of Lactobacillus spp. by In Vitro Techniques and Evaluation of the Colonization Ability of Five Selected Strains in Humans, Applied and Environmental Microbiology, Nov. 1999, p. 4949–4956</td>
+                              </tr>
+    
+                              <tr>
+                                <td>11</td>
+                                <td> Lubcowicz D et al. (2018), Reprogramming Probiotic Lactobacillus reuteri as a Biosensor for Staphylococcus aureus Derived AIP-I Detection, ACS Synth Biol
+                                  </td>
+                              </tr>
+                              <tr>
+                                <td>12</td>
+                                <td>Lizier, Michela, et al. “Comparison of Expression Vectors in Lactobacillus Reuteri  Strains.” FEMS Microbiology Letters, vol. 308, no. 1, Aug. 2010, pp. 8–15., doi:10.1111/j.1574-6968.2010.01978.x.</td>
+                              </tr>
+
+                            
+                              
+                              <tr>
+                                <td>13</td>
+                                <td>Fernandez, A., et al. “Enhanced Secretion of Biologically Active Murine Interleukin-12 by Lactococcus Lactis.” Applied and Environmental Microbiology, vol. 75, no. 3, May 2008, pp. 869–871., doi:10.1128/aem.01728-08.</td>
+                              </tr>
+
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+
+<style>
+    .column {
+  float: left;
+  width: 25%;
+  padding: 5px;
+}
+</style>
+
+</body>
+</html>
+{{Oxford/Footer}}
