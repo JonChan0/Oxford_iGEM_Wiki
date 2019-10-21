@@ -37,13 +37,15 @@
 
                   <h3>Choice of Strain</h3>
 
-                  <h4><i>Escherichia coli</i> strains are commonly used host organisms in labs because they have several advantages: cheap, replicate rapidly, have well characterized and optimized systems, etc. which make them very convenient for lab work. </h4>
-                  <h4>In our project, we opted for using <i>E. coli</i> as well when we had to amplify plasmid DNA, express proteins for purification or just for testing constructs before they were transformed into <i>L. reuteri</i>. </h4>
-                  <h4>We mainly used two strains for our <i>E. coli</i> work: NEBTurbo competent cells for cloning, and BL21(DE3)-RIPL competent cells for protein expression.</h4>
+                  <h4><i>Escherichia coli</i> strains are commonly used host organisms in labs because they possess  several advantages: they are cheap, replicate rapidly, and have well a characterized and optimized systems. making them very convenient for lab work. 
+                  </h4>
+                  <h4>In our project, we opted for using <i>E. coli</i> we had to amplify plasmid DNA, express proteins for purification or test constructs before they were transformed into <i>L. reuteri</i>. 
+                  </h4>
+                  <h4>We mainly used two strains for our <i>E. coli</i> work: NEBTurbo competent cells for cloning and BL21(DE3)-RIPL competent cells for protein expression.</h4>
                
                   <h3>Choice of Expression Vector</h3>
                   
-                  <h4>Initially, we opted to use the pBAD vector with its arabinose-inducible promoter. This promoter can be tightly regulated by arabinose and can induce very strong expression. <sup>10</sup>  However, for our case, induction did not occur properly hence our use of the IPTG-inducible T7 expression system in the pET28a vector.</h4>
+                  <h4>Initially, we opted to use the pBAD33 vector with its arabinose-inducible promoter. This promoter can be tightly regulated by arabinose and can induce very strong expression. <sup>10</sup>  However, induction did not occur properly in any of our constructs. After weeks of trying to achieve expression under arabinose, we switched to the IPTG-inducible T7 expression system in the pET28a vector.</h4>
 
                 </div>
                </div>
@@ -67,19 +69,21 @@
                       </div>
                       <div id="Ecoli_Gibson_Assembly" class="panel-collapse collapse">
                         <centre><div class="panel-body">
-                            <h4>For our project, we designed several constructs which were used for various experiments. To assemble these constructs, we used the protocol developed by Gibson et al. (2009)<sup>1</sup>. </h4>
+                            <h4>For our project, we designed several constructs which were used for various experiments. To assemble these constructs, we used Gibson assembly.<sup>1</sup></h4>
 
-                            <h4>The Gibson assembly (GA) offers a quick and easy method to construct DNA fragments and recombinant plasmids. This method uses a DNA exonuclease that creates single stranded DNA overhangs which can anneal with other complementary overhangs, DNA polymerase that fills in any gaps, and DNA ligase that connects the DNA fragments together, all in one reaction mixture<sup>1</sup>.</h4>
+                            <h4>The Gibson assembly offers a quick and easy method to construct DNA fragments and recombinant plasmids. DNA with overlapping ends are added Gibson assembly master mixes, which contain T5 exonuclease, <i>Taq</i>ligase, and Phusion DNA polymerase<sup>1</sup>. Fragments are then assembled all together in a 4-step process (Fig. 1).
+                            </h4>
           
                             <img src="https://2019.igem.org/wiki/images/2/2c/T--Oxford--GA.png" style="width:75%; display:block; margin-left: auto; margin-right: auto;" alt="Figure 1: Overview of Gibson Assembly">
           
                             <p style="font-size:14px;">Figure 1. Overview of Gibson Assembly. (Gibson Assembly by NivinN is licensed under CC BY 4.0)</p>
           
-                            <h4>This method was an alternative to using restriction enzymes. We used the Gibson Assembly to construct all of our recombinant plasmids. Having our main inserts synthetized by IDT, we only needed to clone the fragment into the corresponding vector. This was achieved by creating overhangs using appropriate primers in polymerase chain reactions (PCR) in the inserts and the vector backbones. The resulting fragments were separated by agarose gel electrophoresis to purify only those bands that corresponded to our fragment of interest. The purified DNA was then used for Gibson Assembly, which linked the fragments together creating the final recombinant plasmid constructs.</h4>
+                            <h4>Despite the Biobrick standard being based around restriction enzymes, we used Gibson Assembly to construct all of our recombinant plasmids. Having our main inserts synthesized by IDT, we only needed to clone the fragment into the corresponding vector. This was achieved by creating overhangs using appropriate primers in polymerase chain reaction (PCR) in the inserts and the vector backbones. The resulting fragments were separated by agarose gel electrophoresis to purify only the bands corresponding to our fragment of interest. The purified DNA was then used for Gibson Assembly, which linked the fragments together, creating the final recombinant plasmid constructs.</h4>
           
-                            <h4>Moreover, this method enabled us to easily troubleshoot our assemblies simply by ordering new primers. We have encountered such issues, notably when we needed a construct with only a promoter and a reporter gene (e.g. erm-mClover3,ldh-mClover3) or when one of the constructs was missing terminators due to the complex secondary structures that would have been difficult for IDT to synthesise. Instead, we were able to attach such terminators, using PCR and Gibson assembly, from another construct.</h4>
+                            <h4>Moreover, this method enabled us to easily troubleshoot our assemblies simply by ordering new primers. We encountered such issues, notably when we needed a construct with only a promoter and a reporter gene (e.g. erm-mClover3, ldh-mClover3) or when terminators made large IDT gBlocks difficult to synthesise. In both cases, we were able to attach parts together easily using PCR and Gibson assembly.
+                              </h4>
           
-                            <h4>The products of Gibson Assembly reactions were transformed into <i>E. coli</i> (NEBTurbo cloning strain) competent cells, selected on agar plates, and correct assembly of product was validated by sequencing.</h4>
+                            <h4>The products of Gibson Assembly reactions were then transformed into <i>E. coli</i> (NEBTurbo) competent cells (made in-house). These colonies were selected on antibiotic-containing LB agar plates before colony PCR and validation by Sanger sequencing (Source Bioscience).</h4>
           
                 </div></centre>
             </div>
@@ -95,9 +99,13 @@
                 </div>
                 <div id="Ecoli_Expression" class="panel-collapse collapse">
                   <centre><div class="panel-body">
-                      <h4>One of the main components of our experimental work is the killing of <i>C. difficile</i> by using CD27L, an endolysin from ɸCD27 bacteriophage. CD27L is a protein with two domains: an N-terminal N-acetylmuramoyl-L-alanine amidase homologue and a C-terminal domain. It has been argued that the N-terminal domain has the same specificity as the full length CD27L and improved catalytic activity<sup>2</sup>.</h4>
+                      <h4>One of the main components of our experimental work was focused around CD27L, an endolysin from ɸCD27 bacteriophage that targeted <i>C. difficile</i>. CD27L is a protein with two domains: an N-terminal N-acetylmuramoyl-L-alanine amidase homologue and a C-terminal domain. It has been argued that the N-terminal domain has the same specificity as the full length CD27L and improved catalytic activity.<sup>2</sup></h4>
 
-                      <h4>We were interested in testing this endolysin in different conditions, to see how it behaves in different environments. Thus, to carry out those experiments, we expressed both the CD27L and CD27L<sub>1-179</sub> endolysins, allowing us to compare them and test how they behave.</h4>
+                      <h4>We were interested in testing different versions of the endolysin (one from <a href=”http://parts.igem.org/Part:BBa_K895005”>Team Dundee 2012</a> as well as a <a href=”http://parts.igem.org/Part:BBa_K3183012”>truncated</a> and <a href=”http://parts.igem.org/Part:BBa_K3183009”>full-length</a> endolysin) in different conditions, to see how it behaves in different environments. Thus, to carry out those experiments, we expressed both the CD27L and CD27L<sub>1-179</sub> endolysins, allowing us to compare them and test how they behave.
+                      </h4>
+
+                      <img src="https://2019.igem.org/wiki/images/6/65/T--Oxford--Taleof3Endolysins.png" style="width:75%; display:block; margin-left:auto; margin-right:auto;" alt="Figure 1.">
+                      <p style="font-size:14px;">Figure 1. Constructs of CD27L Parts: </p>
     
                       <h4>For our purification strategy, we expressed the endolysins in <i>E. coli</i> and purified it via  immobilized metal ion affinity chromatography (IMAC) to obtain a partially purified protein solution. Then, after confirming by SDS-PAGE that we had the correct product, we dialysed our protein into phosphate buffered saline (PBS). With such a purification strategy, we aimed to obtain a pure enough sample of active endolysin for killing  assays.</h4>
     
@@ -105,7 +113,7 @@
     
                       <h4>The constructed part was cloned into an IPTG-inducible, T7 expression system-based pET28a vector. For our host organism, we used the BL21(DE3)-RIPL expression strain, which is optimized for the T7 expression system and rare codons. We grew our cells in LB at 37&#8451; and then induced the cultures in mid-log phase with IPTG at 180RPM 21&#8451;. Following induction overnight, the cells were harvested using centrifugation and lysed by sonication. Purification was then carried out as mentioned above.</h4>
     
-                      <h4>Our choice of buffer was based on previous kill assays in literature, which used PBS as the main buffer for the reaction<sup>2</sup>. Specifically, in cases where our yield was low (i.e. CD27L<sub>1-179</sub> construct) we used spin concentration to achieve total protein concentration that is suitable for assays. </h4>
+                      <h4>Our choice of buffer was based on previous kill assays in literature, which used PBS as the main buffer for the reaction<sup>2</sup>. Specifically, in cases where our yield was low (i.e. CD27L<sub>1-179</sub> construct), we used spin concentration to achieve total protein concentration suitable for killing assays.  </h4>
     
                       <h4>During purification, we encountered several issues with both the CD27L and CD27L<sub>1-179</sub> proteins. The latter was expressed at insufficiently high concentrations for assaying, so spin concentration was used to achieve high enough concentrations.</h4>
     
@@ -129,12 +137,12 @@
           </div>
           <div id="Ecoli_Assay" class="panel-collapse collapse">
             <centre><div class="panel-body">
-                <h4>To test the CD27L endolysin, we had to create an assay demonstrating whether it is able to function as it was shown in literature<sup>2,4</sup>. From such preliminary research, we discovered that CD27L, besides being active against <i>Clostiridoides difficile</i>, is also able to cleave amide bonds in the cell wall of other bacteria with the same peptidoglycan type, A1γ. Thus, we used <i>Bacillus subtilis</i>, a Category 1 Gram-positive bacteria<sup>2</sup> as our surrogate target due to safety concerns with <i>C. difficile</i></h4>
+                <h4>To test the CD27L endolysin, we had to create an assay demonstrating whether it is able to function as it was shown in literature<sup>2,4</sup>. From such preliminary research, we discovered that CD27L, besides being active against <i>Clostiridoides difficile</i>, is also able to cleave amide bonds in the cell wall of other bacteria with the same peptidoglycan type, A1γ. Thus, we used <i>Bacillus subtilis</i>, a Category 1 Gram-positive bacteria<sup>2</sup> as our surrogate target due to safety concerns with <i>C. difficile</i>.</h4>
                 <h4>In order to assay whether <i>B. subtilis</i> is lysed by our endolysin, we measured absorbance at 600nm (OD600) throughout an 8 hour time period at every 15 minutes. This way, we were able to monitor how the <i>B. subtilis</i> culture is affected by CD27L. </h4>
                 <h4>Notably, our kill assay differs from the one described by Mayer et al. (2008)<sup>4</sup>. Their protocol involved washing and concentrating the cells to OD600 = 2.0 in Phosphate Buffered Saline (PBS), followed by mixing with CD27L and measuring the rate of decrease in OD600. </h4>
                 <h4>However, our protocol involved growing up a <i>B. subtilis</i> culture until they reached mid-log phase (OD600 ≈ 0.6), then diluting them in Lysogenic Broth (LB), adding our solution (CD27L or Lysozyme or PBS) and then measuring the growth over time by monitoring the change in OD600. The measurements were made automatically by a plate reader, BMG FLUOstar Omega and the cells were grown in a 96 well plate from Greiner (CellStar® 96 well plate F-type). </h4>
 
-                <h4>The use of a plate reader allowed us to measure the absorbance at OD600 over a long time period, which greatly reduces the possible human error. Additionally, the instrument allowed us to conduct experiments on a larger scale than otherwise possible. Notably, it is capable  of incubating the cells at 37 °C and shaking at 500 rpm, which helped to carry out the experiments in a reproducible manner. Furthermore, to increase confidence in our results, our experiments were always carried out in triplicates so that we could perform statistical analysis from our results.</h4>
+                
 
                 <br>
 
@@ -145,6 +153,28 @@
                 <img src="https://2019.igem.org/wiki/images/3/3b/T--Oxford--SEM-for-experiments.png" style="width:75%; display:block; margin-left:auto; margin-right:auto;" alt="B. subtilis SEM">
                 <p style="font-size: 14px;">Figure 1. SEM Images of <i>B. subtilis</i> Post-Treatment with CD27L Endolysin</p>  
     </div></centre>
+</div>
+</div>
+</div>
+
+
+<div class="panel-group">
+    <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" href="#Ecoli_Dundee">Expression of 2012 iGEM Dundee Endolysin Part BBa_K895005</a>
+      </h4>
+    </div>
+    <div id="Ecoli_Dundee" class="panel-collapse collapse">
+      <centre><div class="panel-body">
+        
+          <h4>Our part improvement revolved around the comparison between our full length CD27L endolysin construct against the 2012 iGEM Dundee part BBa_K895005, as further detailed on the <a href=”https://2019.igem.org/Team:Oxford/Improve”>Part Improvement</a>page. </h4>
+          <h4>Experimentally, we cloned the construct as in Figure 1 into the pET28a vector (IPTG-inducible, T7 expression system). The particular construct included an HA-tag, allowing for affinity labelling for Western Blot. Assembled constructs were transformed into BL21(DE3)-RIPL cells. Upon induction however, both SDS-PAGE gels and Western blots gave negative results, hence a lack of expression. Our solution was thus to remove the <i>VgrG</i> Type VI secretion protein on the original part, and repeat our efforts to express this part.</h4>
+          <img src="https://2019.igem.org/wiki/images/a/a8/T--Oxford--Experiments-Dundee.png" style="width:75%; display:block; margin-left:auto; margin-right:auto;" alt="Figure 1: Dundee Construct">
+
+          <p style="font-size: 14px;">Figure 1. Dundee 2012 iGEM Part BBa_K895005 Construct</p>
+
+</div></centre>
 </div>
 </div>
 </div>
@@ -185,17 +215,15 @@
     <div id="Ecoli_Spy" class="panel-collapse collapse">
       <centre><div class="panel-body">
      
-        <h4>We also explored the novel affinity chromatography method of Spy&Go purification. This method uses a fusion tag, called SpyTag developed by Reddington et al. (2015) which binds to its stationary phase called SpyDock via noncovalent interactions. The SpyTag fused protein, after binding, can be eluted conveniently with 2.5 M imidazole (a relatively cheap compound). Moreover, the purification itself is claimed as a more sensitive alternative to His-tag Ni-NTA purification method<sup>5</sup>.</h4>
+        <h4>We also explored the novel affinity chromatography method of Spy&Go purification. This method uses a fusion tag, called SpyTag<sup>3</sup>> which binds to its stationary phase called SpyDock via noncovalent interactions. The SpyTag fused protein, after binding, can be eluted conveniently with 2.5 M imidazole (a relatively cheap compound). Moreover, the purification itself is claimed as a more sensitive alternative to His-tag Ni-NTA purification method<sup>5</sup>.</h4>
         <h4>To test this purification, we used mClover3, a novel fluorescent protein which has not previously been registered in the Part Registry, fused with 6xHis and SpyTag fusion tags<sup>9</sup>.</h4>
 
-        <img src="https://2019.igem.org/wiki/images/b/ba/T--Oxford--Experiments-mClover.png" style="display:block; margin-left:auto; margin-right:auto; width: 75%;" alt="Figure 1. Construct of mClover3">
-        <p style="font-size: 14px;">Figure 1. Construct of SpyTag-mClover3-6xHis</p>
 
         <h4>The protein was cloned into an IPTG inducible pET28a vector containing a T7 expression system. The assembled vector was transformed into BL21(DE3)-RIPL expression strains. We grew our cells in LB at 37&#8451; and induced the cultures in mid-log phase with IPTG at 180RPM 21&#8451;. The cells were harvested through centrifugation and lysed using sonication. </h4>
 
-        <h4>Since both Ni-NTA and Spy&Go purification methods require different buffer conditions, we halved each culture before sonication and resuspended them in the optimal buffer for lysis. After obtaining a clarified lysate through centrifugation, the lysate was loaded onto either a SpyDock or Ni-NTA column.. The recommended protocols were used for both purification steps and 0.5mL elution fractions were collected. The purification was then checked by SDS-PAGE.</h4>
+        <h4>Since both Ni-NTA and Spy&Go purification methods require different buffer conditions, we halved each culture before sonication and resuspended them in the optimal buffer for lysis. After obtaining a clarified lysate through centrifugation, the lysate was loaded onto either a SpyDock or Ni-NTA column. The recommended protocols were used for both purification steps and 0.5mL elution fractions were collected. The purification was then checked by SDS-PAGE.</h4>
 
-        <h4>Subsequently, we would ideally have a convenient method of assessing the purity of our samples. However ultimately, we were not able to obtain samples of sufficient purity to perform assay based quantification. Hence, we utilized densitometric measurements in SDS-PAGE gels after Coomassie Blue staining using BioRad’s Chemidoc XRS and Image Lab (6.0.1) software to measure Lane% (which we refer to as purity) as seen in Figure 2 below.</h4>
+        <h4>Subsequently, we would ideally have a convenient method of assessing the purity of our samples. However, we were not able to obtain samples of sufficient purity to perform assay based quantification. Instead, we utilized densitometric measurements in SDS-PAGE gels after Coomassie Blue staining using BioRad’s Chemidoc XRS and Image Lab (6.0.1) software to measure Lane% (which we refer to as purity), as shown in Figure 2 below.</h4>
         <img src="https://parts.igem.org/wiki/images/4/4b/T--Oxford--Densitometry_Characterization2019.png" style="width:75%; display: block; margin-left: auto; margin-right:auto;" alt="Figure 2. Comparison of Spy&Go Purification vs. Ni-NTA purification by Densitometry">
 
         <p style="font-size: 14px;">Figure 2. Comparison of Spy&Go Purification vs. Ni-NTA purification by Densitometry</p>
@@ -209,26 +237,6 @@
 </div>
 </div>
 
-<div class="panel-group">
-    <div class="panel panel-default">
-    <div class="panel-heading">
-      <h4 class="panel-title">
-        <a data-toggle="collapse" href="#Ecoli_Dundee">Expression of 2012 iGEM Dundee Endolysin Part BBa_K895005</a>
-      </h4>
-    </div>
-    <div id="Ecoli_Dundee" class="panel-collapse collapse">
-      <centre><div class="panel-body">
-        
-          <h4>Our part improvement revolved around the comparison between our full length CD27L endolysin construct against the 2012 iGEM Dundee part BBa_K895005, as further detailed on the <a href=”https://2019.igem.org/Team:Oxford/Improve”>Part Improvement</a>page. </h4>
-          <h4>Experimentally, we cloned the construct as in Figure 1 into the pET28a vector (IPTG-inducible, T7 expression system). The particular construct included an HA-tag, allowing for affinity labelling for Western Blot. Assembled constructs were transformed into BL21(DE3)-RIPL cells. Upon induction however, both SDS-PAGE gels and Western blots gave negative results, hence a lack of expression. Our solution was thus to remove the <i>VgrG</i> Type VI secretion protein on the original part, and repeat our efforts to express this part.</h4>
-          <img src="https://2019.igem.org/wiki/images/a/a8/T--Oxford--Experiments-Dundee.png" style="width:75%; display:block; margin-left:auto; margin-right:auto;" alt="Figure 1: Dundee Construct">
-
-          <p style="font-size: 14px;">Figure 1. Dundee 2012 iGEM Part BBa_K895005 Construct</p>
-
-</div></centre>
-</div>
-</div>
-</div>
 
 <div class="panel-group">
     <div class="panel panel-default">
@@ -240,8 +248,8 @@
     <div id="Ecoli_Promoters" class="panel-collapse collapse">
       <centre><div class="panel-body">
 
-        <h4>In our <i>L. reuteri</i> system, we implemented a constitutive promoter for both the testing of endolysin secretion, and to express AgrAC detection system. However, we also considered that such promoters might be useful for <i>E. coli</i> synthetic biological systems as well. </h4>
-        <h4>To test the strength of these promoters, we decided to use fluorometric measurements, Specifically, we used mClover3 as our reporter gene, pTRKH3 as our expression vector and the NEBTurbo competent <i>E. coli</i> cloning strain. </h4>       
+        <h4>In our <i>L. reuteri</i> system, we implemented a constitutive promoter for both the testing of endolysin secretion and to express the AgrAC detection system. However, we also considered that such promoters might be useful for <i>E. coli</i> synthetic biological systems as well. </h4>
+        <h4>To test the strength of these promoters, we decided to use fluorometric measurements. Specifically, we used mClover3 as our reporter gene, pTRKH3 as our expression vector in NEBTurbo <i>E. coli</i> cells.</h4>       
           
 </div></centre>
 </div>
