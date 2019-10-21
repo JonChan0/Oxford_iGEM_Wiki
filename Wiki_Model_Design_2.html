@@ -1,0 +1,659 @@
+
+
+{{Oxford/Loader}}
+{{Oxford}}
+<html lang="en">
+
+<!-- THIS IS WHERE THE HTML BEGINS -->
+
+<body>
+  
+    <section id="banner">
+        <div class="container" style="width:100%; padding-right:0; padding-left:0;">
+          <div class="row">
+            <div class="col-md-12">
+          <div class="inner" style="background-image: url('https://2019.igem.org/wiki/images/0/0a/T--Oxford--Modleling_Filler2.jpg'); background-size: cover; background-position:center;">
+            <div class="image_faded_overlay" style="background-color: white; opacity: 0.7">
+              <div class="translucent-back" style="height: 400px;">
+              </div>
+            </div>
+          <div class="banner_overlay_text">
+            Further Modelling Development
+          </div>
+          </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      
+        <section id="n1" style="padding-bottom:15px;">
+          <div class="container">
+            <div class="row">
+              <div class=".col-md-8 .offset-md-2">
+        
+                <h2>Part III: Spatial Stochastic Model</h2>
+
+                <h4>The mathematical models developed up until this point has made the assumption of our probiotic and <i> C. difficile </i> being perfectly mixed. In reality, the human gut topology violates this assumption because not only is it unlikely for <i>C. difficile</i> and <i>L. reuteri</i> to be well mixed together, but it is also unlikely for colonies of each bacterium to be in immediate proximity. </h4>
+                    <h4>Thus, there is a distinct possibility that the <i>L. reuteri</i> population may not receive sufficient AIP signal from a <i>C. difficile</i> colony located farther down the gut. Additionally, the ratio of <i>L. reuteri</i> to <i>C. difficile</i> in the human gut would be 1:100 at best. This further decreases the probability of upregulation of <i>L. reuteri</i> cells.</h4>
+
+                    <h4>To see how adversely the spatial location of the two colonies affects system response, we decided to qualitatively model the system response in various spatial orientations on the Monte Carlo Simulator, an add on to Blender that uses spatially realistic 3-D cellular models and specialized Monte Carlo algorithms to simulate the movements and reactions of molecules within and between cells.</h4>
+                <h4>  
+                      Consider the following spatial outline of <i>C. difficile</i> being upregulated in the intestine.
+                    </h4>
+                    <img src="" style="width:100%; height:auto" alt="Intestinal Render">
+        
+                    
+                    
+                    <h4>As MCell takes many computations into account such as diffusion and probabilistic simulations, it would require an unrealistic amount of computational power to model a truly realistic theoretical model at the correct timescale without any assumptions.</h4>
+                    
+                    <div class="panel-group">
+                        <div class="panel panel-default">
+                        <div class="panel-heading">
+                          <h4 class="panel-title">
+                            <a data-toggle="collapse" href="#Spatial_Assumptions">Assumptions</a>
+                          </h4>
+                        </div>
+                        <div id="Spatial_Assumptions" class="panel-collapse collapse">
+                          <centre><div class="panel-body">
+                              <h4>To obtain qualitative results from the spatial simulations, we made the following assumptions:</h4>
+                              <ul style="font-size: 18px;">
+                                <li>As the size of bacterial cells is minute relative to the intestine, we can ignore the curvature of the intestinal wall upon which the bacterial cells thrive.</li>
+                                <li>Kinetic rate constants are estimated such that 90% of the <i>C. difficile</i> population would be upregulated by 2-3 AIP molecules per cell.</li>
+                                <li>The efficiency of the AgrAC two-component regulatory system in our <i>L. reuteri</i> would be equal to that in <i>C. difficile</i></li>
+                                <li>Upregulated <i>C.difficile</i> does not produce AIP molecules.</li>
+                              </ul>
+                            </div></centre>
+                        </div>
+                        </div>
+                        </div>
+        
+                        <div class="panel-group">
+                            <div class="panel panel-default">
+                            <div class="panel-heading">
+                              <h4 class="panel-title">
+                                <a data-toggle="collapse" href="#Kin_Eqs">Kinetic Equations</a>
+                              </h4>
+                            </div>
+                            <div id="Kin_Eqs" class="panel-collapse collapse">
+                              <centre><div class="panel-body">
+        
+        
+                                  <div class="table-responsive">
+                                      <table class="table">
+                                        <thead>
+                                          <tr>
+                                            <th>Kinetic Rate Equation</th>
+                                            <th>Kinetic Rate Constant</th>
+                                            <th>Kinetic Rate Constant Value Modelled</th>
+        
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <td>$$C. difficile_{downregulated} \to C. difficile_{downregulated} + AIP$$</td>
+                                            <td>$$k_S$$</td>
+                                            <td>$$10^{3}$$</td>
+                                          </tr>
+        
+                                          <tr>
+                                            <td>$$AIP \to [NULL]$$</td>
+                                            <td>$$\delta_S$$</td>
+                                            <td>$$10^{2}$$</td>
+                                          </tr>
+        
+                                          <tr>
+                                            <td>$$C. difficile_{downregulated} + AIP \to C. difficile_{upregulated}$$</td>
+                                            <td>$$\phi_c$$</td>
+                                            <td>$$10^{6}$$</td>
+                                          </tr>
+        
+                                          <tr>
+                                            <td>$$L. reuteri_{downregulated} + AIP \to L. reuteri_{upregulated}$$</td>
+                                            <td>$$\phi_l$$</td>
+                                            <td>$$10^{6}$$</td>
+                                          </tr>
+        
+                                        </tbody>
+                                      </table>
+                                    </div>
+        
+                                    <h4>The kinetic rate constants given above as determined such that an initiai <i>C. difficile</i> population is upregulated by approximately 8000 AIP molecules within 50,000 iterations of 10<sup>-6</sup> second timesteps.</h4>
+        
+                                </div></centre>
+                            </div>
+                            </div>
+                            </div>
+        
+                            <div class="panel-group">
+                                <div class="panel panel-default">
+                                <div class="panel-heading">
+                                  <h4 class="panel-title">
+                                    <a data-toggle="collapse" href="#Spatial_Results">Results</a>
+                                  </h4>
+                                </div>
+                                <div id="Spatial_Results" class="panel-collapse collapse">
+                                  <centre><div class="panel-body">
+
+                                    <img src="https://2019.igem.org/wiki/images/9/99/T--oxford--perfectlymixeddifficile.png" style="width:75%; display: block; margin-left:auto; margin-right:auto;" alt="Figure 1">
+                                    <p style="font-size: 14px;">Figure 1. Upregulation of <i>C. difficile</i> Assuming Uniform Mixture. Yellow represents AIP; Blue represents downregulated <i>C. difficile</i> population; Red represents upregulated <i>C. difficile</i> population.</p>
+
+                                    <img src="https://2019.igem.org/wiki/images/6/6d/T--oxford--perfectlymixedreuteri.png" style="width:75%; display: block; margin-left:auto; margin-right:auto;" alt="Figure 2">
+                                    <p style="font-size: 14px;">Figure 2. Upregulation of <i>L. reuteri</i> Assuming Uniform Mixture. Purple represents downregulated <i>L. reuteri</i> population; Green represents upregulated <i>L. reuteri</i> population.</p>
+                                    <h4>As seen in Figures 1 and 2 above, assuming uniform mixture, upregulation of <i>C. difficile</i> and <i>L. reuteri</i> takes the same amount of time.</h4>
+
+
+                                    <img src="https://2019.igem.org/wiki/images/b/b6/T--oxford--separateddifficile.png" style="width:75%; display: block; margin-left:auto; margin-right:auto;" alt="Figure 3">
+                                    <p style="font-size: 14px;">Figure 3. Upregulation of <i>C. difficile</i> Assuming <i>C. difficile</i> & <i>L. reuteri</i> Colonies Adjacent. Green represents downregulated <i>C. difficile</i> population; Red represents upregulated <i>C. difficile</i> population.</p>
+                                    
+                                    <img src="https://2019.igem.org/wiki/images/9/99/T--oxford--separatedreuteri.png" style="width:75%; display: block; margin-left:auto; margin-right:auto;" alt="Figure 4">
+                                    <p style="font-size: 14px;">Figure 4. Upregulation of <i>L. reuteri</i> Assuming <i>C. difficile</i> & <i>L. reuteri</i> Colonies Adjacent. Blue represents downregulated <i>L. reuteri</i> population; Green represents upregulated <i>L. reuteri</i> population.</p>
+                                    
+                                    <h4>In this case of the two bacterial colonies being spatially separated but adjacent, <i>L. reuteri</i> takes much longer to reach complete upregulation when compared to <i>C. difficile</i>. This is due to the greater diffusion distance of the AIP compared to in a uniform mixture.</h4>
+                                  
+                                    <img src="https://2019.igem.org/wiki/images/4/42/T--oxford--difficileseparateddistance.png" style="width:75%; display: block; margin-left:auto; margin-right:auto;" alt="Figure 5">
+                                    <p style="font-size: 14px;">Figure 5. Upregulation of <i>C. difficile</i> Assuming <i>C. difficile</i> & <i>L. reuteri</i> Spatial Separation. Blue represents downregulated AIP concentration; Green represents downregulated <i>C. difficile</i> population; Red represents upregulated <i>C. difficile</i> population. </p>
+
+                                    <img src="https://2019.igem.org/wiki/images/a/a0/T--oxford--reuteriseparateddistance.png" style="width:75%; display: block; margin-left:auto; margin-right:auto;" alt="Figure 6">
+                                    <p style="font-size: 14px;">Figure 6. Upregulation of <i>L. reuteri</i> Assuming <i>C. difficile</i> & <i>L. reuteri</i> Spatial Separation. Blue represents downregulated <i>L. reuteri</i> population; Green represents upregulated <i>L. reuteri</i> population. </p>
+
+                                    <h4>Thus, as seen in Figure 6 above, spatial separation has resulted in a decrease in the upregulation of our probiotic to approximately 10%.</h4>
+
+                                  </div></centre>
+                                </div>
+                                </div>
+                                </div>
+
+    
+        
+                                <div class="panel-group">
+                                    <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                      <h4 class="panel-title">
+                                        <a data-toggle="collapse" href="#Spatial_Discussion">Discussion</a>
+                                      </h4>
+                                    </div>
+                                    <div id="Spatial_Discussion" class="panel-collapse collapse">
+                                      <centre><div class="panel-body">
+        
+                                        <h4>It is thus evident that the relative spatial orientations of the bacteria make a significant difference on the amount of AIP bound to our probiotic. How can our system thus cope with the signal starvation evident?</h4>
+        
+                                        
+                                        <h4>A potential solution is a secondary amplification system that uses a separate signalling molecule in our system. Theoretically, it would mean that a small fraction of the <i>L. reuteri</i> being upregulated could trigger an upregulation cascade that up-regulates our system sufficiently rapidly.</h4>
+                                        <h4>One way is for the engineered <i>L. reuteri</i> cells to upregulate other <i>L. reuteri</i> cells once a small fraction of the population has been upregulated by <i>C. difficile</i>-regulated AIP. This can be accomplished by incorporating an additional signal secretion & detection system - a secondary amplification system.</h4>
+                                        </div></centre>
+                                    </div>
+                                    </div>
+                                    </div>
+        
+        
+        
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        
+        <section id="n4" style="background-color: #f2f2f2ff; padding-bottom:15px;">
+        <div class="container">
+          <div class="row">
+            <div class=".col-md-8 .offset-md-2">
+              <h2> Part IV: Secondary Amplification System Spatial Model </h2>
+        
+              <h4>Our first goal was to test whether a secondary amplification system would truly help to improve upregulation of our probiotic in different spatial orientations. </h4>
+              <h4>First, let us consider the signal for the secondary amplification system to be S. The following kinetic equations were then added to the previous spatial model: </h4>
+
+              <br>
+              <div class="panel-group">
+                  <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a data-toggle="collapse" href="#Secondary_Spatial_Kin_Eqs">Kinetic Equations & Kinetic Constants</a>
+                    </h4>
+                  </div>
+                  <div id="Secondary_Spatial_Kin_Eqs" class="panel-collapse collapse">
+                    <centre><div class="panel-body">
+
+
+                        <div class="table-responsive">
+                            <table class="table">
+                              <thead>
+                                <tr>
+                                  <th>Kinetic Rate Equation</th>
+                                  <th>Kinetic Rate Constant</th>
+                                  <th>Kinetic Rate Constant Value Modelled</th>
+
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>$$L. / reuteri_{upregulated} \to L. / reuteri_{downregulated} + S$</td>
+                                  <td>$$k$$</td>
+                                  <td>$$10^{3}$$</td>
+                                </tr>
+                               
+
+                                <tr>
+                                  <td>$$L. / reuteri_{downregulated} + AIP \to L. /  reuteri_{upregulated}$$</td>
+                                  <td>$$\gamma$$</td>
+                                  <td>$$10^{6}$$</td>
+                                </tr>
+
+                                <tr>
+                                    <td>$$S \to [NULL]$$</td>
+                                    <td>$$\delta_S$$</td>
+                                    <td>$$10^{2}$$</td>
+                                  </tr>
+
+                              </tbody>
+                            </table>
+                          </div>
+                          <h4>The kinetic rate constants modelled were taken to be equivalent to be those for AIP.</h4>
+                      
+
+                      </div></centre>
+                  </div>
+                  </div>
+                  </div>
+
+                  <div class="panel-group">
+                      <div class="panel panel-default">
+                      <div class="panel-heading">
+                        <h4 class="panel-title">
+                          <a data-toggle="collapse" href="#Secondary_Spatial_Results">Results</a>
+                        </h4>
+                      </div>
+                      <div id="Secondary_Spatial_Results" class="panel-collapse collapse">
+                        <centre><div class="panel-body">
+
+                         <img src="https://2019.igem.org/wiki/images/7/7e/T--oxford--secondaryamplification_mcell.png" style="width: 75%; display: block; margin-left:auto; margin-right:auto; " alt="Figure 1.">
+                         <p style="font-size:14px;">Figure 1. Upregulation of <i>L. reuteri</i>, Secondary Signalling System, Assuming <i>C. difficile</i> & <i>L. reuteri</i> Spatial Separation. Blue represents downregulated <i>L. reuteri</i> population; Green represents upregulated <i>L. reuteri</i> population. </p>
+                          
+                          <h4>As seen in Figure 1 above, approximately 50% of the population is upregulated by time = 0.6 seconds. This is in contrast to the 10% upregulation obtained in the previous simulation without a secondary signalling system.</h4>
+                        
+                        </div></centre>
+                      </div>
+                      </div>
+                      </div>
+
+
+                      <div class="panel-group">
+                          <div class="panel panel-default">
+                          <div class="panel-heading">
+                            <h4 class="panel-title">
+                              <a data-toggle="collapse" href="#Secondary_Spatial_Discussion">Discussion</a>
+                            </h4>
+                          </div>
+                          <div id="Secondary_Spatial_Discussion" class="panel-collapse collapse">
+                            <centre><div class="panel-body">
+    
+                              <h4>Evidently, the implementation of a secondary amplification system into our model system has increased the upregulation of our probiotic in unfavourable spatial orientations. </h4>
+
+                              <h4>Additionally, we performed a more valid mathematical analysis of the impact of a hypothetical secondary system on our probiotic’s response. This was achieved by building on the deterministic model of our two-component regulatory system.</h4>
+                            
+                            </div></centre>
+                          </div>
+                          </div>
+                          </div>
+
+
+                      </div>
+                      </div>
+        </div>
+        </section>
+
+                      <section id="n3" style="padding-bottom:15px;">
+                          <div class="container">
+                            <div class="row">
+                              <div class=".col-md-8 .offset-md-2">
+
+
+                                <h2>Part V: Secondary Signalling System Deterministic Model</h2>
+             
+              <h4>To observe the efficacy of our engineered <i>L. reuteri</i> with a hypothetical secondary amplification system, we incorporated new differential equations into our existing deterministic mathematical model <a href=#n2>here</a> and simulated this new integrated system.</h4>
+              <br> 
+              <div class="panel-group">
+                    <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                        <a data-toggle="collapse" href="#Secondary_Primer">Secondary Amplification System Primer</a>
+                      </h4>
+                    </div>
+                    <div id="Secondary_Primer" class="panel-collapse collapse">
+                      <centre><div class="panel-body">
+                          <h4>For our generic secondary amplification system, consider a signal X and its complementary receptor Y which can only be produced by previously AgrA/C-upregulated <i>L. reuteri</i> cells. Such a signal X is assumed to secreted and then bind with membrane receptor Y in neighbouring <i>L. reuteri</i> cells to form complex XY. This complex thus acts as a transcription factor that upregulates the <i>L. reuteri</i> cell.</h4>
+                        </div></centre>
+                    </div>
+                    </div>
+                    </div>
+              <div class="panel-group">
+                  <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a data-toggle="collapse" href="#Secondary_Assumptions">Assumptions</a>
+                    </h4>
+                  </div>
+                  <div id="Secondary_Assumptions" class="panel-collapse collapse">
+                    <centre><div class="panel-body">
+
+                      <ol style="font-size:18px;">
+                        <li> Signal X and receptor Y expression produces negligible cellular stress</li>
+                        <li> Kinetic rates of the secondary amplification system are identical to those for AgrAC two-component regulatory system as in the <a href="https://2019.igem.org/Team:Oxford/Model/Design">Model Design</a>page.</li>
+                        <li> Signal X and receptor Y can freely diffuse through cell membranes.</li>
+                        <li> The upregulation profile due to signal-receptor complex XY can be approximated using an upregulation cut-off concentration as previously assumed for the AgrAC two-component regulatory system as in the <a href="https://2019.igem.org/Team:Oxford/Model/Design">Model Design</a>page. </li>
+                        <li> A single molecule of signal-receptor complex XY is sufficient co cause upregulation. Consequently, the decrease in XY concentration can be ignored.</li>
+                      </ol>
+        
+                      </div></centre>
+                  </div>
+                  </div>
+                  </div>
+              
+              <div class="panel-group">
+                  <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a data-toggle="collapse" href="#Secondary_Kinetic">Kinetic Equations & Kinetic Rate Constants</a>
+                    </h4>
+                  </div>
+                  <div id="Secondary_Kinetic" class="panel-collapse collapse">
+                    <centre><div class="panel-body">
+                        <h3>Transcription of Signalling Molecule X & Receptor Y</h3>
+                           
+                        <h4>As previously described in the mathematical model for the AgrAC two-component regulatory system as in the <a href="https://2019.igem.org/Team:Oxford/Model/Design">Model Design</a>page, let the upregulation cutoff for the dimerised, phospohrylated AgrA such that 10 pM of AIP can upregulated a single cell. This corresponds to a concentration of $$6.514 \times 10^-9 \ M$$ of dimerised, phosphorylated AgrA protein.</h4>
+                                        
+                        <h4>As mRNA transcription is triggered by dimerised, phosphorylated AgrA, the relevant kinetic equations are written as:</h4>
+                        
+                                          <div class="table-responsive">
+                                              <table class="table">
+                                                <thead>
+                                                  <tr>
+                                                    <th>Kinetic Rate Equation</th>
+                                                    <th>Kinetic Rate Constant</th>
+                                                    <th>Kinetic Rate Constant Value Modelled</th>
+                              
+                                                  </tr>
+                                                </thead>
+                                                <tbody>
+                                                  <tr>
+                                                    <td>$$NULL \to Mxy$$</td>
+                                                    <td>$$m2 \ (if [Ap_2] \geq 6.514 \times 10^-9 \ M); \\ 0 \ (if [Ap_2] \lt 6.514 \times 10^-9 \ M)$$</td>
+                                                    <td>$$8.33 \ $$</td>
+                                                  </tr>
+                              
+                              
+                                                </tbody>
+                                              </table>
+                                            </div>
+
+                            
+                             <h3>Translation of Signalling Molecule & Receptor Y</h3>
+        
+                                   
+                                
+                                                  <div class="table-responsive">
+                                                      <table class="table">
+                                                        <thead>
+                                                          <tr>
+                                                            <th>Kinetic Rate Equation</th>
+                                                            <th>Kinetic Rate Constant</th>
+                                                            <th>Kinetic Rate Constant Value Modelled</th>
+                                      
+                                                          </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                          <tr>
+                                                            <td>$$Mxy \to X$$</td>
+                                                            <td>$$v$$</td>
+                                                            <td></td>
+                                                          </tr>
+                      
+                                                          <tr>
+                                                            <td>$$Mxy \to Y$$</td>
+                                                            <td>$$v$$</td>
+                                                          </tr>
+                                      
+                                      
+                                                        </tbody>
+                                                      </table>
+                                                    </div>
+                                                
+                                          <h3>Ligand Binding of X to Receptor Y & Subsequent Formation of Transcription Factor</h3>
+      
+                                        
+                                                          <div class="table-responsive">
+                                                              <table class="table">
+                                                                <thead>
+                                                                  <tr>
+                                                                    <th>Kinetic Rate Equation</th>
+                                                                    <th>Kinetic Rate Constant</th>
+                                                                    <th>Kinetic Rate Constant Value Modelled</th>
+                                              
+                                                                  </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                  <tr>
+                                                                    <td>$$X + Y \to XY$$</td>
+                                                                    <td>$$k_{ir}$$</td>
+                                                                    <td></td>
+                                                                  </tr>
+                                              
+                                              
+                                                                </tbody>
+                                                              </table>
+                                                            </div>
+
+                                                            <h3>Upregulation of Cell by Transcription Factor of Secondary Signalling System</h3>
+                                                        
+                                                            <div class="table-responsive">
+                                                                <table class="table">
+                                                                  <thead>
+                                                                    <tr>
+                                                                      
+                                                                      <th>Kinetic Rate Constant</th>
+                                                                      <th>Kinetic Rate Constant Value Modelled</th>
+                                                
+                                                                    </tr>
+                                                                  </thead>
+                                                                  <tbody>
+                                                                    <tr>
+                                                                      
+                                                                      <td>$$P$$</td>
+                                                                      <td>$$1 \ (if XY \geq 0.25 \times 10^-5) \ or \ 0 \ (if XY \lt 0.25 \times 10^-5)$$</td>
+                                                                      <td></td>
+                                                                    </tr>
+                                                
+                                                
+                                                                  </tbody>
+                                                                </table>
+                                                              </div>
+
+                                                              <h4>Such a upregulation cutoff of XY was deliberately chosen so that small concentrations of XY transcription factor can upregulate the cell.</h4>
+
+                                                              <h3>Degradation of Molecules</h3>
+
+
+                                                                  <div class="table-responsive">
+                                                                      <table class="table">
+                                                                        <thead>
+                                                                          <tr>
+                                                                            <th>Kinetic Rate Equation</th>
+                                                                            <th>Kinetic Rate Constant</th>
+                                                                            <th>Kinetic Rate Constant Value Modelled</th>
+                                                      
+                                                                          </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                          <tr>
+                                                                            <td>$$X \to NULL \ (where X=Mxy, X, Y)$$</td>
+                                                                            <td>$$\delta_X$$</td>
+                                                                            <td></td>
+                                                                          </tr>
+                                                      
+                                                      
+                                                                        </tbody>
+                                                                      </table>
+                                                                    </div>
+                                                                </div></centre>
+                                                            </div>
+                                                            </div>
+                                                            </div>
+        
+             
+        
+                  <div class="panel-group">
+                      <div class="panel panel-default">
+                      <div class="panel-heading">
+                        <h4 class="panel-title">
+                          <a data-toggle="collapse" href="#Secondary_Diff">Differential Equations</a>
+                        </h4>
+                      </div>
+                      <div id="Secondary_Diff" class="panel-collapse collapse">
+                        <centre><div class="panel-body">
+                                <div class="table-responsive">
+                                        <table class="table">
+                                          <thead>
+                                            <tr>
+                                              <th>Concentration Modelled</th>
+                                              <th>Differential Equation</th>
+                                              <th>Process Modelled</th>
+                                            </tr>
+                                          </thead>
+                                          <tbody>
+                                            <tr>
+                                              <td>mRNA for Signaling Molecule X & Receptor Y</td>
+                                              <td>$$\frac {dMxy}{dt} = m2 - \delta_{Mxy} \times Mxy \ (if [Ap_2] \geq 2 \times 10^-9)
+                                                 \ or \ \frac {dMxy}{dt} = 0 \ (if {Ap_2} \lt 2 \times 10^-9)$$</td>
+                                              <td>Transcription (only if upregulated <i>L. reuteri</i>) +  Degradation</td>
+                                            </tr>
+              
+                                            <tr>
+                                              <td>Signalling Molecule X</td>
+                                              <td>$$\frac {dX}{dt} = v \times Mxy - k_{ir} \times X \times Y - \delta_X \times X$$</td>
+                                              <td>Translation + Ligand Binding + Degradation</td>
+                                            </tr>
+              
+                                            <tr>
+                                                <td>Signalling Molecule Y</td>
+                                                <td>$$\frac {dY}{dt} = v \times Mxy - k_{ir} \times X \times Y - \delta_Y \times Y$$</td>
+                                                <td>Translation + Ligand Binding + Degradation</td>
+                                              </tr>
+              
+                                              <tr>
+                                                <td>Ligand-Receptor Complex XY</td>
+                                                <td>$$\frac {dXY}{dt} = k_{ir} \times X \times Y - \delta_{XY} \times XY$$</td>
+                                                <td>Ligand Binding + Degradation</td>
+                                              </tr>
+                                          </tbody>
+                                        </table>
+                                      </div>
+                          </div></centre>
+                      </div>
+                      </div>
+                      </div>
+        
+                      <div class="panel-group">
+                          <div class="panel panel-default">
+                          <div class="panel-heading">
+                            <h4 class="panel-title">
+                              <a data-toggle="collapse" href="#Secondary_Results">Results</a>
+                            </h4>
+                          </div>
+                          <div id="Secondary_Results" class="panel-collapse collapse">
+                            <centre><div class="panel-body">
+
+                              <img src="https://2019.igem.org/wiki/images/6/60/T--oxford--secondary_amplification_upregulation.png" style="width:75%; margin-left: auto; margin-right: auto; display: block;" alt="Figure 1">
+                              <p style="font-size:14px;">Figure 1. Upregulation Profile with Secondary Amplification System, AIP Concentration Modulated. Specifically, AIP added at 350 minutes and removed at 650 minutes.</p>
+
+                              <img src="https://2019.igem.org/wiki/images/c/c3/T--oxford--secondary_amplification_Ap2.png" style="width:75%; margin-left: auto; margin-right: auto; display: block;" alt="Figure 2">
+                              <p style="font-size:14px;">Figure 2. Dynamics of Dimerised, Phosphorylated AgrA Protein with Secondary Amplification System, AIP Concentration Modulated. Specifically, AIP added at 350 minutes and removed at 650 minutes.</p>
+        
+                              <img src="https://2019.igem.org/wiki/images/7/71/T--oxford--secondary_amplification_XY.png" style="width:75%; margin-left: auto; margin-right: auto; display: block;" alt="Figure 3">
+                              <p style="font-size:14px;">Figure 3. Dynamics of Signal-Receptor Complex XY with Secondary Amplification System, AIP Concentration Modulated. Specifically, AIP added at 350 minutes and removed at 650 minutes.</p>
+
+                              </div></centre>
+                          </div>
+                          </div>
+                          </div>
+        
+                          
+                      <div class="panel-group">
+                          <div class="panel panel-default">
+                          <div class="panel-heading">
+                            <h4 class="panel-title">
+                              <a data-toggle="collapse" href="#Secondary_Discussion">Discussion</a>
+                            </h4>
+                          </div>
+                          <div id="Secondary_Discussion" class="panel-collapse collapse">
+                            <centre><div class="panel-body">
+
+                              <h4>Figures 1, 2 and 3 above depict the cell being upregulated for a subsantial duration of time after the timepoint at which the concentration of dimerised, phosphorylated AgrA (i.e the primary signalling system's transcription factor) has decreased below its upregulation cut-off concentration. This is due to the delay for the concentration of XY to decrease below its own upregulation cut-off concentration.</h4>
+
+                              <h4>Therefore, not only does the secondary amplification system help trigger endolysin production in <i>L. reuteri</i> in unfavourable spatial orientations, but it also maintains upregulation of the cell following signal depletion. This is beneficial for our probiotic as it increases therapeutic efficacy in its suppression of <i>C. difficile</i> pathogenicity.</h4>
+        
+                              </div></centre>
+                          </div>
+                          </div>
+                          </div>
+            </div>
+          </div>
+        </div>
+        </section>
+
+        <section id="n5" style="padding-bottom: 15px;">
+            <div class="container">
+              <div class="row">
+                <div class=".col-md-8 .offset-md-2">
+    
+                    <h2 style="text-align: center;">
+                      References
+                      </h2>
+    
+                    <div class="table-responsive">
+                      <table class="table">
+                        <thead>
+                          <tr>
+                            <th>Reference</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+
+                          <tr>
+                            <td>Stiles, JR, et al. (1996). Miniature endplate current rise times &lt; 100 μs from improved dual recordings can be modeled with passive acetylcholine diffusion from a synaptic vesicle. Proc. Natl. Acad. Sci. USA 93:5747-5752.</td>
+                          </tr>
+                        
+
+                          <tr>
+                            
+                            <td>Jabbari, Sara, et al. “Mathematical Modelling of the Agr Operon in Staphylococcus Aureus.” Journal of Mathematical Biology, vol. 61, no. 1, 2009, pp. 17–54., doi:10.1007/s00285-009-0291-6.</td>
+                            
+                              </td>
+                          </tr>
+
+                          <tr>
+                            <td>Stiles, JR, and Bartol, TM. (2001). Monte Carlo methods for simulating realistic synaptic microphysiology using MCell. In: Computational Neuroscience: Realistic Modeling for Experimentalists, ed. De Schutter, E. CRC Press, Boca Raton, pp. 87-127.</td>
+                          </tr>
+
+                          <tr>
+                            <td>Kerr R, Bartol TM, Kaminsky B, Dittrich M, Chang JCJ, Baden S, Sejnowski TJ, Stiles JR. (2009). Fast Monte Carlo Simulation Methods for Biological Reaction-Diffusion Systems in Solution and on Surfaces. SIAM J. Sci. Comput., 30(6):3126-3149.</td>
+                          </tr>
+                        
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+<style>
+    .column {
+  float: left;
+  width: 25%;
+  padding: 5px;
+}
+</style>
+
+</body>
+</html>
+{{Oxford/Footer}}
