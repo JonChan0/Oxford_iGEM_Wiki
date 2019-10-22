@@ -300,10 +300,7 @@
                         </div>
                             </section>
 
-
-
-                             
-<section id="p1" style="background-color: #f2f2f2ff; padding-bottom:15px;">
+<section id="n2" style="background-color: #f2f2f2ff; padding-bottom:15px;">
   <div class="container">
     <div class="row">
       <div class=".col-md-8 .offset-md-2">
@@ -311,50 +308,86 @@
           <h2 style="text-align:center;">Part II: Mathematical Model of Two-Component Regulatory System (TCS)</h2>
 
           <h4>Once we established that expression of the endolysin in our <i>L. reuteri</i> should be regulated, we needed an external stimulus indicative of <i>C. difficile</i> infection and a regulatory system that would transduce such a stimulus to induce endolysin expression.
-          </h4>
+          </h4> <br>
 
-          <h3>External Stimulus Requirements</h3>
+          <div class="panel-group">
+            <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" href="#Stim_Req">External Stimulus Requirements</a>
+              </h4>
+            </div>
+            <div id="Stim_Req" class="panel-collapse collapse">
+              <centre><div class="panel-body">
                 <h4>Given that our aim is to induce expression of endolysin upon detection of pathogenic <i>C. difficile</i> (as opposed to dormant colonies in the gut), the external signal must be a biomarker of the pathogen. Thus, an excellent candidate is the autoinducer peptide (AIP) molecule, a quorum sensing molecule produced by <i>C. difficile</i>  to trigger toxin expression in neighbouring cells.
-          
-                  <h3>Regulatory System Requirements</h3>
+                </h4>
+                </div></centre>
+            </div>
+            </div>
+            </div>
+
+            <div class="panel-group">
+              <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" href="#Reg_Req">Regulatory System Requirements</a>
+                </h4>
+              </div>
+              <div id="Reg_Req" class="panel-collapse collapse">
+                <centre><div class="panel-body">
+                  <h4>
+                    For optimal function of our overall system, the regulatory system must meet certain requirements:
+                  </h4>
+        
+                  <ul style="font-size: 18px;">
+                    <li>Endolysin expression should be triggered when the surrounding population of <i>C. difficile</i> crosses a certain threshold.</li>
+                    <li>The regulatory system must be robust to temporary spikes of external signal(s).</li>
+                    <li>The timing and throughput of endolysin synthesis should be of sufficient magnitude that the surrounding population of <i>C. difficile</i> diminishes before toxin synthesis occurs significantly.</li>
+                  </ul>
 
                   <h4>
-                      For optimal function of our overall system, the regulatory system must meet certain requirements:
-                    </h4>
-          
-                    <ul style="font-size: 18px;">
-                      <li>Endolysin expression should be triggered when the surrounding population of <i>C. difficile</i> crosses a certain threshold.</li>
-                      <li>The regulatory system must be robust to temporary spikes of external signal(s).</li>
-                      <li>The timing and throughput of endolysin synthesis should be of sufficient magnitude that the surrounding population of <i>C. difficile</i> diminishes before toxin synthesis occurs significantly.</li>
-                    </ul>
-  
-                    <h4>
-                      After defining the regulatory system requirements above, we then needed to find a suitable regulatory system - either natural or synthetic. As the AIP quorum signalling molecule of <i>C. Difficile </i> is relatively uncharacterised, it would be very difficult to engineer a custom receptor. Thus, it made sense to use the two-component AgrA/AgrC regulatory system already in-built into <i>C. difficile</i>.
-                    </h4>
-  
-                    <h4>
-                      Thus, we chose to mathematically model this AIP detection and two-component AgrA/AgrC regulatory system to provide a model of our corresponding system in vitro.
+                    After defining the regulatory system requirements above, we then needed to find a suitable regulatory system - either natural or synthetic. As the AIP quorum signalling molecule of <i>C. Difficile </i> is relatively uncharacterised, it would be very difficult to engineer a custom receptor. Thus, it made sense to use the two-component AgrA/AgrC regulatory system already in-built into <i>C. difficile</i>.
+                  </h4>
 
-           <h3>Regulatory System Primer</h3>
+                  <h4>
+                    Thus, we chose to mathematically model this AIP detection and two-component AgrA/AgrC regulatory system to provide a model of our corresponding system in vitro.
+                  </h4>
+                  </div></centre>
+              </div>
+              </div>
+              </div>
 
-           
+              <div class="panel-group">
+                <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" href="#Det">Regulatory System Primer</a>
+                  </h4>
+                </div>
+                <div id="Det" class="panel-collapse collapse">
+                  <centre><div class="panel-body">
+
                       <h4>
                         <i>C. difficile</i> uses a two-component system (TCS) to detect its signalling molecule (AIP). As seen below, when the AIP binds to its AgrC receptor, it triggers a phosphorylation cascade: the receptor first autophosphorylates; this causes the phosphorylation of AgrA protein which then dimerises. This dimerised AgrA protein acts as the specific transcription factor for the expression of CD27L endolysin.
                     </h4> <br>
                         <img src="https://2019.igem.org/wiki/images/e/e6/T--Oxford--Overall_Schematic_Diagram.png" style="width:80%; height:auto; display:block; margin-left:auto; margin-right:auto;">
 
                   </div>
-                  </div>
-                  </div>
-                </section>
 
-                <section id="p2" style="padding-bottom:15px;">
-                    <div class="container">
-                      <div class="row">
-                        <div class=".col-md-8 .offset-md-2">
+                    </div></centre>
+                </div>
+                </div>
 
-                          <h3>Assumptions of Deterministic Model</h3>
 
+                <div class="panel-group">
+                    <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                        <a data-toggle="collapse" href="#ModelAssumptions">Assumptions of Deterministic Model</a>
+                      </h4>
+                    </div>
+                    <div id="ModelAssumptions" class="panel-collapse collapse">
+                      <centre><div class="panel-body">
                           <h4>Below are the assumptions:</h4>
 
 
@@ -366,7 +399,10 @@
                           </ol>
   
 
-                          <br>
+                        </div></centre>
+                    </div>
+                    </div>
+                    </div>
 
                     <div class="panel-group">
                         <div class="panel panel-default">
@@ -854,7 +890,7 @@
 
 
 
- <section id="n10" style="padding-bottom: 15px;">
+ <section id="n5" style="padding-bottom: 15px;">
                                             <div class="container">
                                               <div class="row">
                                                 <div class=".col-md-8 .offset-md-2">
